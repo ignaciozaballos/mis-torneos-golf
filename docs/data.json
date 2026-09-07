@@ -1,0 +1,551 @@
+{
+  "actualizado": "2026-09-07T14:37:36",
+  "torneos": [
+    {
+      "club": "Club de Golf Escorpión",
+      "nombre": "LIGUILLA SENIOR MASCULINA",
+      "fecha": "2026-09-09",
+      "url": "https://clubescorpion.com/evento/liguilla-senior-masculina/"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Torneo Locos por el Golf Septiembre 2026",
+      "fecha": "2026-09-10",
+      "url": "https://paradores.es/es/node/22236"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Torneo Locos por el Golf Septiembre 2026",
+      "fecha": "2026-09-10",
+      "url": "https://paradores.es/es/node/22236"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Torneo Locos por el Golf Septiembre 2026",
+      "fecha": "2026-09-10",
+      "url": "https://paradores.es/es/node/22236"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Torneo Locos por el Golf Septiembre 2026",
+      "fecha": "2026-09-10",
+      "url": "https://paradores.es/es/node/22236"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Torneo Locos por el Golf Septiembre 2026",
+      "fecha": "2026-09-10",
+      "url": "https://paradores.es/es/node/22236"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Torneo Locos por el Golf Septiembre 2026",
+      "fecha": "2026-09-10",
+      "url": "https://paradores.es/es/node/22236"
+    },
+    {
+      "club": "Club de Golf Escorpión",
+      "nombre": "CTO. DOBLES DEL CLUB SCRATCH",
+      "fecha": "2026-09-12",
+      "url": "https://clubescorpion.com/evento/cto-dobles-del-club-scratch/"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Puntuable Orden de Mérito Seniors Caballeros El Saler 2026",
+      "fecha": "2026-09-15",
+      "url": "https://paradores.es/es/node/22239"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Puntuable Orden de Mérito Seniors Caballeros El Saler 2026",
+      "fecha": "2026-09-15",
+      "url": "https://paradores.es/es/node/22239"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Puntuable Orden de Mérito Seniors Caballeros El Saler 2026",
+      "fecha": "2026-09-15",
+      "url": "https://paradores.es/es/node/22239"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Puntuable Orden de Mérito Seniors Caballeros El Saler 2026",
+      "fecha": "2026-09-15",
+      "url": "https://paradores.es/es/node/22239"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Puntuable Orden de Mérito Seniors Caballeros El Saler 2026",
+      "fecha": "2026-09-15",
+      "url": "https://paradores.es/es/node/22239"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Puntuable Orden de Mérito Seniors Caballeros El Saler 2026",
+      "fecha": "2026-09-15",
+      "url": "https://paradores.es/es/node/22239"
+    },
+    {
+      "club": "Club de Golf Escorpión",
+      "nombre": "AESGOLF DAMAS - CIRCUITO LANZAROTE",
+      "fecha": "2026-09-17",
+      "url": "https://clubescorpion.com/evento/aesgolf-damas-circuito-lanzarote/"
+    },
+    {
+      "club": "Club de Golf Escorpión",
+      "nombre": "SOCIAL BIENVENIDA",
+      "fecha": "2026-09-19",
+      "url": "https://clubescorpion.com/evento/social-bienvenida/"
+    },
+    {
+      "club": "Foressos Club de Golf",
+      "nombre": "Torneo Match Quality",
+      "fecha": "2026-09-19",
+      "url": "https://foressosclubgolf.com/torneos/"
+    },
+    {
+      "club": "Foressos Club de Golf",
+      "nombre": "Torneo Noveles Infantil",
+      "fecha": "2026-09-19",
+      "url": "https://foressosclubgolf.com/torneos/"
+    },
+    {
+      "club": "Foressos Club de Golf",
+      "nombre": "Torneo Noveles",
+      "fecha": "2026-09-20",
+      "url": "https://foressosclubgolf.com/torneos/"
+    },
+    {
+      "club": "Foressos Club de Golf",
+      "nombre": "Liga de Foressos",
+      "fecha": "2026-09-25",
+      "url": "https://foressosclubgolf.com/torneos/"
+    },
+    {
+      "club": "Foressos Club de Golf",
+      "nombre": "Liga de Foressos",
+      "fecha": "2026-09-26",
+      "url": "https://foressosclubgolf.com/torneos/"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "II Circuito MSC Cruceros 2026",
+      "fecha": "2026-09-26",
+      "url": "https://paradores.es/es/node/22425"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "II Circuito MSC Cruceros 2026",
+      "fecha": "2026-09-26",
+      "url": "https://paradores.es/es/node/22425"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "II Circuito MSC Cruceros 2026",
+      "fecha": "2026-09-26",
+      "url": "https://paradores.es/es/node/22425"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "II Circuito MSC Cruceros 2026",
+      "fecha": "2026-09-26",
+      "url": "https://paradores.es/es/node/22425"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "II Circuito MSC Cruceros 2026",
+      "fecha": "2026-09-26",
+      "url": "https://paradores.es/es/node/22425"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "II Circuito MSC Cruceros 2026",
+      "fecha": "2026-09-26",
+      "url": "https://paradores.es/es/node/22425"
+    },
+    {
+      "club": "Foressos Club de Golf",
+      "nombre": "Copa de Golf Adaptado CV",
+      "fecha": "2026-10-03",
+      "url": "https://foressosclubgolf.com/torneos/"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Trofeo Escuela Juvenil Octubre 2026",
+      "fecha": "2026-10-04",
+      "url": "https://paradores.es/es/node/22428"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Trofeo Escuela Juvenil Octubre 2026",
+      "fecha": "2026-10-04",
+      "url": "https://paradores.es/es/node/22428"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Trofeo Escuela Juvenil Octubre 2026",
+      "fecha": "2026-10-04",
+      "url": "https://paradores.es/es/node/22428"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Trofeo Escuela Juvenil Octubre 2026",
+      "fecha": "2026-10-04",
+      "url": "https://paradores.es/es/node/22428"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Trofeo Escuela Juvenil Octubre 2026",
+      "fecha": "2026-10-04",
+      "url": "https://paradores.es/es/node/22428"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Trofeo Escuela Juvenil Octubre 2026",
+      "fecha": "2026-10-04",
+      "url": "https://paradores.es/es/node/22428"
+    },
+    {
+      "club": "Foressos Club de Golf",
+      "nombre": "Torneo Locos por el Golf",
+      "fecha": "2026-10-09",
+      "url": "https://foressosclubgolf.com/torneos/"
+    },
+    {
+      "club": "Foressos Club de Golf",
+      "nombre": "Torneo Noveles Infantil",
+      "fecha": "2026-10-17",
+      "url": "https://foressosclubgolf.com/torneos/"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Circuito Nacional de Golf Onda Cero 2026",
+      "fecha": "2026-10-17",
+      "url": "https://paradores.es/es/node/22431"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Circuito Nacional de Golf Onda Cero 2026",
+      "fecha": "2026-10-17",
+      "url": "https://paradores.es/es/node/22431"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Circuito Nacional de Golf Onda Cero 2026",
+      "fecha": "2026-10-17",
+      "url": "https://paradores.es/es/node/22431"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Circuito Nacional de Golf Onda Cero 2026",
+      "fecha": "2026-10-17",
+      "url": "https://paradores.es/es/node/22431"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Circuito Nacional de Golf Onda Cero 2026",
+      "fecha": "2026-10-17",
+      "url": "https://paradores.es/es/node/22431"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Circuito Nacional de Golf Onda Cero 2026",
+      "fecha": "2026-10-17",
+      "url": "https://paradores.es/es/node/22431"
+    },
+    {
+      "club": "Foressos Club de Golf",
+      "nombre": "Torneo Noveles",
+      "fecha": "2026-10-18",
+      "url": "https://foressosclubgolf.com/torneos/"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Circuito Masculino y Femenino CV",
+      "fecha": "2026-10-18",
+      "url": "https://paradores.es/es/node/22434"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Circuito Masculino y Femenino CV",
+      "fecha": "2026-10-18",
+      "url": "https://paradores.es/es/node/22434"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Circuito Masculino y Femenino CV",
+      "fecha": "2026-10-18",
+      "url": "https://paradores.es/es/node/22434"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Circuito Masculino y Femenino CV",
+      "fecha": "2026-10-18",
+      "url": "https://paradores.es/es/node/22434"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Circuito Masculino y Femenino CV",
+      "fecha": "2026-10-18",
+      "url": "https://paradores.es/es/node/22434"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Circuito Masculino y Femenino CV",
+      "fecha": "2026-10-18",
+      "url": "https://paradores.es/es/node/22434"
+    },
+    {
+      "club": "Foressos Club de Golf",
+      "nombre": "Torneo de la Federación",
+      "fecha": "2026-10-23",
+      "url": "https://foressosclubgolf.com/torneos/"
+    },
+    {
+      "club": "Foressos Club de Golf",
+      "nombre": "Torneo de la Federación",
+      "fecha": "2026-10-24",
+      "url": "https://foressosclubgolf.com/torneos/"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Saler Trophy 2026",
+      "fecha": "2026-10-24",
+      "url": "https://paradores.es/es/node/22437"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Saler Trophy 2026",
+      "fecha": "2026-10-24",
+      "url": "https://paradores.es/es/node/22437"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Saler Trophy 2026",
+      "fecha": "2026-10-24",
+      "url": "https://paradores.es/es/node/22437"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Saler Trophy 2026",
+      "fecha": "2026-10-24",
+      "url": "https://paradores.es/es/node/22437"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Saler Trophy 2026",
+      "fecha": "2026-10-24",
+      "url": "https://paradores.es/es/node/22437"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Saler Trophy 2026",
+      "fecha": "2026-10-24",
+      "url": "https://paradores.es/es/node/22437"
+    },
+    {
+      "club": "Club de Golf Escorpión",
+      "nombre": "AESGOLF DAMAS P&P",
+      "fecha": "2026-10-29",
+      "url": "https://clubescorpion.com/evento/aesgolf-damas-pp-4/"
+    },
+    {
+      "club": "Foressos Club de Golf",
+      "nombre": "Liga de Foressos",
+      "fecha": "2026-10-30",
+      "url": "https://foressosclubgolf.com/torneos/"
+    },
+    {
+      "club": "Club de Golf Escorpión",
+      "nombre": "MENSUAL JUVENIL ESCUELA OCTUBRE P&P",
+      "fecha": "2026-10-31",
+      "url": "https://clubescorpion.com/evento/mensual-juvenil-escuela-octubre-pp/"
+    },
+    {
+      "club": "Foressos Club de Golf",
+      "nombre": "Liga de Foressos",
+      "fecha": "2026-10-31",
+      "url": "https://foressosclubgolf.com/torneos/"
+    },
+    {
+      "club": "Club de Golf Escorpión",
+      "nombre": "RYDER DAMAS",
+      "fecha": "2026-11-01",
+      "url": "https://clubescorpion.com/evento/ryder-damas/"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Campeonato de 2ª,3ª,4ª y 5ª categoría de la C.V.",
+      "fecha": "2026-11-07",
+      "url": "https://paradores.es/es/node/22449"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Campeonato de 2ª,3ª,4ª y 5ª categoría de la C.V.",
+      "fecha": "2026-11-07",
+      "url": "https://paradores.es/es/node/22449"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Campeonato de 2ª,3ª,4ª y 5ª categoría de la C.V.",
+      "fecha": "2026-11-07",
+      "url": "https://paradores.es/es/node/22449"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Campeonato de 2ª,3ª,4ª y 5ª categoría de la C.V.",
+      "fecha": "2026-11-07",
+      "url": "https://paradores.es/es/node/22449"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Campeonato de 2ª,3ª,4ª y 5ª categoría de la C.V.",
+      "fecha": "2026-11-07",
+      "url": "https://paradores.es/es/node/22449"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Campeonato de 2ª,3ª,4ª y 5ª categoría de la C.V.",
+      "fecha": "2026-11-07",
+      "url": "https://paradores.es/es/node/22449"
+    },
+    {
+      "club": "Club de Golf Escorpión",
+      "nombre": "OPEN DAMAS HIPERCOR",
+      "fecha": "2026-11-10",
+      "url": "https://clubescorpion.com/evento/open-damas-hipercor-2/"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Lanzarote Golf Tour Aesgolf 2026- Trofeo L'Albufera",
+      "fecha": "2026-11-12",
+      "url": "https://paradores.es/es/node/22452"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Lanzarote Golf Tour Aesgolf 2026- Trofeo L'Albufera",
+      "fecha": "2026-11-12",
+      "url": "https://paradores.es/es/node/22452"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Lanzarote Golf Tour Aesgolf 2026- Trofeo L'Albufera",
+      "fecha": "2026-11-12",
+      "url": "https://paradores.es/es/node/22452"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Lanzarote Golf Tour Aesgolf 2026- Trofeo L'Albufera",
+      "fecha": "2026-11-12",
+      "url": "https://paradores.es/es/node/22452"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Lanzarote Golf Tour Aesgolf 2026- Trofeo L'Albufera",
+      "fecha": "2026-11-12",
+      "url": "https://paradores.es/es/node/22452"
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Lanzarote Golf Tour Aesgolf 2026- Trofeo L'Albufera",
+      "fecha": "2026-11-12",
+      "url": "https://paradores.es/es/node/22452"
+    },
+    {
+      "club": "Club de Golf Escorpión",
+      "nombre": "MENSUAL JUVENIL ESCUELA NOVIEMBRE",
+      "fecha": "2026-11-14",
+      "url": "https://clubescorpion.com/evento/mensual-juvenil-escuela-noviembre/"
+    },
+    {
+      "club": "Foressos Club de Golf",
+      "nombre": "Torneo de Noveles Infantil",
+      "fecha": "2026-11-14",
+      "url": "https://foressosclubgolf.com/torneos/"
+    },
+    {
+      "club": "Club de Golf Escorpión",
+      "nombre": "RYDER DAMAS ESCORPIÓN",
+      "fecha": "2026-11-15",
+      "url": "https://clubescorpion.com/evento/ryder-damas-escorpion-5/"
+    },
+    {
+      "club": "Foressos Club de Golf",
+      "nombre": "Torneo de Noveles",
+      "fecha": "2026-11-15",
+      "url": "https://foressosclubgolf.com/torneos/"
+    },
+    {
+      "club": "Club de Golf Escorpión",
+      "nombre": "CTO BENÉFICO",
+      "fecha": "2026-11-19",
+      "url": "https://clubescorpion.com/evento/cto-benefico-2/"
+    },
+    {
+      "club": "Foressos Club de Golf",
+      "nombre": "Liga de Foressos",
+      "fecha": "2026-11-20",
+      "url": "https://foressosclubgolf.com/torneos/"
+    },
+    {
+      "club": "Club de Golf Escorpión",
+      "nombre": "SOCIAL NOVIEMBRE",
+      "fecha": "2026-11-21",
+      "url": "https://clubescorpion.com/evento/cto-benefico/"
+    },
+    {
+      "club": "Foressos Club de Golf",
+      "nombre": "Liga de Foressos",
+      "fecha": "2026-11-21",
+      "url": "https://foressosclubgolf.com/torneos/"
+    },
+    {
+      "club": "Club de Golf Escorpión",
+      "nombre": "MANDARINA DE ORO",
+      "fecha": "2026-11-24",
+      "url": "https://clubescorpion.com/evento/mandarina-de-oro/"
+    },
+    {
+      "club": "Foressos Club de Golf",
+      "nombre": "Torneo MSC Cruceros",
+      "fecha": "2026-11-27",
+      "url": "https://foressosclubgolf.com/torneos/"
+    },
+    {
+      "club": "Club de Golf Escorpión",
+      "nombre": "COPA ESCORPIÓN",
+      "fecha": "2026-11-28",
+      "url": "https://clubescorpion.com/evento/copa-escorpion-3/"
+    },
+    {
+      "club": "Foressos Club de Golf",
+      "nombre": "Torneo MSC Cruceros",
+      "fecha": "2026-11-28",
+      "url": "https://foressosclubgolf.com/torneos/"
+    },
+    {
+      "club": "Club de Golf Escorpión",
+      "nombre": "NARANJA DE ORO",
+      "fecha": "2026-12-09",
+      "url": "https://clubescorpion.com/evento/naranja-de-oro/"
+    },
+    {
+      "club": "Club de Golf Escorpión",
+      "nombre": "SENIOR DAMAS ESCORPIÓN",
+      "fecha": "2026-12-16",
+      "url": "https://clubescorpion.com/evento/senior-damas-escorpion-2/"
+    },
+    {
+      "club": "Club de Golf Escorpión",
+      "nombre": "SOCIAL NAVIDAD",
+      "fecha": "2026-12-19",
+      "url": "https://clubescorpion.com/evento/social-navidad-3/"
+    },
+    {
+      "club": "Club de Golf Escorpión",
+      "nombre": "MENSUAL JUVENIL ESCUELA DICIEMBRE",
+      "fecha": "2026-12-30",
+      "url": "https://clubescorpion.com/evento/mensual-juvenil-escuela-diciembre/"
+    }
+  ]
+}
