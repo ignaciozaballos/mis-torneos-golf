@@ -13,7 +13,10 @@ URL = "https://lasellagolf.com/competiciones"
 
 
 def obtener_torneos():
-    soup = get_soup(URL)
+    # Le pasamos un "Referer" (como si viniéramos de la home del propio
+    # club) porque algunas webs bloquean peticiones que no parecen venir
+    # de una navegación normal.
+    soup = get_soup(URL, referer="https://lasellagolf.com/")
     torneos = []
 
     enlaces = soup.find_all("a", string=lambda s: s and "detalles y reserva" in s.lower())
