@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-07T15:02:04",
+  "actualizado": "2026-09-07T15:07:07",
   "torneos": [
     {
       "club": "Club de Golf Escorpión",
@@ -116,6 +116,12 @@
       "url": "https://foressosclubgolf.com/torneos/"
     },
     {
+      "club": "Oliva Nova Beach & Golf Resort",
+      "nombre": "Torneo 50 aniversario Federaciones Autonómicas",
+      "fecha": "2026-09-24",
+      "url": "https://www.olivanova.com/deporte-ocio-golf-torneos"
+    },
+    {
       "club": "Foressos Club de Golf",
       "nombre": "Liga de Foressos",
       "fecha": "2026-09-25",
@@ -162,6 +168,12 @@
       "nombre": "II Circuito MSC Cruceros 2026",
       "fecha": "2026-09-26",
       "url": "https://paradores.es/es/node/22425"
+    },
+    {
+      "club": "Oliva Nova Beach & Golf Resort",
+      "nombre": "Campbell Lamont",
+      "fecha": "2026-09-27",
+      "url": "https://www.olivanova.com/deporte-ocio-golf-torneos"
     },
     {
       "club": "Foressos Club de Golf",
@@ -524,10 +536,22 @@
       "url": "https://foressosclubgolf.com/torneos/"
     },
     {
+      "club": "Oliva Nova Beach & Golf Resort",
+      "nombre": "Doble de profesionales",
+      "fecha": "2026-11-30",
+      "url": "https://www.olivanova.com/deporte-ocio-golf-torneos"
+    },
+    {
       "club": "Club de Golf Escorpión",
       "nombre": "NARANJA DE ORO",
       "fecha": "2026-12-09",
       "url": "https://clubescorpion.com/evento/naranja-de-oro/"
+    },
+    {
+      "club": "Oliva Nova Beach & Golf Resort",
+      "nombre": "Torneo de Navidad",
+      "fecha": "2026-12-12",
+      "url": "https://www.olivanova.com/deporte-ocio-golf-torneos"
     },
     {
       "club": "Club de Golf Escorpión",
