@@ -5,12 +5,21 @@ import re
 import datetime
 import requests
 
-# Cabecera para que las webs no nos bloqueen pensando que somos un bot raro.
+# Cabeceras para que las webs no nos bloqueen pensando que somos un bot raro.
+# Cuantas más cabeceras "de navegador real" mandemos, menos posibilidades de
+# que algún filtro anti-bot nos rechace con un error 403.
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
         "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
-    )
+    ),
+    "Accept": (
+        "text/html,application/xhtml+xml,application/xml;q=0.9,"
+        "image/webp,*/*;q=0.8"
+    ),
+    "Accept-Language": "es-ES,es;q=0.9,en;q=0.8",
+    "Connection": "keep-alive",
+    "Upgrade-Insecure-Requests": "1",
 }
 
 MESES_ES = {
@@ -30,10 +39,13 @@ MESES_EN_ABR = {
 }
 
 
-def get_soup(url, timeout=20):
+def get_soup(url, timeout=20, referer=None):
     """Descarga una URL y la devuelve como objeto BeautifulSoup."""
     from bs4 import BeautifulSoup
-    resp = requests.get(url, headers=HEADERS, timeout=timeout)
+    headers = dict(HEADERS)
+    if referer:
+        headers["Referer"] = referer
+    resp = requests.get(url, headers=headers, timeout=timeout)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
 
