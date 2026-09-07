@@ -17,13 +17,18 @@ def obtener_torneos():
     torneos = []
 
     tablas = soup.find_all("table")
+    print(f"[oliva_nova] DIAGNOSTICO: número de <table> encontradas: {len(tablas)}")
+
+    for n_tabla, tabla in enumerate(tablas):
+        filas = tabla.find_all("tr")
+        print(f"[oliva_nova] DIAGNOSTICO: tabla #{n_tabla} tiene {len(filas)} filas (<tr>)")
+
+        for n_fila, fila in enumerate(filas[:6]):  # solo mostramos las primeras 6 para no saturar el log
+            celdas = fila.find_all("td")
+            textos = [c.get_text(strip=True) for c in celdas]
+            print(f"[oliva_nova] DIAGNOSTICO: tabla #{n_tabla} fila #{n_fila} -> {textos}")
+
     if not tablas:
-        # Modo diagnóstico: si no hay ninguna <table>, probablemente los
-        # torneos se cargan con JavaScript después de que llegue el HTML
-        # inicial (que es lo único que ve 'requests'). Volcamos pistas al
-        # log para poder confirmarlo y decidir el siguiente paso.
-        print("[oliva_nova] DIAGNOSTICO: no se ha encontrado ninguna <table> en la página.")
-        print(f"[oliva_nova] DIAGNOSTICO: longitud del HTML recibido: {len(str(soup))} caracteres")
         texto = soup.get_text(" ", strip=True)
         idx = texto.lower().find("torneo")
         fragmento = texto[max(0, idx - 100): idx + 300] if idx != -1 else texto[:300]
