@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mis Torneos de Golf</title>
+<style>
+  :root {
+    --verde: #2e6b3e;
+    --verde-claro: #eef6ef;
+    --texto: #1f2a24;
+    --gris: #6b7a70;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--verde-claro);
+    color: var(--texto);
+    margin: 0;
+    padding: 0 16px 40px;
+  }
+  header {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 32px 0 16px;
+  }
+  h1 {
+    color: var(--verde);
+    margin: 0 0 4px;
+    font-size: 28px;
+  }
+  #actualizado {
+    color: var(--gris);
+    font-size: 13px;
+  }
+  .filtros {
+    max-width: 800px;
+    margin: 16px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .filtros button {
+    border: 1px solid var(--verde);
+    background: white;
+    color: var(--verde);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .filtros button.activo {
+    background: var(--verde);
+    color: white;
+  }
+  #lista {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .torneo {
+    background: white;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  .torneo .info h3 {
+    margin: 0 0 4px;
+    font-size: 16px;
+  }
+  .torneo .info .club {
+    color: var(--gris);
+    font-size: 13px;
+  }
+  .torneo .fecha {
+    text-align: center;
+    min-width: 64px;
+  }
+  .torneo .fecha .dia {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--verde);
+    line-height: 1;
+  }
+  .torneo .fecha .mes {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--gris);
+  }
+  .torneo a.enlace {
+    text-decoration: none;
+    color: var(--verde);
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  #vacio, #error {
+    text-align: center;
+    color: var(--gris);
+    margin-top: 40px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>⛳ Mis Torneos de Golf</h1>
+  <div id="actualizado">Cargando...</div>
+</header>
+
+<div class="filtros" id="filtros"></div>
+
+<div id="lista"></div>
+<div id="vacio" style="display:none;">No hay torneos próximos con este filtro.</div>
+<div id="error" style="display:none;">
+  No se ha podido cargar data.json todavía. Si acabas de configurar el
+  proyecto, ejecuta el scraper al menos una vez (ver README).
+</div>
+
+<script>
+const MESES = ["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
+let TODOS_LOS_TORNEOS = [];
+let filtroActivo = "Todos";
+
+async function cargar() {
+  try {
+    const resp = await fetch('data.json?_=' + Date.now());
+    if (!resp.ok) throw new Error("no data.json");
+    const data = await resp.json();
+    TODOS_LOS_TORNEOS = data.torneos || [];
+    document.getElementById('actualizado').textContent =
+      "Actualizado: " + new Date(data.actualizado).toLocaleString('es-ES');
+    construirFiltros();
+    render();
+  } catch (e) {
+    document.getElementById('error').style.display = 'block';
+    document.getElementById('actualizado').textContent = '';
+  }
+}
+
+function construirFiltros() {
+  const clubes = ["Todos", ...new Set(TODOS_LOS_TORNEOS.map(t => t.club))];
+  const cont = document.getElementById('filtros');
+  cont.innerHTML = '';
+  clubes.forEach(club => {
+    const btn = document.createElement('button');
+    btn.textContent = club;
+    if (club === filtroActivo) btn.classList.add('activo');
+    btn.onclick = () => { filtroActivo = club; render(); construirFiltros(); };
+    cont.appendChild(btn);
+  });
+}
+
+function render() {
+  const lista = document.getElementById('lista');
+  const vacio = document.getElementById('vacio');
+  lista.innerHTML = '';
+
+  const filtrados = filtroActivo === "Todos"
+    ? TODOS_LOS_TORNEOS
+    : TODOS_LOS_TORNEOS.filter(t => t.club === filtroActivo);
+
+  if (filtrados.length === 0) {
+    vacio.style.display = 'block';
+    return;
+  }
+  vacio.style.display = 'none';
+
+  filtrados.forEach(t => {
+    const fecha = new Date(t.fecha + "T00:00:00");
+    const div = document.createElement('div');
+    div.className = 'torneo';
+    div.innerHTML = `
+      <div class="fecha">
+        <div class="dia">${fecha.getDate()}</div>
+        <div class="mes">${MESES[fecha.getMonth()]}</div>
+      </div>
+      <div class="info" style="flex:1">
+        <h3>${t.nombre}</h3>
+        <div class="club">${t.club}</div>
+      </div>
+      <a class="enlace" href="${t.url}" target="_blank" rel="noopener">Ver &rarr;</a>
+    `;
+    lista.appendChild(div);
+  });
+}
+
+cargar();
+</script>
+
+</body>
+</html>
