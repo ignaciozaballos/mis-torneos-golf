@@ -17,27 +17,12 @@ def obtener_torneos():
     torneos = []
 
     tablas = soup.find_all("table")
-    print(f"[oliva_nova] DIAGNOSTICO: número de <table> encontradas: {len(tablas)}")
-
-    for n_tabla, tabla in enumerate(tablas):
-        filas = tabla.find_all("tr")
-        print(f"[oliva_nova] DIAGNOSTICO: tabla #{n_tabla} tiene {len(filas)} filas (<tr>)")
-
-        for n_fila, fila in enumerate(filas[:6]):  # solo mostramos las primeras 6 para no saturar el log
-            celdas = fila.find_all("td")
-            textos = [c.get_text(strip=True) for c in celdas]
-            print(f"[oliva_nova] DIAGNOSTICO: tabla #{n_tabla} fila #{n_fila} -> {textos}")
-
-    if not tablas:
-        texto = soup.get_text(" ", strip=True)
-        idx = texto.lower().find("torneo")
-        fragmento = texto[max(0, idx - 100): idx + 300] if idx != -1 else texto[:300]
-        print(f"[oliva_nova] DIAGNOSTICO: fragmento de texto alrededor de 'torneo': {fragmento}")
-
     for tabla in tablas:
         filas = tabla.find_all("tr")
         for fila in filas:
-            celdas = fila.find_all("td")
+            # El nombre del torneo va en una celda <th> (cabecera de fila) y
+            # el resto de datos (fecha, cartel...) en celdas <td> normales.
+            celdas = fila.find_all(["th", "td"])
             if len(celdas) < 2:
                 continue
             nombre = celdas[0].get_text(strip=True)
