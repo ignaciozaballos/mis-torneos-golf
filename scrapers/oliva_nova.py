@@ -16,7 +16,20 @@ def obtener_torneos():
     soup = get_soup(URL)
     torneos = []
 
-    for tabla in soup.find_all("table"):
+    tablas = soup.find_all("table")
+    if not tablas:
+        # Modo diagnóstico: si no hay ninguna <table>, probablemente los
+        # torneos se cargan con JavaScript después de que llegue el HTML
+        # inicial (que es lo único que ve 'requests'). Volcamos pistas al
+        # log para poder confirmarlo y decidir el siguiente paso.
+        print("[oliva_nova] DIAGNOSTICO: no se ha encontrado ninguna <table> en la página.")
+        print(f"[oliva_nova] DIAGNOSTICO: longitud del HTML recibido: {len(str(soup))} caracteres")
+        texto = soup.get_text(" ", strip=True)
+        idx = texto.lower().find("torneo")
+        fragmento = texto[max(0, idx - 100): idx + 300] if idx != -1 else texto[:300]
+        print(f"[oliva_nova] DIAGNOSTICO: fragmento de texto alrededor de 'torneo': {fragmento}")
+
+    for tabla in tablas:
         filas = tabla.find_all("tr")
         for fila in filas:
             celdas = fila.find_all("td")
