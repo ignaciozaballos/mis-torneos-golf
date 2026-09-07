@@ -6,20 +6,19 @@ Web personal que centraliza los torneos próximos de varios clubes de golf.
 
 | Club | Estado | Notas |
 |---|---|---|
-| Club de Golf Escorpión | ✅ Automático | Usa un feed de calendario estándar (.ics), es el más fiable de todos |
-| Foressos Club de Golf | ✅ Automático (revisar) | Extracción por patrones de texto; si el club rediseña la web, tocará ajustarlo |
-| Golf Parador El Saler | ✅ Automático (revisar) | Con paginación |
+| Club de Golf Escorpión | ✅ Automático | Usa un feed de calendario estándar (.ics), el más fiable de todos |
+| Foressos Club de Golf | ✅ Automático | Extracción por patrones de texto; si el club rediseña la web, tocará ajustarlo |
+| Golf Parador El Saler | ✅ Automático | Con paginación |
 | Oliva Nova Beach & Golf Resort | ✅ Automático | Tablas HTML normales |
-| La Sella Golf Resort & Spa | ✅ Automático (revisar) | Calendario anual |
-| Club de Golf El Bosque | ⏳ Pendiente | Sus torneos se muestran con una app externa (GolfDirecto) que carga los datos con JavaScript; necesita otro enfoque (ver abajo) |
-| Panorámica Golf | ❌ Bloqueado | Su web prohíbe expresamente el acceso automático (robots.txt) |
-| Mediterráneo Golf | ❌ Bloqueado | Igual que Panorámica |
+| La Sella Golf Resort & Spa | ✋ Manual | Su web bloquea las peticiones automáticas (error 403), probablemente por IP de centro de datos |
+| Club de Golf El Bosque | ⏳ Pendiente | Sus torneos se muestran con una app externa (GolfDirecto) que carga los datos con JavaScript; necesita otro enfoque |
+| Panorámica Golf | ✋ Manual | Su web prohíbe expresamente el acceso automático (robots.txt) |
+| Mediterráneo Golf | ✋ Manual | Igual que Panorámica |
 
-Los scrapers marcados "revisar" están construidos a partir de una inspección
-puntual de cada web (no de pruebas reales, porque el entorno donde escribí
-este código no tiene acceso a internet). Es muy probable que la primera vez
-que los ejecutes alguno falle o traiga datos raros — es normal, y es fácil
-de arreglar en cuanto veamos el error real.
+El scraper se ejecuta automáticamente **una vez por semana** (los lunes),
+ya que los torneos se anuncian con meses de antelación y no hace falta
+revisar más a menudo. También puedes lanzarlo a mano cuando quieras desde
+la pestaña "Actions" > "Actualizar torneos" > "Run workflow".
 
 ## Cómo publicarlo (paso a paso, sin experiencia previa)
 
@@ -70,7 +69,9 @@ y lo arreglamos.
 - **El Bosque**: requiere automatizar un navegador (Selenium/Playwright) o
   bien contactar con el club para pedir sus datos directamente. Se puede
   añadir como fase 2.
-- **Panorámica y Mediterráneo**: al bloquear el acceso automático, las
-  opciones razonables son (a) añadir sus torneos a mano de vez en cuando,
-  o (b) escribirles para preguntar si tienen un feed de datos público o
-  API que puedas usar.
+- **Panorámica, Mediterráneo y La Sella**: como no se pueden automatizar
+  por ahora (bloqueo por robots.txt o por IP), sus torneos se pueden añadir
+  a mano. Una opción sencilla para una fase futura: crear un pequeño
+  archivo `data/manual.json` con los torneos de estos 3 clubes escritos a
+  mano, y hacer que `main.py` los añada al resultado final junto a los
+  automáticos.
