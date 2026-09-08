@@ -309,6 +309,52 @@
     text-decoration: underline;
   }
 
+  /* ---------- Modal del día (calendario) ---------- */
+  .modal-fondo {
+    position: fixed;
+    inset: 0;
+    background: rgba(31, 42, 36, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    z-index: 1000;
+  }
+  .modal-fondo.oculto {
+    display: none;
+  }
+  .modal-caja {
+    background: var(--verde-claro);
+    border-radius: 16px;
+    padding: 20px;
+    width: 100%;
+    max-width: 520px;
+    max-height: 82vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  }
+  .modal-cerrar {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  }
+  .modal-titulo {
+    font-family: "Baloo 2", sans-serif;
+    color: var(--verde);
+    font-size: 20px;
+    margin: 0 30px 14px 0;
+    text-transform: capitalize;
+  }
+
   #vacio, #error {
     text-align: center;
     color: var(--gris);
@@ -340,6 +386,9 @@
   @media (max-width: 600px) {
     .cal-dia { min-height: 60px; }
     .cal-chip { font-size: 9px; }
+    header { padding: 20px 0 12px; }
+    h1 { font-size: 21px; letter-spacing: 0.2px; }
+    #actualizado { font-size: 10.5px; padding: 4px 9px; }
   }
 </style>
 </head>
@@ -385,6 +434,14 @@
 <div id="error" style="display:none;">
   No se ha podido cargar data.json todavía. Si acabas de configurar el
   proyecto, ejecuta el scraper al menos una vez (ver README).
+</div>
+
+<div id="modal-fondo" class="modal-fondo oculto">
+  <div class="modal-caja">
+    <button class="modal-cerrar" id="modal-cerrar" title="Cerrar">✕</button>
+    <h2 class="modal-titulo" id="modal-titulo"></h2>
+    <div id="modal-lista"></div>
+  </div>
 </div>
 
 <script>
@@ -635,6 +692,43 @@ function render() {
   }
 }
 
+function crearTarjetaTorneo(t, indice = 0) {
+  const fecha = new Date(t.fecha + "T00:00:00");
+  const id = idTorneo(t);
+  const esFavorito = FAVORITOS.has(id);
+  const color = colorDeClub(t.club);
+
+  const div = document.createElement('div');
+  div.className = 'torneo';
+  div.style.setProperty('--color-club', color);
+  div.style.animationDelay = `${Math.min(indice, 15) * 25}ms`;
+  div.innerHTML = `
+    <div class="fecha">
+      <div class="dia-semana">${DIAS_SEMANA[fecha.getDay()]}</div>
+      <div class="dia">${fecha.getDate()}</div>
+      <div class="mes">${MESES[fecha.getMonth()]}</div>
+    </div>
+    <div class="info" style="flex:1">
+      <h3>${t.nombre}${t.nuevo ? '<span class="badge-nuevo">NUEVO</span>' : ''}</h3>
+      <span class="club">${t.club}</span>
+    </div>
+    <div class="acciones">
+      <button class="btn-favorito ${esFavorito ? 'activo' : ''}" title="Marcar como favorito">
+        ${esFavorito ? '★' : '☆'}
+      </button>
+      <a class="enlace" href="${t.url}" target="_blank" rel="noopener">Ver &rarr;</a>
+    </div>
+  `;
+  div.querySelector('.btn-favorito').onclick = () => {
+    alternarFavorito(id);
+    // Si el botón estaba dentro del modal del día, lo refrescamos también
+    if (document.getElementById('modal-fondo').contains(div)) {
+      abrirModalDia(diaModalActual, porDiaModalActual);
+    }
+  };
+  return div;
+}
+
 function renderLista() {
   const lista = document.getElementById('lista');
   const vacio = document.getElementById('vacio');
@@ -652,34 +746,7 @@ function renderLista() {
   vacio.style.display = 'none';
 
   filtrados.forEach((t, indice) => {
-    const fecha = new Date(t.fecha + "T00:00:00");
-    const id = idTorneo(t);
-    const esFavorito = FAVORITOS.has(id);
-    const color = colorDeClub(t.club);
-
-    const div = document.createElement('div');
-    div.className = 'torneo';
-    div.style.setProperty('--color-club', color);
-    div.style.animationDelay = `${Math.min(indice, 15) * 25}ms`;
-    div.innerHTML = `
-      <div class="fecha">
-        <div class="dia-semana">${DIAS_SEMANA[fecha.getDay()]}</div>
-        <div class="dia">${fecha.getDate()}</div>
-        <div class="mes">${MESES[fecha.getMonth()]}</div>
-      </div>
-      <div class="info" style="flex:1">
-        <h3>${t.nombre}${t.nuevo ? '<span class="badge-nuevo">NUEVO</span>' : ''}</h3>
-        <span class="club">${t.club}</span>
-      </div>
-      <div class="acciones">
-        <button class="btn-favorito ${esFavorito ? 'activo' : ''}" title="Marcar como favorito">
-          ${esFavorito ? '★' : '☆'}
-        </button>
-        <a class="enlace" href="${t.url}" target="_blank" rel="noopener">Ver &rarr;</a>
-      </div>
-    `;
-    div.querySelector('.btn-favorito').onclick = () => alternarFavorito(id);
-    lista.appendChild(div);
+    lista.appendChild(crearTarjetaTorneo(t, indice));
   });
 }
 
@@ -763,21 +830,26 @@ function renderCalendario() {
       chip.href = t.url;
       chip.target = '_blank';
       chip.rel = 'noopener';
+      chip.onclick = (e) => e.stopPropagation(); // que abrir el enlace no abra también el modal
       return chip;
     }
 
     torneosDelDia.slice(0, MAX_VISIBLES).forEach(t => celda.appendChild(crearChip(t)));
 
     if (torneosDelDia.length > MAX_VISIBLES) {
-      const restantes = torneosDelDia.slice(MAX_VISIBLES);
       const btnMas = document.createElement('button');
       btnMas.className = 'cal-mas';
-      btnMas.textContent = `+${restantes.length} más`;
-      btnMas.onclick = () => {
-        restantes.forEach(t => celda.insertBefore(crearChip(t), btnMas));
-        btnMas.remove();
+      btnMas.textContent = `+${torneosDelDia.length - MAX_VISIBLES} más`;
+      btnMas.onclick = (e) => {
+        e.stopPropagation();
+        abrirModalDia(fechaStr, torneosDelDia);
       };
       celda.appendChild(btnMas);
+    }
+
+    if (torneosDelDia.length > 0) {
+      celda.style.cursor = 'pointer';
+      celda.onclick = () => abrirModalDia(fechaStr, torneosDelDia);
     }
 
     grid.appendChild(celda);
@@ -785,6 +857,45 @@ function renderCalendario() {
 
   cont.appendChild(grid);
 }
+
+// --- Modal de detalle del día (calendario) ---
+let diaModalActual = null;
+let porDiaModalActual = [];
+
+function abrirModalDia(fechaStr, torneosDelDia) {
+  diaModalActual = fechaStr;
+  porDiaModalActual = torneosDelDia;
+
+  const fecha = new Date(fechaStr + "T00:00:00");
+  const NOMBRES_DIA = ["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
+  const titulo = `${NOMBRES_DIA[fecha.getDay()]} ${fecha.getDate()} de ${MESES_LARGO[fecha.getMonth()]}`;
+
+  document.getElementById('modal-titulo').textContent = titulo;
+
+  const listaModal = document.getElementById('modal-lista');
+  listaModal.innerHTML = '';
+  torneosDelDia
+    .slice()
+    .sort((a, b) => a.club.localeCompare(b.club)) // orden estable dentro del modal
+    .forEach((t, i) => listaModal.appendChild(crearTarjetaTorneo(t, i)));
+
+  document.getElementById('modal-fondo').classList.remove('oculto');
+}
+
+function cerrarModalDia() {
+  document.getElementById('modal-fondo').classList.add('oculto');
+  diaModalActual = null;
+  porDiaModalActual = [];
+}
+
+document.getElementById('modal-cerrar').onclick = cerrarModalDia;
+document.getElementById('modal-fondo').onclick = (e) => {
+  // Cerrar si se pulsa el fondo oscuro, pero no si se pulsa dentro de la tarjeta
+  if (e.target.id === 'modal-fondo') cerrarModalDia();
+};
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') cerrarModalDia();
+});
 
 cargar();
 </script>
