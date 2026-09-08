@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-08T07:51:25",
+  "actualizado": "2026-09-08T08:24:43",
   "torneos": [
     {
       "club": "Club de Golf Escorpión",
@@ -140,6 +140,12 @@
       "url": "https://www.elbosquegolf.com/torneos/"
     },
     {
+      "club": "Mediterráneo Golf",
+      "nombre": "CIRCUITO YOINGOLF",
+      "fecha": "2026-09-19",
+      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/"
+    },
+    {
       "club": "Foressos Club de Golf",
       "nombre": "Torneo Noveles",
       "fecha": "2026-09-20",
@@ -150,6 +156,12 @@
       "nombre": "Torneo 50 aniversario Federaciones Autonómicas",
       "fecha": "2026-09-24",
       "url": "https://www.olivanova.com/deporte-ocio-golf-torneos"
+    },
+    {
+      "club": "Mediterráneo Golf",
+      "nombre": "AESGOLF MASCULINO",
+      "fecha": "2026-09-24",
+      "url": "https://mediterraneo.golf/torneos/"
     },
     {
       "club": "Foressos Club de Golf",
@@ -212,6 +224,12 @@
       "url": "https://www.panoramicaclubdegolf.com/competiciones.html"
     },
     {
+      "club": "Mediterráneo Golf",
+      "nombre": "COPA LEVANTE - MEMORIAL FCO. GIL 5/5",
+      "fecha": "2026-09-26",
+      "url": "https://golfcv.com/torneo_seek/ver-torneo/?torneoid=2703"
+    },
+    {
       "club": "Oliva Nova Beach & Golf Resort",
       "nombre": "Campbell Lamont",
       "fecha": "2026-09-27",
@@ -228,6 +246,12 @@
       "nombre": "9H Torneo Mensual Infantil",
       "fecha": "2026-09-27",
       "url": "https://www.elbosquegolf.com/torneos/"
+    },
+    {
+      "club": "Mediterráneo Golf",
+      "nombre": "CIRCUITO INTERCLUBS PAIRS TROPHY CBACFCV",
+      "fecha": "2026-09-27",
+      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/"
     },
     {
       "club": "Foressos Club de Golf",
@@ -288,6 +312,12 @@
       "nombre": "Torneo Locos por el Golf",
       "fecha": "2026-10-09",
       "url": "https://foressosclubgolf.com/torneos/"
+    },
+    {
+      "club": "Mediterráneo Golf",
+      "nombre": "CIRCUITO MEDITERRANEO GOLF",
+      "fecha": "2026-10-10",
+      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/"
     },
     {
       "club": "Foressos Club de Golf",
@@ -434,6 +464,12 @@
       "url": "https://www.panoramicaclubdegolf.com/competiciones.html"
     },
     {
+      "club": "Mediterráneo Golf",
+      "nombre": "CIRCUITO ONDA CERO",
+      "fecha": "2026-10-24",
+      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/"
+    },
+    {
       "club": "Club de Golf El Bosque",
       "nombre": "18H Torneo Mensual Infantil",
       "fecha": "2026-10-25",
@@ -518,6 +554,12 @@
       "url": "https://paradores.es/es/node/22449"
     },
     {
+      "club": "Mediterráneo Golf",
+      "nombre": "CIRCUITO MEDITERRANEO GOLF",
+      "fecha": "2026-11-07",
+      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/"
+    },
+    {
       "club": "Club de Golf El Bosque",
       "nombre": "DAMAS MARIA PICATTO",
       "fecha": "2026-11-08",
@@ -582,6 +624,12 @@
       "nombre": "Torneo Noveles",
       "fecha": "2026-11-14",
       "url": "https://www.elbosquegolf.com/torneos/"
+    },
+    {
+      "club": "Mediterráneo Golf",
+      "nombre": "XIX Torneo de Golf Sindrome Down",
+      "fecha": "2026-11-14",
+      "url": "https://mediterraneo.golf/torneos/"
     },
     {
       "club": "Club de Golf Escorpión",
@@ -656,6 +704,18 @@
       "url": "https://foressosclubgolf.com/torneos/"
     },
     {
+      "club": "La Sella Golf Resort & Spa",
+      "nombre": "TORNEO XXXVI ANIVERSARIO LA SELLA GOLF",
+      "fecha": "2026-11-28",
+      "url": "https://lasellagolf.com/competiciones/torneo-xxxvi-aniversario-la-sella-golf"
+    },
+    {
+      "club": "Mediterráneo Golf",
+      "nombre": "CIRCUITO MEDITERRANEO GOLF",
+      "fecha": "2026-11-28",
+      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/"
+    },
+    {
       "club": "Oliva Nova Beach & Golf Resort",
       "nombre": "Doble de profesionales",
       "fecha": "2026-11-30",
@@ -716,6 +776,18 @@
       "url": "https://www.elbosquegolf.com/torneos/"
     },
     {
+      "club": "La Sella Golf Resort & Spa",
+      "nombre": "TORNEO DE NAVIDAD 2026",
+      "fecha": "2026-12-19",
+      "url": "https://lasellagolf.com/competiciones/torneo-de-navidad-2026"
+    },
+    {
+      "club": "Mediterráneo Golf",
+      "nombre": "TORNEO NAVIDAD",
+      "fecha": "2026-12-19",
+      "url": "https://mediterraneo.golf/torneos/"
+    },
+    {
       "club": "Club de Golf El Bosque",
       "nombre": "18H Torneo Mensual Infantil",
       "fecha": "2026-12-20",
@@ -732,6 +804,12 @@
       "nombre": "MENSUAL JUVENIL ESCUELA DICIEMBRE",
       "fecha": "2026-12-30",
       "url": "https://clubescorpion.com/evento/mensual-juvenil-escuela-diciembre/"
+    },
+    {
+      "club": "Mediterráneo Golf",
+      "nombre": "THE INVITATIONAL",
+      "fecha": "2026-17-10",
+      "url": "https://mediterraneo.golf/torneos/"
     },
     {
       "club": "Club de Golf El Bosque",
