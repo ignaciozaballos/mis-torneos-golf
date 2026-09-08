@@ -21,7 +21,7 @@
     padding: 0 16px 40px;
   }
   header {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 32px 0 16px;
   }
@@ -35,7 +35,7 @@
     font-size: 13px;
   }
   .bloque-filtro {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto 12px;
   }
   .bloque-filtro .etiqueta {
@@ -71,8 +71,18 @@
     background: #2f6f9e;
     border-color: #2f6f9e;
   }
+  .filtros button.vista-btn {
+    border-color: var(--texto);
+    color: var(--texto);
+  }
+  .filtros button.vista-btn.activo {
+    background: var(--texto);
+    color: white;
+  }
+
+  /* ---------- Vista lista ---------- */
   #lista {
-    max-width: 800px;
+    max-width: 900px;
     margin: 16px auto 0;
   }
   .torneo {
@@ -85,14 +95,20 @@
     justify-content: space-between;
     align-items: center;
     gap: 14px;
+    border-left: 5px solid var(--color-club, var(--verde));
   }
   .torneo .info h3 {
     margin: 0 0 4px;
     font-size: 16px;
   }
   .torneo .info .club {
-    color: var(--gris);
-    font-size: 13px;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    background: var(--color-club, var(--gris));
+    padding: 2px 9px;
+    border-radius: 10px;
   }
   .torneo .fecha {
     text-align: center;
@@ -140,10 +156,89 @@
   .btn-favorito.activo {
     color: var(--amarillo);
   }
+
+  /* ---------- Vista calendario ---------- */
+  #calendario {
+    max-width: 900px;
+    margin: 16px auto 0;
+  }
+  .cal-cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .cal-cabecera h2 {
+    margin: 0;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: var(--verde);
+  }
+  .cal-cabecera button {
+    border: 1px solid var(--verde);
+    background: white;
+    color: var(--verde);
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+  }
+  .cal-diasemana {
+    text-align: center;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--gris);
+    font-weight: 600;
+    padding-bottom: 4px;
+  }
+  .cal-dia {
+    background: white;
+    border-radius: 8px;
+    min-height: 90px;
+    padding: 6px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  }
+  .cal-dia.vacio {
+    background: transparent;
+    box-shadow: none;
+  }
+  .cal-dia.hoy {
+    outline: 2px solid var(--verde);
+  }
+  .cal-dia .numero {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gris);
+    margin-bottom: 4px;
+  }
+  .cal-chip {
+    display: block;
+    font-size: 10px;
+    color: white;
+    background: var(--color-club, var(--verde));
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin-bottom: 3px;
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   #vacio, #error {
     text-align: center;
     color: var(--gris);
     margin-top: 40px;
+  }
+
+  @media (max-width: 600px) {
+    .cal-dia { min-height: 60px; }
+    .cal-chip { font-size: 9px; }
   }
 </style>
 </head>
@@ -155,11 +250,19 @@
 </header>
 
 <div class="bloque-filtro">
+  <div class="etiqueta">Vista</div>
+  <div class="filtros">
+    <button id="btn-vista-lista" class="vista-btn activo">📋 Lista</button>
+    <button id="btn-vista-calendario" class="vista-btn">🗓️ Calendario</button>
+  </div>
+</div>
+
+<div class="bloque-filtro">
   <div class="etiqueta">Clubes</div>
   <div class="filtros" id="filtros-club"></div>
 </div>
 
-<div class="bloque-filtro">
+<div class="bloque-filtro" id="bloque-filtro-fecha">
   <div class="etiqueta">Fechas</div>
   <div class="filtros" id="filtros-fecha"></div>
 </div>
@@ -172,6 +275,7 @@
 </div>
 
 <div id="lista"></div>
+<div id="calendario" style="display:none;"></div>
 <div id="vacio" style="display:none;">No hay torneos que coincidan con estos filtros.</div>
 <div id="error" style="display:none;">
   No se ha podido cargar data.json todavía. Si acabas de configurar el
@@ -180,14 +284,35 @@
 
 <script>
 const MESES = ["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
+const MESES_LARGO = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
 const DIAS_SEMANA = ["dom","lun","mar","mié","jue","vie","sáb"];
+const DIAS_SEMANA_CAL = ["L","M","X","J","V","S","D"];
 let TODOS_LOS_TORNEOS = [];
 
+// Colores por club (se asignan una vez cargados los datos)
+const PALETA_COLORES = [
+  "#2e6b3e", "#2f6f9e", "#c0392b", "#e0a415",
+  "#8e44ad", "#16a085", "#d35400", "#34495e",
+];
+let coloresClub = {};
+
+function colorDeClub(club) {
+  return coloresClub[club] || "#6b7a70";
+}
+
+function asignarColores(clubes) {
+  clubes.forEach((club, i) => {
+    coloresClub[club] = PALETA_COLORES[i % PALETA_COLORES.length];
+  });
+}
+
 // Filtros activos
+let vistaActual = "lista";             // "lista" | "calendario"
 let clubesSeleccionados = new Set();   // vacío = todos los clubes
 let rangoFechaActivo = "todos";        // "todos" | "mes" | "3meses" | "6meses"
 let soloFavoritos = false;
 let soloFinDeSemana = false;
+let mesCalendario = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
 
 const RANGOS_FECHA = [
   { id: "todos",   etiqueta: "Todos" },
@@ -236,6 +361,10 @@ async function cargar() {
     TODOS_LOS_TORNEOS = data.torneos || [];
     document.getElementById('actualizado').textContent =
       "Actualizado: " + new Date(data.actualizado).toLocaleString('es-ES');
+
+    const clubes = [...new Set(TODOS_LOS_TORNEOS.map(t => t.club))].sort();
+    asignarColores(clubes);
+
     construirFiltroClubes();
     construirFiltroFechas();
     render();
@@ -258,9 +387,13 @@ function construirFiltroClubes() {
   cont.appendChild(btnTodos);
 
   clubes.forEach(club => {
+    const color = colorDeClub(club);
     const btn = document.createElement('button');
     btn.textContent = club;
-    if (clubesSeleccionados.has(club)) btn.classList.add('activo');
+    const activo = clubesSeleccionados.has(club);
+    btn.style.borderColor = color;
+    btn.style.color = activo ? "white" : color;
+    btn.style.background = activo ? color : "white";
     btn.onclick = () => {
       // Selección múltiple: cada click añade o quita ese club del conjunto
       if (clubesSeleccionados.has(club)) {
@@ -299,16 +432,30 @@ document.getElementById('btn-finde').onclick = (e) => {
   render();
 };
 
+document.getElementById('btn-vista-lista').onclick = () => cambiarVista('lista');
+document.getElementById('btn-vista-calendario').onclick = () => cambiarVista('calendario');
+
+function cambiarVista(v) {
+  vistaActual = v;
+  document.getElementById('btn-vista-lista').classList.toggle('activo', v === 'lista');
+  document.getElementById('btn-vista-calendario').classList.toggle('activo', v === 'calendario');
+  document.getElementById('lista').style.display = v === 'lista' ? '' : 'none';
+  document.getElementById('calendario').style.display = v === 'calendario' ? '' : 'none';
+  // El filtro de rango de fechas no pinta nada en la vista calendario
+  // (ahí navegas mes a mes con las flechas), así que lo ocultamos.
+  document.getElementById('bloque-filtro-fecha').style.display = v === 'lista' ? '' : 'none';
+  render();
+}
+
 function esFinDeSemana(fechaStr) {
   const diaSemana = new Date(fechaStr + "T00:00:00").getDay(); // 0=domingo, 6=sábado
   return diaSemana === 0 || diaSemana === 6;
 }
 
-// --- Lógica de filtrado por fecha ---
+// --- Lógica de filtrado por fecha (vista lista) ---
 function fechaDentroDelRango(fechaStr) {
   if (rangoFechaActivo === "todos") return true;
 
-  const hoy = new Date();
   const limite = new Date();
 
   if (rangoFechaActivo === "mes") {
@@ -323,27 +470,38 @@ function fechaDentroDelRango(fechaStr) {
   return fecha <= limite;
 }
 
-// --- Render principal ---
-function render() {
-  const lista = document.getElementById('lista');
-  const vacio = document.getElementById('vacio');
-  lista.innerHTML = '';
-
-  let filtrados = TODOS_LOS_TORNEOS;
+// --- Filtros comunes (club, favoritos, fin de semana) ---
+function aplicarFiltrosComunes(torneos) {
+  let filtrados = torneos;
 
   if (clubesSeleccionados.size > 0) {
     filtrados = filtrados.filter(t => clubesSeleccionados.has(t.club));
   }
-
-  filtrados = filtrados.filter(t => fechaDentroDelRango(t.fecha));
-
   if (soloFavoritos) {
     filtrados = filtrados.filter(t => FAVORITOS.has(idTorneo(t)));
   }
-
   if (soloFinDeSemana) {
     filtrados = filtrados.filter(t => esFinDeSemana(t.fecha));
   }
+  return filtrados;
+}
+
+// --- Render principal ---
+function render() {
+  if (vistaActual === 'lista') {
+    renderLista();
+  } else {
+    renderCalendario();
+  }
+}
+
+function renderLista() {
+  const lista = document.getElementById('lista');
+  const vacio = document.getElementById('vacio');
+  lista.innerHTML = '';
+
+  let filtrados = aplicarFiltrosComunes(TODOS_LOS_TORNEOS);
+  filtrados = filtrados.filter(t => fechaDentroDelRango(t.fecha));
 
   if (filtrados.length === 0) {
     vacio.style.display = 'block';
@@ -355,9 +513,11 @@ function render() {
     const fecha = new Date(t.fecha + "T00:00:00");
     const id = idTorneo(t);
     const esFavorito = FAVORITOS.has(id);
+    const color = colorDeClub(t.club);
 
     const div = document.createElement('div');
     div.className = 'torneo';
+    div.style.setProperty('--color-club', color);
     div.innerHTML = `
       <div class="fecha">
         <div class="dia-semana">${DIAS_SEMANA[fecha.getDay()]}</div>
@@ -366,7 +526,7 @@ function render() {
       </div>
       <div class="info" style="flex:1">
         <h3>${t.nombre}</h3>
-        <div class="club">${t.club}</div>
+        <span class="club">${t.club}</span>
       </div>
       <div class="acciones">
         <button class="btn-favorito ${esFavorito ? 'activo' : ''}" title="Marcar como favorito">
@@ -378,6 +538,91 @@ function render() {
     div.querySelector('.btn-favorito').onclick = () => alternarFavorito(id);
     lista.appendChild(div);
   });
+}
+
+function renderCalendario() {
+  const cont = document.getElementById('calendario');
+  const vacio = document.getElementById('vacio');
+  vacio.style.display = 'none';
+  cont.innerHTML = '';
+
+  const filtrados = aplicarFiltrosComunes(TODOS_LOS_TORNEOS);
+
+  const anio = mesCalendario.getFullYear();
+  const mes = mesCalendario.getMonth();
+
+  // Torneos agrupados por día "AAAA-MM-DD" para este mes
+  const porDia = {};
+  filtrados.forEach(t => {
+    if (!porDia[t.fecha]) porDia[t.fecha] = [];
+    porDia[t.fecha].push(t);
+  });
+
+  // Cabecera con navegación
+  const cabecera = document.createElement('div');
+  cabecera.className = 'cal-cabecera';
+  cabecera.innerHTML = `
+    <button id="cal-anterior">&larr;</button>
+    <h2>${MESES_LARGO[mes]} ${anio}</h2>
+    <button id="cal-siguiente">&rarr;</button>
+  `;
+  cont.appendChild(cabecera);
+  cabecera.querySelector('#cal-anterior').onclick = () => {
+    mesCalendario = new Date(anio, mes - 1, 1);
+    renderCalendario();
+  };
+  cabecera.querySelector('#cal-siguiente').onclick = () => {
+    mesCalendario = new Date(anio, mes + 1, 1);
+    renderCalendario();
+  };
+
+  const grid = document.createElement('div');
+  grid.className = 'cal-grid';
+
+  DIAS_SEMANA_CAL.forEach(d => {
+    const cab = document.createElement('div');
+    cab.className = 'cal-diasemana';
+    cab.textContent = d;
+    grid.appendChild(cab);
+  });
+
+  const primerDiaMes = new Date(anio, mes, 1);
+  const offsetInicial = (primerDiaMes.getDay() + 6) % 7; // lunes = 0
+  const diasEnMes = new Date(anio, mes + 1, 0).getDate();
+  const hoyStr = new Date().toISOString().slice(0, 10);
+
+  for (let i = 0; i < offsetInicial; i++) {
+    const vacio = document.createElement('div');
+    vacio.className = 'cal-dia vacio';
+    grid.appendChild(vacio);
+  }
+
+  for (let dia = 1; dia <= diasEnMes; dia++) {
+    const fechaStr = `${anio}-${String(mes + 1).padStart(2, '0')}-${String(dia).padStart(2, '0')}`;
+    const celda = document.createElement('div');
+    celda.className = 'cal-dia' + (fechaStr === hoyStr ? ' hoy' : '');
+
+    const numero = document.createElement('div');
+    numero.className = 'numero';
+    numero.textContent = dia;
+    celda.appendChild(numero);
+
+    (porDia[fechaStr] || []).forEach(t => {
+      const chip = document.createElement('a');
+      chip.className = 'cal-chip';
+      chip.style.setProperty('--color-club', colorDeClub(t.club));
+      chip.textContent = t.nombre;
+      chip.title = `${t.nombre} — ${t.club}`;
+      chip.href = t.url;
+      chip.target = '_blank';
+      chip.rel = 'noopener';
+      celda.appendChild(chip);
+    });
+
+    grid.appendChild(celda);
+  }
+
+  cont.appendChild(grid);
 }
 
 cargar();
