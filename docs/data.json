@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-08T06:15:09",
+  "actualizado": "2026-09-08T07:36:57",
   "torneos": [
     {
       "club": "Club de Golf Escorpión",
@@ -48,6 +48,12 @@
       "nombre": "CTO. DOBLES DEL CLUB SCRATCH",
       "fecha": "2026-09-12",
       "url": "https://clubescorpion.com/evento/cto-dobles-del-club-scratch/"
+    },
+    {
+      "club": "Panorámica Golf",
+      "nombre": "TORNEO OM INDIVIDUAL",
+      "fecha": "2026-09-12",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html"
     },
     {
       "club": "Club de Golf El Bosque",
@@ -102,6 +108,12 @@
       "nombre": "Torneo LPG",
       "fecha": "2026-09-17",
       "url": "https://www.elbosquegolf.com/torneos/"
+    },
+    {
+      "club": "Panorámica Golf",
+      "nombre": "WAGR PANORÁMICA",
+      "fecha": "2026-09-18",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html"
     },
     {
       "club": "Club de Golf Escorpión",
@@ -194,6 +206,12 @@
       "url": "https://www.elbosquegolf.com/torneos/"
     },
     {
+      "club": "Panorámica Golf",
+      "nombre": "TORNEO OM PAREJAS",
+      "fecha": "2026-09-26",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html"
+    },
+    {
       "club": "Oliva Nova Beach & Golf Resort",
       "nombre": "Campbell Lamont",
       "fecha": "2026-09-27",
@@ -216,6 +234,12 @@
       "nombre": "Copa de Golf Adaptado CV",
       "fecha": "2026-10-03",
       "url": "https://foressosclubgolf.com/torneos/"
+    },
+    {
+      "club": "Panorámica Golf",
+      "nombre": "INTERCLUBS PAIRS TROPHY 2026",
+      "fecha": "2026-10-03",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html"
     },
     {
       "club": "Golf Parador El Saler",
@@ -402,6 +426,12 @@
       "nombre": "Saler Trophy 2026",
       "fecha": "2026-10-24",
       "url": "https://paradores.es/es/node/22437"
+    },
+    {
+      "club": "Panorámica Golf",
+      "nombre": "TORNEO LE CLUB",
+      "fecha": "2026-10-24",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html"
     },
     {
       "club": "Club de Golf El Bosque",
