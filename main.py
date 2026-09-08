@@ -14,7 +14,7 @@ import datetime
 import traceback
 from pathlib import Path
 
-from scrapers import escorpion, foressos, parador_saler, oliva_nova, el_bosque
+from scrapers import escorpion, foressos, parador_saler, oliva_nova, el_bosque, panoramica
 
 SCRAPERS = [
     escorpion,
@@ -22,6 +22,7 @@ SCRAPERS = [
     parador_saler,
     oliva_nova,
     el_bosque,
+    panoramica,
 ]
 
 SALIDA = Path(__file__).parent / "docs" / "data.json"
