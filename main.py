@@ -93,6 +93,26 @@ def main():
     todos_los_torneos.extend(torneos_manuales)
     resumen.append(f"INFO - Torneos manuales: {mensaje_manual}")
 
+    # Red de seguridad: si por lo que sea algún club aparece repetido (por
+    # ejemplo, un fallo de paginación que devuelva el mismo torneo dos
+    # veces), lo eliminamos aquí antes de guardar nada. Consideramos que es
+    # el "mismo" torneo si coinciden club + nombre + fecha.
+    vistos = set()
+    torneos_sin_duplicados = []
+    duplicados_eliminados = 0
+    for t in todos_los_torneos:
+        clave = (t.get("club"), t.get("nombre"), t.get("fecha"))
+        if clave in vistos:
+            duplicados_eliminados += 1
+            continue
+        vistos.add(clave)
+        torneos_sin_duplicados.append(t)
+
+    if duplicados_eliminados:
+        resumen.append(f"INFO - Duplicados eliminados: {duplicados_eliminados}")
+
+    todos_los_torneos = torneos_sin_duplicados
+
     hoy = datetime.date.today().isoformat()
 
     # Solo torneos de hoy en adelante
