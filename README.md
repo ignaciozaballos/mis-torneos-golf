@@ -10,10 +10,10 @@ Web personal que centraliza los torneos próximos de varios clubes de golf.
 | Foressos Club de Golf | ✅ Automático | Extracción por patrones de texto; si el club rediseña la web, tocará ajustarlo |
 | Golf Parador El Saler | ✅ Automático | Con paginación |
 | Oliva Nova Beach & Golf Resort | ✅ Automático | Tablas HTML normales |
+| Club de Golf El Bosque | ✅ Automático | Usa la API pública de GolfDirecto (encontrada con las DevTools del navegador) |
+| Panorámica Golf | ✅ Automático | También usa la API pública de GolfDirecto, así que no depende de su web (que sí bloquea el acceso automático) |
 | La Sella Golf Resort & Spa | ✋ Manual | Su web bloquea las peticiones automáticas (error 403), probablemente por IP de centro de datos |
-| Club de Golf El Bosque | ⏳ Pendiente | Sus torneos se muestran con una app externa (GolfDirecto) que carga los datos con JavaScript; necesita otro enfoque |
-| Panorámica Golf | ✋ Manual | Su web prohíbe expresamente el acceso automático (robots.txt) |
-| Mediterráneo Golf | ✋ Manual | Igual que Panorámica |
+| Mediterráneo Golf | ✋ Manual | Su web bloquea el acceso automático (robots.txt), y aunque también aparece en GolfDirecto, esa fuente está incompleta (le faltan torneos), así que no es fiable usarla |
 
 El scraper se ejecuta automáticamente **una vez por semana** (los lunes),
 ya que los torneos se anuncian con meses de antelación y no hace falta
@@ -66,12 +66,9 @@ y lo arreglamos.
 
 ## Próximos pasos pendientes de decidir juntos
 
-- **El Bosque**: requiere automatizar un navegador (Selenium/Playwright) o
-  bien contactar con el club para pedir sus datos directamente. Se puede
-  añadir como fase 2.
-- **Panorámica, Mediterráneo y La Sella**: como no se pueden automatizar
-  por ahora (bloqueo por robots.txt o por IP), sus torneos se pueden añadir
-  a mano. Una opción sencilla para una fase futura: crear un pequeño
-  archivo `data/manual.json` con los torneos de estos 3 clubes escritos a
-  mano, y hacer que `main.py` los añada al resultado final junto a los
+- **Mediterráneo y La Sella**: como no se pueden automatizar de forma
+  fiable por ahora, sus torneos se pueden añadir a mano. Una opción
+  sencilla para una fase futura: crear un pequeño archivo
+  `data/manual.json` con los torneos de estos 2 clubes escritos a mano, y
+  hacer que `main.py` los añada al resultado final junto a los
   automáticos.
