@@ -67,6 +67,10 @@
     background: var(--amarillo);
     border-color: var(--amarillo);
   }
+  .filtros button.finde-btn.activo {
+    background: #2f6f9e;
+    border-color: #2f6f9e;
+  }
   #lista {
     max-width: 800px;
     margin: 16px auto 0;
@@ -93,6 +97,13 @@
   .torneo .fecha {
     text-align: center;
     min-width: 64px;
+  }
+  .torneo .fecha .dia-semana {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: var(--gris);
+    font-weight: 600;
+    letter-spacing: 0.5px;
   }
   .torneo .fecha .dia {
     font-size: 22px;
@@ -156,6 +167,7 @@
 <div class="bloque-filtro">
   <div class="filtros">
     <button id="btn-favoritos" class="favoritos-btn">⭐ Solo favoritos</button>
+    <button id="btn-finde" class="finde-btn">🏖️ Fin de semana</button>
   </div>
 </div>
 
@@ -168,12 +180,14 @@
 
 <script>
 const MESES = ["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
+const DIAS_SEMANA = ["dom","lun","mar","mié","jue","vie","sáb"];
 let TODOS_LOS_TORNEOS = [];
 
 // Filtros activos
 let clubesSeleccionados = new Set();   // vacío = todos los clubes
 let rangoFechaActivo = "todos";        // "todos" | "mes" | "3meses" | "6meses"
 let soloFavoritos = false;
+let soloFinDeSemana = false;
 
 const RANGOS_FECHA = [
   { id: "todos",   etiqueta: "Todos" },
@@ -279,6 +293,17 @@ document.getElementById('btn-favoritos').onclick = (e) => {
   render();
 };
 
+document.getElementById('btn-finde').onclick = (e) => {
+  soloFinDeSemana = !soloFinDeSemana;
+  e.target.classList.toggle('activo', soloFinDeSemana);
+  render();
+};
+
+function esFinDeSemana(fechaStr) {
+  const diaSemana = new Date(fechaStr + "T00:00:00").getDay(); // 0=domingo, 6=sábado
+  return diaSemana === 0 || diaSemana === 6;
+}
+
 // --- Lógica de filtrado por fecha ---
 function fechaDentroDelRango(fechaStr) {
   if (rangoFechaActivo === "todos") return true;
@@ -316,6 +341,10 @@ function render() {
     filtrados = filtrados.filter(t => FAVORITOS.has(idTorneo(t)));
   }
 
+  if (soloFinDeSemana) {
+    filtrados = filtrados.filter(t => esFinDeSemana(t.fecha));
+  }
+
   if (filtrados.length === 0) {
     vacio.style.display = 'block';
     return;
@@ -331,6 +360,7 @@ function render() {
     div.className = 'torneo';
     div.innerHTML = `
       <div class="fecha">
+        <div class="dia-semana">${DIAS_SEMANA[fecha.getDay()]}</div>
         <div class="dia">${fecha.getDate()}</div>
         <div class="mes">${MESES[fecha.getMonth()]}</div>
       </div>
