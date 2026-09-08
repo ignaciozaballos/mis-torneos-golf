@@ -1,563 +1,656 @@
 {
-  "actualizado": "2026-09-08T14:57:14",
+  "actualizado": "2026-09-08T15:10:48",
   "torneos": [
     {
       "club": "Club de Golf Escorpión",
       "nombre": "LIGUILLA SENIOR MASCULINA",
       "fecha": "2026-09-09",
-      "url": "https://clubescorpion.com/evento/liguilla-senior-masculina/"
+      "url": "https://clubescorpion.com/evento/liguilla-senior-masculina/",
+      "nuevo": false
     },
     {
       "club": "Golf Parador El Saler",
       "nombre": "Torneo Locos por el Golf Septiembre 2026",
       "fecha": "2026-09-10",
-      "url": "https://paradores.es/es/node/22236"
+      "url": "https://paradores.es/es/node/22236",
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "CTO. DOBLES DEL CLUB SCRATCH",
       "fecha": "2026-09-12",
-      "url": "https://clubescorpion.com/evento/cto-dobles-del-club-scratch/"
+      "url": "https://clubescorpion.com/evento/cto-dobles-del-club-scratch/",
+      "nuevo": false
     },
     {
       "club": "Panorámica Golf",
       "nombre": "TORNEO OM INDIVIDUAL",
       "fecha": "2026-09-12",
-      "url": "https://www.panoramicaclubdegolf.com/competiciones.html"
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "DAMAS Mrs CURLY",
       "fecha": "2026-09-13",
-      "url": "https://www.elbosquegolf.com/torneos/"
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Golf Parador El Saler",
       "nombre": "Puntuable Orden de Mérito Seniors Caballeros El Saler 2026",
       "fecha": "2026-09-15",
-      "url": "https://paradores.es/es/node/22239"
+      "url": "https://paradores.es/es/node/22239",
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "AESGOLF DAMAS - CIRCUITO LANZAROTE",
       "fecha": "2026-09-17",
-      "url": "https://clubescorpion.com/evento/aesgolf-damas-circuito-lanzarote/"
+      "url": "https://clubescorpion.com/evento/aesgolf-damas-circuito-lanzarote/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "Torneo LPG",
       "fecha": "2026-09-17",
-      "url": "https://www.elbosquegolf.com/torneos/"
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Panorámica Golf",
       "nombre": "WAGR PANORÁMICA",
       "fecha": "2026-09-18",
-      "url": "https://www.panoramicaclubdegolf.com/competiciones.html"
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "SOCIAL BIENVENIDA",
       "fecha": "2026-09-19",
-      "url": "https://clubescorpion.com/evento/social-bienvenida/"
+      "url": "https://clubescorpion.com/evento/social-bienvenida/",
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
       "nombre": "Torneo Match Quality",
       "fecha": "2026-09-19",
-      "url": "https://foressosclubgolf.com/torneos/"
+      "url": "https://foressosclubgolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
       "nombre": "Torneo Noveles Infantil",
       "fecha": "2026-09-19",
-      "url": "https://foressosclubgolf.com/torneos/"
+      "url": "https://foressosclubgolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "Torneo Noveles",
       "fecha": "2026-09-19",
-      "url": "https://www.elbosquegolf.com/torneos/"
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Mediterráneo Golf",
       "nombre": "CIRCUITO YOINGOLF",
       "fecha": "2026-09-19",
-      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/"
+      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/",
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
       "nombre": "Torneo Noveles",
       "fecha": "2026-09-20",
-      "url": "https://foressosclubgolf.com/torneos/"
+      "url": "https://foressosclubgolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Oliva Nova Beach & Golf Resort",
       "nombre": "Torneo 50 aniversario Federaciones Autonómicas",
       "fecha": "2026-09-24",
-      "url": "https://www.olivanova.com/deporte-ocio-golf-torneos"
+      "url": "https://www.olivanova.com/deporte-ocio-golf-torneos",
+      "nuevo": false
     },
     {
       "club": "Mediterráneo Golf",
       "nombre": "AESGOLF MASCULINO",
       "fecha": "2026-09-24",
-      "url": "https://mediterraneo.golf/torneos/"
+      "url": "https://mediterraneo.golf/torneos/",
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
       "nombre": "Liga de Foressos",
       "fecha": "2026-09-25",
-      "url": "https://foressosclubgolf.com/torneos/"
+      "url": "https://foressosclubgolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
       "nombre": "Liga de Foressos",
       "fecha": "2026-09-26",
-      "url": "https://foressosclubgolf.com/torneos/"
+      "url": "https://foressosclubgolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Golf Parador El Saler",
       "nombre": "II Circuito MSC Cruceros 2026",
       "fecha": "2026-09-26",
-      "url": "https://paradores.es/es/node/22425"
+      "url": "https://paradores.es/es/node/22425",
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "Torneo de Otoño",
       "fecha": "2026-09-26",
-      "url": "https://www.elbosquegolf.com/torneos/"
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Panorámica Golf",
       "nombre": "TORNEO OM PAREJAS",
       "fecha": "2026-09-26",
-      "url": "https://www.panoramicaclubdegolf.com/competiciones.html"
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": false
     },
     {
       "club": "Mediterráneo Golf",
       "nombre": "COPA LEVANTE - MEMORIAL FCO. GIL 5/5",
       "fecha": "2026-09-26",
-      "url": "https://golfcv.com/torneo_seek/ver-torneo/?torneoid=2703"
+      "url": "https://golfcv.com/torneo_seek/ver-torneo/?torneoid=2703",
+      "nuevo": false
     },
     {
       "club": "Oliva Nova Beach & Golf Resort",
       "nombre": "Campbell Lamont",
       "fecha": "2026-09-27",
-      "url": "https://www.olivanova.com/deporte-ocio-golf-torneos"
+      "url": "https://www.olivanova.com/deporte-ocio-golf-torneos",
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "18H Torneo Mensual Infantil",
       "fecha": "2026-09-27",
-      "url": "https://www.elbosquegolf.com/torneos/"
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "9H Torneo Mensual Infantil",
       "fecha": "2026-09-27",
-      "url": "https://www.elbosquegolf.com/torneos/"
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Mediterráneo Golf",
       "nombre": "CIRCUITO INTERCLUBS PAIRS TROPHY CBACFCV",
       "fecha": "2026-09-27",
-      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/"
+      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/",
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
       "nombre": "Copa de Golf Adaptado CV",
       "fecha": "2026-10-03",
-      "url": "https://foressosclubgolf.com/torneos/"
+      "url": "https://foressosclubgolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Panorámica Golf",
       "nombre": "INTERCLUBS PAIRS TROPHY 2026",
       "fecha": "2026-10-03",
-      "url": "https://www.panoramicaclubdegolf.com/competiciones.html"
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": false
     },
     {
       "club": "Golf Parador El Saler",
       "nombre": "Trofeo Escuela Juvenil Octubre 2026",
       "fecha": "2026-10-04",
-      "url": "https://paradores.es/es/node/22428"
+      "url": "https://paradores.es/es/node/22428",
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "DAMAS RANDOM",
       "fecha": "2026-10-04",
-      "url": "https://www.elbosquegolf.com/torneos/"
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
       "nombre": "Torneo Locos por el Golf",
       "fecha": "2026-10-09",
-      "url": "https://foressosclubgolf.com/torneos/"
+      "url": "https://foressosclubgolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Mediterráneo Golf",
       "nombre": "CIRCUITO MEDITERRANEO GOLF",
       "fecha": "2026-10-10",
-      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/"
+      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/",
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
       "nombre": "Torneo Noveles Infantil",
       "fecha": "2026-10-17",
-      "url": "https://foressosclubgolf.com/torneos/"
+      "url": "https://foressosclubgolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Golf Parador El Saler",
       "nombre": "Circuito Nacional de Golf Onda Cero 2026",
       "fecha": "2026-10-17",
-      "url": "https://paradores.es/es/node/22431"
+      "url": "https://paradores.es/es/node/22431",
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "Torneo Noveles",
       "fecha": "2026-10-17",
-      "url": "https://www.elbosquegolf.com/torneos/"
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Mediterráneo Golf",
       "nombre": "THE INVITATIONAL",
       "fecha": "2026-10-17",
-      "url": "https://mediterraneo.golf/torneos/"
+      "url": "https://mediterraneo.golf/torneos/",
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
       "nombre": "Torneo Noveles",
       "fecha": "2026-10-18",
-      "url": "https://foressosclubgolf.com/torneos/"
+      "url": "https://foressosclubgolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Golf Parador El Saler",
       "nombre": "Circuito Masculino y Femenino CV",
       "fecha": "2026-10-18",
-      "url": "https://paradores.es/es/node/22434"
+      "url": "https://paradores.es/es/node/22434",
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
       "nombre": "Torneo de la Federación",
       "fecha": "2026-10-23",
-      "url": "https://foressosclubgolf.com/torneos/"
+      "url": "https://foressosclubgolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
       "nombre": "Torneo de la Federación",
       "fecha": "2026-10-24",
-      "url": "https://foressosclubgolf.com/torneos/"
+      "url": "https://foressosclubgolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Golf Parador El Saler",
       "nombre": "Saler Trophy 2026",
       "fecha": "2026-10-24",
-      "url": "https://paradores.es/es/node/22437"
+      "url": "https://paradores.es/es/node/22437",
+      "nuevo": false
     },
     {
       "club": "Panorámica Golf",
       "nombre": "TORNEO LE CLUB",
       "fecha": "2026-10-24",
-      "url": "https://www.panoramicaclubdegolf.com/competiciones.html"
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": false
     },
     {
       "club": "Mediterráneo Golf",
       "nombre": "CIRCUITO ONDA CERO",
       "fecha": "2026-10-24",
-      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/"
+      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "18H Torneo Mensual Infantil",
       "fecha": "2026-10-25",
-      "url": "https://www.elbosquegolf.com/torneos/"
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "9H Torneo Mensual Infantil",
       "fecha": "2026-10-25",
-      "url": "https://www.elbosquegolf.com/torneos/"
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "AESGOLF DAMAS P&P",
       "fecha": "2026-10-29",
-      "url": "https://clubescorpion.com/evento/aesgolf-damas-pp-4/"
+      "url": "https://clubescorpion.com/evento/aesgolf-damas-pp-4/",
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
       "nombre": "Liga de Foressos",
       "fecha": "2026-10-30",
-      "url": "https://foressosclubgolf.com/torneos/"
+      "url": "https://foressosclubgolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "MENSUAL JUVENIL ESCUELA OCTUBRE P&P",
       "fecha": "2026-10-31",
-      "url": "https://clubescorpion.com/evento/mensual-juvenil-escuela-octubre-pp/"
+      "url": "https://clubescorpion.com/evento/mensual-juvenil-escuela-octubre-pp/",
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
       "nombre": "Liga de Foressos",
       "fecha": "2026-10-31",
-      "url": "https://foressosclubgolf.com/torneos/"
+      "url": "https://foressosclubgolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "RYDER DAMAS",
       "fecha": "2026-11-01",
-      "url": "https://clubescorpion.com/evento/ryder-damas/"
+      "url": "https://clubescorpion.com/evento/ryder-damas/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "TORNEO AESGOLF BIENVENIDA",
       "fecha": "2026-11-05",
-      "url": "https://www.elbosquegolf.com/torneos/"
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Golf Parador El Saler",
       "nombre": "Campeonato de 2ª,3ª,4ª y 5ª categoría de la C.V.",
       "fecha": "2026-11-07",
-      "url": "https://paradores.es/es/node/22449"
+      "url": "https://paradores.es/es/node/22449",
+      "nuevo": false
     },
     {
       "club": "Mediterráneo Golf",
       "nombre": "CIRCUITO MEDITERRANEO GOLF",
       "fecha": "2026-11-07",
-      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/"
+      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "DAMAS MARIA PICATTO",
       "fecha": "2026-11-08",
-      "url": "https://www.elbosquegolf.com/torneos/"
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "OPEN DAMAS HIPERCOR",
       "fecha": "2026-11-10",
-      "url": "https://clubescorpion.com/evento/open-damas-hipercor-2/"
+      "url": "https://clubescorpion.com/evento/open-damas-hipercor-2/",
+      "nuevo": false
     },
     {
       "club": "Golf Parador El Saler",
       "nombre": "Lanzarote Golf Tour Aesgolf 2026- Trofeo L'Albufera",
       "fecha": "2026-11-12",
-      "url": "https://paradores.es/es/node/22452"
+      "url": "https://paradores.es/es/node/22452",
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "MENSUAL JUVENIL ESCUELA NOVIEMBRE",
       "fecha": "2026-11-14",
-      "url": "https://clubescorpion.com/evento/mensual-juvenil-escuela-noviembre/"
+      "url": "https://clubescorpion.com/evento/mensual-juvenil-escuela-noviembre/",
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
       "nombre": "Torneo de Noveles Infantil",
       "fecha": "2026-11-14",
-      "url": "https://foressosclubgolf.com/torneos/"
+      "url": "https://foressosclubgolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "Torneo Noveles",
       "fecha": "2026-11-14",
-      "url": "https://www.elbosquegolf.com/torneos/"
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Mediterráneo Golf",
       "nombre": "XIX Torneo de Golf Sindrome Down",
       "fecha": "2026-11-14",
-      "url": "https://mediterraneo.golf/torneos/"
+      "url": "https://mediterraneo.golf/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "RYDER DAMAS ESCORPIÓN",
       "fecha": "2026-11-15",
-      "url": "https://clubescorpion.com/evento/ryder-damas-escorpion-5/"
+      "url": "https://clubescorpion.com/evento/ryder-damas-escorpion-5/",
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
       "nombre": "Torneo de Noveles",
       "fecha": "2026-11-15",
-      "url": "https://foressosclubgolf.com/torneos/"
+      "url": "https://foressosclubgolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "CTO BENÉFICO",
       "fecha": "2026-11-19",
-      "url": "https://clubescorpion.com/evento/cto-benefico-2/"
+      "url": "https://clubescorpion.com/evento/cto-benefico-2/",
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
       "nombre": "Liga de Foressos",
       "fecha": "2026-11-20",
-      "url": "https://foressosclubgolf.com/torneos/"
+      "url": "https://foressosclubgolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "SOCIAL NOVIEMBRE",
       "fecha": "2026-11-21",
-      "url": "https://clubescorpion.com/evento/cto-benefico/"
+      "url": "https://clubescorpion.com/evento/cto-benefico/",
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
       "nombre": "Liga de Foressos",
       "fecha": "2026-11-21",
-      "url": "https://foressosclubgolf.com/torneos/"
+      "url": "https://foressosclubgolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "18H Torneo Mensual Infantil",
       "fecha": "2026-11-22",
-      "url": "https://www.elbosquegolf.com/torneos/"
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "9H Torneo Mensual Infantil",
       "fecha": "2026-11-22",
-      "url": "https://www.elbosquegolf.com/torneos/"
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "MANDARINA DE ORO",
       "fecha": "2026-11-24",
-      "url": "https://clubescorpion.com/evento/mandarina-de-oro/"
+      "url": "https://clubescorpion.com/evento/mandarina-de-oro/",
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
       "nombre": "Torneo MSC Cruceros",
       "fecha": "2026-11-27",
-      "url": "https://foressosclubgolf.com/torneos/"
+      "url": "https://foressosclubgolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "COPA ESCORPIÓN",
       "fecha": "2026-11-28",
-      "url": "https://clubescorpion.com/evento/copa-escorpion-3/"
+      "url": "https://clubescorpion.com/evento/copa-escorpion-3/",
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
       "nombre": "Torneo MSC Cruceros",
       "fecha": "2026-11-28",
-      "url": "https://foressosclubgolf.com/torneos/"
+      "url": "https://foressosclubgolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "La Sella Golf Resort & Spa",
       "nombre": "TORNEO XXXVI ANIVERSARIO LA SELLA GOLF",
       "fecha": "2026-11-28",
-      "url": "https://lasellagolf.com/competiciones/torneo-xxxvi-aniversario-la-sella-golf"
+      "url": "https://lasellagolf.com/competiciones/torneo-xxxvi-aniversario-la-sella-golf",
+      "nuevo": false
     },
     {
       "club": "Mediterráneo Golf",
       "nombre": "CIRCUITO MEDITERRANEO GOLF",
       "fecha": "2026-11-28",
-      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/"
+      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/",
+      "nuevo": false
     },
     {
       "club": "Oliva Nova Beach & Golf Resort",
       "nombre": "Doble de profesionales",
       "fecha": "2026-11-30",
-      "url": "https://www.olivanova.com/deporte-ocio-golf-torneos"
+      "url": "https://www.olivanova.com/deporte-ocio-golf-torneos",
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "LIGUILLA SENIOR MASCULINA ZONA VLC/CS",
       "fecha": "2026-12-01",
-      "url": "https://www.elbosquegolf.com/torneos/"
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "NARANJA DE ORO",
       "fecha": "2026-12-09",
-      "url": "https://clubescorpion.com/evento/naranja-de-oro/"
+      "url": "https://clubescorpion.com/evento/naranja-de-oro/",
+      "nuevo": false
     },
     {
       "club": "Oliva Nova Beach & Golf Resort",
       "nombre": "Torneo de Navidad",
       "fecha": "2026-12-12",
-      "url": "https://www.olivanova.com/deporte-ocio-golf-torneos"
+      "url": "https://www.olivanova.com/deporte-ocio-golf-torneos",
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "Torneo Noveles",
       "fecha": "2026-12-12",
-      "url": "https://www.elbosquegolf.com/torneos/"
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "VIII Damas MARFIL HERITAGE",
       "fecha": "2026-12-13",
-      "url": "https://www.elbosquegolf.com/torneos/"
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "SENIOR DAMAS ESCORPIÓN",
       "fecha": "2026-12-16",
-      "url": "https://clubescorpion.com/evento/senior-damas-escorpion-2/"
+      "url": "https://clubescorpion.com/evento/senior-damas-escorpion-2/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "Torneo LPG",
       "fecha": "2026-12-17",
-      "url": "https://www.elbosquegolf.com/torneos/"
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "SOCIAL NAVIDAD",
       "fecha": "2026-12-19",
-      "url": "https://clubescorpion.com/evento/social-navidad-3/"
+      "url": "https://clubescorpion.com/evento/social-navidad-3/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "Torneo Memorial Alfonso Pinto",
       "fecha": "2026-12-19",
-      "url": "https://www.elbosquegolf.com/torneos/"
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "La Sella Golf Resort & Spa",
       "nombre": "TORNEO DE NAVIDAD 2026",
       "fecha": "2026-12-19",
-      "url": "https://lasellagolf.com/competiciones/torneo-de-navidad-2026"
+      "url": "https://lasellagolf.com/competiciones/torneo-de-navidad-2026",
+      "nuevo": false
     },
     {
       "club": "Mediterráneo Golf",
       "nombre": "TORNEO NAVIDAD",
       "fecha": "2026-12-19",
-      "url": "https://mediterraneo.golf/torneos/"
+      "url": "https://mediterraneo.golf/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "18H Torneo Mensual Infantil",
       "fecha": "2026-12-20",
-      "url": "https://www.elbosquegolf.com/torneos/"
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "9H Torneo Mensual Infantil",
       "fecha": "2026-12-20",
-      "url": "https://www.elbosquegolf.com/torneos/"
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "MENSUAL JUVENIL ESCUELA DICIEMBRE",
       "fecha": "2026-12-30",
-      "url": "https://clubescorpion.com/evento/mensual-juvenil-escuela-diciembre/"
+      "url": "https://clubescorpion.com/evento/mensual-juvenil-escuela-diciembre/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "AESGOLF CIRCUITO POR EQUIPOS",
       "fecha": "2027-03-09",
-      "url": "https://www.elbosquegolf.com/torneos/"
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "AESGOLF PAREJAS CABALLEROS CV",
       "fecha": "2027-09-02",
-      "url": "https://www.elbosquegolf.com/torneos/"
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "AESGOLF MIXTO BIENVENIDA",
       "fecha": "2027-11-04",
-      "url": "https://www.elbosquegolf.com/torneos/"
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": false
     }
   ]
 }
