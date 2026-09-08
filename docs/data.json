@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-08T08:24:43",
+  "actualizado": "2026-09-08T08:33:57",
   "torneos": [
     {
       "club": "Club de Golf Escorpión",
@@ -366,6 +366,12 @@
       "nombre": "Torneo Noveles",
       "fecha": "2026-10-17",
       "url": "https://www.elbosquegolf.com/torneos/"
+    },
+    {
+      "club": "Mediterráneo Golf",
+      "nombre": "THE INVITATIONAL",
+      "fecha": "2026-10-17",
+      "url": "https://mediterraneo.golf/torneos/"
     },
     {
       "club": "Foressos Club de Golf",
@@ -804,12 +810,6 @@
       "nombre": "MENSUAL JUVENIL ESCUELA DICIEMBRE",
       "fecha": "2026-12-30",
       "url": "https://clubescorpion.com/evento/mensual-juvenil-escuela-diciembre/"
-    },
-    {
-      "club": "Mediterráneo Golf",
-      "nombre": "THE INVITATIONAL",
-      "fecha": "2026-17-10",
-      "url": "https://mediterraneo.golf/torneos/"
     },
     {
       "club": "Club de Golf El Bosque",
