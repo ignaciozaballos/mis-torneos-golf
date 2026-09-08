@@ -2,15 +2,81 @@
   "torneos": [
     {
       "club": "La Sella Golf Resort & Spa",
-      "nombre": "EJEMPLO - sustituye esta línea por un torneo real (o bórrala)",
-      "fecha": "2026-01-01",
-      "url": "https://lasellagolf.com/competiciones"
+      "nombre": "TORNEO XXXVI ANIVERSARIO LA SELLA GOLF",
+      "fecha": "2026-11-28",
+      "url": "https://lasellagolf.com/competiciones/torneo-xxxvi-aniversario-la-sella-golf"
+    },
+       {
+      "club": "La Sella Golf Resort & Spa",
+      "nombre": "TORNEO DE NAVIDAD 2026",
+      "fecha": "2026-12-19",
+      "url": "https://lasellagolf.com/competiciones/torneo-de-navidad-2026"
+    },
+     {
+      "club": "Mediterráneo Golf",
+      "nombre": "AESGOLF MASCULINO",
+      "fecha": "2026-09-24",
+      "url": "https://mediterraneo.golf/torneos/"
+    },
+     {
+      "club": "Mediterráneo Golf",
+      "nombre": "COPA LEVANTE - MEMORIAL FCO. GIL 5/5",
+      "fecha": "2026-09-26",
+      "url": "https://golfcv.com/torneo_seek/ver-torneo/?torneoid=2703"
+    },
+     {
+      "club": "Mediterráneo Golf",
+      "nombre": "CIRCUITO INTERCLUBS PAIRS TROPHY CBACFCV",
+      "fecha": "2026-09-27",
+      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/"
+    },
+     {
+      "club": "Mediterráneo Golf",
+      "nombre": "CIRCUITO MEDITERRANEO GOLF",
+      "fecha": "2026-10-10",
+      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/"
+    },
+     {
+      "club": "Mediterráneo Golf",
+      "nombre": "THE INVITATIONAL",
+      "fecha": "2026-17-10",
+      "url": "https://mediterraneo.golf/torneos/"
+    },
+     {
+      "club": "Mediterráneo Golf",
+      "nombre": "CIRCUITO ONDA CERO",
+      "fecha": "2026-10-24",
+      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/"
     },
     {
       "club": "Mediterráneo Golf",
-      "nombre": "EJEMPLO - sustituye esta línea por un torneo real (o bórrala)",
-      "fecha": "2026-01-01",
+      "nombre": "CIRCUITO MEDITERRANEO GOLF",
+      "fecha": "2026-11-07",
+      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/"
+    },
+    {
+      "club": "Mediterráneo Golf",
+      "nombre": "XIX Torneo de Golf Sindrome Down",
+      "fecha": "2026-11-14",
       "url": "https://mediterraneo.golf/torneos/"
+    },
+    {
+      "club": "Mediterráneo Golf",
+      "nombre": "CIRCUITO MEDITERRANEO GOLF",
+      "fecha": "2026-11-28",
+      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/"
+    },
+    {
+      "club": "Mediterráneo Golf",
+      "nombre": "TORNEO NAVIDAD",
+      "fecha": "2026-12-19",
+      "url": "https://mediterraneo.golf/torneos/"
+    },
+    {
+      "club": "Mediterráneo Golf",
+      "nombre": "CIRCUITO YOINGOLF",
+      "fecha": "2026-09-19",
+      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/"
     }
   ]
 }
