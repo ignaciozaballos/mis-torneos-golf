@@ -75,9 +75,36 @@ def cargar_torneos_manuales():
     return torneos_validos, f"{len(torneos_validos)} torneos manuales cargados"
 
 
+def cargar_claves_ejecucion_anterior():
+    """
+    Antes de sobreescribir docs/data.json con los datos de esta ejecución,
+    leemos la versión anterior (la de la última vez que se ejecutó el
+    scraper) para saber qué torneos ya conocíamos. Así podemos marcar como
+    "nuevo" cualquier torneo que no estuviera en esa versión anterior.
+    Si es la primera vez que se ejecuta, o el archivo no es válido, no pasa
+    nada: simplemente no habrá torneos marcados como nuevos esta vez.
+    """
+    if not SALIDA.exists():
+        return set()
+
+    try:
+        with open(SALIDA, "r", encoding="utf-8") as f:
+            contenido_anterior = json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return set()
+
+    return {
+        (t.get("club"), t.get("nombre"), t.get("fecha"))
+        for t in contenido_anterior.get("torneos", [])
+    }
+
+
 def main():
     todos_los_torneos = []
     resumen = []
+
+    # Leemos ANTES de sobreescribir nada, para poder comparar luego.
+    claves_anteriores = cargar_claves_ejecucion_anterior()
 
     for modulo in SCRAPERS:
         nombre_club = getattr(modulo, "CLUB_NOMBRE", modulo.__name__)
@@ -119,6 +146,15 @@ def main():
     proximos = [t for t in todos_los_torneos if t["fecha"] >= hoy]
     # Ordenados por fecha
     proximos.sort(key=lambda t: t["fecha"])
+
+    # Marcamos como "nuevo" cualquier torneo que no existiera en la
+    # ejecución anterior (comparando por club + nombre + fecha).
+    for t in proximos:
+        clave = (t.get("club"), t.get("nombre"), t.get("fecha"))
+        t["nuevo"] = clave not in claves_anteriores
+
+    nuevos_encontrados = sum(1 for t in proximos if t["nuevo"])
+    resumen.append(f"INFO - Torneos nuevos desde la última actualización: {nuevos_encontrados}")
 
     SALIDA.parent.mkdir(parents=True, exist_ok=True)
     with open(SALIDA, "w", encoding="utf-8") as f:
