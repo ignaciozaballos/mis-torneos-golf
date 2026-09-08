@@ -355,6 +355,24 @@
     text-transform: capitalize;
   }
 
+  /* ---------- Indicador de "deslizar para actualizar" ---------- */
+  #pull-indicador {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--verde);
+    background: var(--verde-claro);
+    opacity: 0;
+    display: none;
+    z-index: 2000;
+    transition: opacity 0.1s ease;
+  }
+
   #vacio, #error {
     text-align: center;
     color: var(--gris);
@@ -393,6 +411,8 @@
 </style>
 </head>
 <body>
+
+<div id="pull-indicador">↓ Desliza para actualizar</div>
 
 <header>
   <h1>⛳ TORNEOS COMUNIDAD VALENCIANA</h1>
@@ -896,6 +916,48 @@ document.getElementById('modal-fondo').onclick = (e) => {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') cerrarModalDia();
 });
+
+// --- Deslizar hacia abajo para actualizar (como en apps nativas) ---
+// El navegador desactiva su gesto nativo cuando la web está "instalada"
+// en la pantalla de inicio del móvil, así que lo hacemos nosotros a mano.
+(function () {
+  const UMBRAL_PULL = 70; // píxeles que hay que arrastrar para que cuente
+  const indicador = document.getElementById('pull-indicador');
+  let inicioY = 0;
+  let distancia = 0;
+  let activo = false;
+
+  document.addEventListener('touchstart', (e) => {
+    // Solo si estamos arriba del todo de la página (si no, es scroll normal)
+    activo = window.scrollY === 0;
+    inicioY = e.touches[0].clientY;
+  }, { passive: true });
+
+  document.addEventListener('touchmove', (e) => {
+    if (!activo) return;
+    distancia = e.touches[0].clientY - inicioY;
+    if (distancia > 0 && window.scrollY === 0) {
+      indicador.style.display = 'block';
+      indicador.style.opacity = Math.min(distancia / UMBRAL_PULL, 1);
+      indicador.textContent = distancia > UMBRAL_PULL
+        ? '↑ Suelta para actualizar'
+        : '↓ Desliza para actualizar';
+    }
+  }, { passive: true });
+
+  document.addEventListener('touchend', async () => {
+    if (!activo) return;
+    if (distancia > UMBRAL_PULL) {
+      indicador.textContent = '⏳ Actualizando...';
+      indicador.style.opacity = 1;
+      await cargar();
+    }
+    indicador.style.display = 'none';
+    indicador.style.opacity = 0;
+    activo = false;
+    distancia = 0;
+  }, { passive: true });
+})();
 
 cargar();
 </script>
