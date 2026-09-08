@@ -66,9 +66,59 @@ y lo arreglamos.
 
 ## Próximos pasos pendientes de decidir juntos
 
-- **Mediterráneo y La Sella**: como no se pueden automatizar de forma
-  fiable por ahora, sus torneos se pueden añadir a mano. Una opción
-  sencilla para una fase futura: crear un pequeño archivo
-  `data/manual.json` con los torneos de estos 2 clubes escritos a mano, y
-  hacer que `main.py` los añada al resultado final junto a los
-  automáticos.
+Ya no quedan pasos pendientes de decidir — el proyecto está completo con
+6 clubes automáticos y 2 gestionados a mano (ver siguiente sección).
+
+## Añadir torneos a mano (La Sella y Mediterráneo)
+
+Estos 2 clubes no se pueden leer automáticamente de forma fiable, así que
+sus torneos se añaden a mano en el archivo `data/manual.json`.
+
+### Cómo añadir un torneo
+
+1. Ve a ese archivo en GitHub y pulsa el lápiz para editar.
+2. Copia una de las líneas que hay dentro de `"torneos": [ ... ]` (un bloque
+   entre `{` y `}`) y pégala justo debajo, separada por una coma. Por
+   ejemplo, así quedaría con dos torneos de La Sella:
+
+```json
+{
+  "torneos": [
+    {
+      "club": "La Sella Golf Resort & Spa",
+      "nombre": "I Torneo Circuito Invierno 2026",
+      "fecha": "2026-01-10",
+      "url": "https://lasellagolf.com/competiciones"
+    },
+    {
+      "club": "La Sella Golf Resort & Spa",
+      "nombre": "Torneo Aniversario",
+      "fecha": "2026-02-14",
+      "url": "https://lasellagolf.com/competiciones"
+    }
+  ]
+}
+```
+
+3. Rellena cada torneo con:
+   - `club`: el nombre del club, tal cual (respeta mayúsculas/acentos).
+   - `nombre`: el nombre del torneo.
+   - `fecha`: la fecha en formato `AAAA-MM-DD` (año-mes-día), por ejemplo
+     el 5 de marzo de 2026 se escribe `"2026-03-05"`.
+   - `url`: un enlace donde se pueda ver más información (puedes dejar
+     siempre el mismo, el de la página de torneos del club).
+4. **Importante**: cada bloque `{ ... }` menos el último debe terminar con
+   una coma `,`. El último bloque de la lista NO lleva coma después de su
+   `}`.
+5. Guarda con "Commit changes". Los cambios aparecerán en tu web:
+   - En cuanto se ejecute el scraper (cada lunes, o si lo lanzas a mano
+     desde "Actions" → "Run workflow").
+
+### Si algo se rompe al editar este archivo
+
+Es un formato llamado JSON y es muy sensible a comas y comillas. Si te
+equivocas, no pasa nada grave: el scraper detecta el error, avisa en el
+log de "Actions" con un mensaje que empieza por "INFO - Torneos manuales:"
+y sigue funcionando con normalidad para el resto de clubes (solo se
+quedarán sin actualizar los torneos manuales hasta que arregles el
+archivo). Cópiame ese mensaje si no sabes qué está mal y lo revisamos.
