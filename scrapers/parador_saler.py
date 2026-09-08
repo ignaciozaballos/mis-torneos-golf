@@ -15,6 +15,7 @@ MAX_PAGINAS = 6  # límite de seguridad para no quedarnos atascados
 
 def obtener_torneos():
     torneos = []
+    vistos = set()  # ahora es global a TODAS las páginas, no se reinicia en cada una
 
     for pagina in range(MAX_PAGINAS):
         url = BASE_URL if pagina == 0 else f"{BASE_URL}?page={pagina}"
@@ -26,7 +27,6 @@ def obtener_torneos():
             break
 
         encontrados_en_pagina = 0
-        vistos = set()
 
         for enlace in enlaces:
             titulo = enlace.get_text(strip=True)
@@ -54,6 +54,9 @@ def obtener_torneos():
             })
             encontrados_en_pagina += 1
 
+        # Si esta página no ha traído NINGÚN enlace nuevo (todos ya vistos
+        # en páginas anteriores), significa que la paginación ha dejado de
+        # avanzar de verdad. Paramos aquí para no repetir contenido.
         if encontrados_en_pagina == 0:
             break
 
