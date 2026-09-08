@@ -1,0 +1,16 @@
+{
+  "torneos": [
+    {
+      "club": "La Sella Golf Resort & Spa",
+      "nombre": "EJEMPLO - sustituye esta línea por un torneo real (o bórrala)",
+      "fecha": "2026-01-01",
+      "url": "https://lasellagolf.com/competiciones"
+    },
+    {
+      "club": "Mediterráneo Golf",
+      "nombre": "EJEMPLO - sustituye esta línea por un torneo real (o bórrala)",
+      "fecha": "2026-01-01",
+      "url": "https://mediterraneo.golf/torneos/"
+    }
+  ]
+}
