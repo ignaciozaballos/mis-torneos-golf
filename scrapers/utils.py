@@ -93,3 +93,50 @@ def parse_fecha_es(texto, anio_referencia=None):
 
 def hoy():
     return datetime.date.today()
+
+
+def obtener_torneos_golfdirecto(club_id, club_nombre, url_info):
+    """
+    Función genérica para clubes que usan la app GolfDirecto para publicar
+    sus torneos (en vez de listarlos en su propia web). Llama a la API
+    pública de GolfDirecto, encontrada inspeccionando las peticiones de red
+    del navegador (pestaña Network de las herramientas de desarrollador).
+    """
+    import requests
+
+    api_url = "https://www.golfdirecto.com/api/v2/public/tournament/last"
+    params = {
+        "limit": 50,
+        "offset": 0,
+        "filter[name]": "",
+        "filter[gameStatus][0]": "scheduled",  # solo próximos, no ya jugados
+        "filter[club]": club_id,
+        "filter[withRegistration]": "false",
+        "filter[profile]": "official",
+        "sort": "-sortingDate",
+        "fromSearchForm": "false",
+    }
+
+    resp = requests.get(api_url, params=params, headers=HEADERS, timeout=20)
+    resp.raise_for_status()
+    data = resp.json()
+
+    torneos = []
+    docs = data.get("data", {}).get("docs", [])
+
+    for doc in docs:
+        nombre = (doc.get("name") or "").strip()
+        fecha_iso = doc.get("sortingDate")  # ej: "2026-09-13T07:30:14.080Z"
+        if not nombre or not fecha_iso:
+            continue
+
+        fecha = fecha_iso[:10]  # nos quedamos solo con "AAAA-MM-DD"
+
+        torneos.append({
+            "club": club_nombre,
+            "nombre": nombre,
+            "fecha": fecha,
+            "url": url_info,
+        })
+
+    return torneos
