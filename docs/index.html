@@ -79,6 +79,16 @@
     background: var(--texto);
     color: white;
   }
+  .filtros button.nuevos-btn.activo {
+    background: #c0392b;
+    border-color: #c0392b;
+  }
+  #contador {
+    max-width: 900px;
+    margin: 0 auto 12px;
+    font-size: 13px;
+    color: var(--gris);
+  }
 
   /* ---------- Vista lista ---------- */
   #lista {
@@ -100,6 +110,17 @@
   .torneo .info h3 {
     margin: 0 0 4px;
     font-size: 16px;
+  }
+  .badge-nuevo {
+    display: inline-block;
+    background: #c0392b;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 5px;
+    margin-left: 6px;
+    vertical-align: middle;
   }
   .torneo .info .club {
     display: inline-block;
@@ -229,6 +250,9 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+  .cal-chip.nuevo {
+    outline: 2px solid #c0392b;
+  }
 
   #vacio, #error {
     text-align: center;
@@ -271,8 +295,11 @@
   <div class="filtros">
     <button id="btn-favoritos" class="favoritos-btn">⭐ Solo favoritos</button>
     <button id="btn-finde" class="finde-btn">🏖️ Fin de semana</button>
+    <button id="btn-nuevos" class="nuevos-btn">🆕 Solo nuevos</button>
   </div>
 </div>
+
+<div id="contador"></div>
 
 <div id="lista"></div>
 <div id="calendario" style="display:none;"></div>
@@ -432,6 +459,13 @@ document.getElementById('btn-finde').onclick = (e) => {
   render();
 };
 
+let soloNuevos = false;
+document.getElementById('btn-nuevos').onclick = (e) => {
+  soloNuevos = !soloNuevos;
+  e.target.classList.toggle('activo', soloNuevos);
+  render();
+};
+
 document.getElementById('btn-vista-lista').onclick = () => cambiarVista('lista');
 document.getElementById('btn-vista-calendario').onclick = () => cambiarVista('calendario');
 
@@ -483,7 +517,16 @@ function aplicarFiltrosComunes(torneos) {
   if (soloFinDeSemana) {
     filtrados = filtrados.filter(t => esFinDeSemana(t.fecha));
   }
+  if (soloNuevos) {
+    filtrados = filtrados.filter(t => t.nuevo);
+  }
   return filtrados;
+}
+
+function actualizarContador(mostrados) {
+  const total = TODOS_LOS_TORNEOS.length;
+  document.getElementById('contador').textContent =
+    `Mostrando ${mostrados} de ${total} torneos`;
 }
 
 // --- Render principal ---
@@ -502,6 +545,8 @@ function renderLista() {
 
   let filtrados = aplicarFiltrosComunes(TODOS_LOS_TORNEOS);
   filtrados = filtrados.filter(t => fechaDentroDelRango(t.fecha));
+
+  actualizarContador(filtrados.length);
 
   if (filtrados.length === 0) {
     vacio.style.display = 'block';
@@ -525,7 +570,7 @@ function renderLista() {
         <div class="mes">${MESES[fecha.getMonth()]}</div>
       </div>
       <div class="info" style="flex:1">
-        <h3>${t.nombre}</h3>
+        <h3>${t.nombre}${t.nuevo ? '<span class="badge-nuevo">NUEVO</span>' : ''}</h3>
         <span class="club">${t.club}</span>
       </div>
       <div class="acciones">
@@ -547,6 +592,7 @@ function renderCalendario() {
   cont.innerHTML = '';
 
   const filtrados = aplicarFiltrosComunes(TODOS_LOS_TORNEOS);
+  actualizarContador(filtrados.length);
 
   const anio = mesCalendario.getFullYear();
   const mes = mesCalendario.getMonth();
@@ -609,10 +655,10 @@ function renderCalendario() {
 
     (porDia[fechaStr] || []).forEach(t => {
       const chip = document.createElement('a');
-      chip.className = 'cal-chip';
+      chip.className = 'cal-chip' + (t.nuevo ? ' nuevo' : '');
       chip.style.setProperty('--color-club', colorDeClub(t.club));
-      chip.textContent = t.nombre;
-      chip.title = `${t.nombre} — ${t.club}`;
+      chip.textContent = t.nuevo ? `🆕 ${t.nombre}` : t.nombre;
+      chip.title = `${t.nombre} — ${t.club}` + (t.nuevo ? ' (nuevo)' : '');
       chip.href = t.url;
       chip.target = '_blank';
       chip.rel = 'noopener';
