@@ -10,6 +10,7 @@
     --verde-claro: #eef6ef;
     --texto: #1f2a24;
     --gris: #6b7a70;
+    --amarillo: #e0a415;
   }
   * { box-sizing: border-box; }
   body {
@@ -33,9 +34,18 @@
     color: var(--gris);
     font-size: 13px;
   }
-  .filtros {
+  .bloque-filtro {
     max-width: 800px;
-    margin: 16px auto;
+    margin: 0 auto 12px;
+  }
+  .bloque-filtro .etiqueta {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--gris);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .filtros {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
@@ -53,9 +63,13 @@
     background: var(--verde);
     color: white;
   }
+  .filtros button.favoritos-btn.activo {
+    background: var(--amarillo);
+    border-color: var(--amarillo);
+  }
   #lista {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 16px auto 0;
   }
   .torneo {
     background: white;
@@ -66,7 +80,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 16px;
+    gap: 14px;
   }
   .torneo .info h3 {
     margin: 0 0 4px;
@@ -98,6 +112,23 @@
     font-weight: 600;
     white-space: nowrap;
   }
+  .torneo .acciones {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .btn-favorito {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 1;
+    padding: 4px;
+    color: #d8dcd9;
+  }
+  .btn-favorito.activo {
+    color: var(--amarillo);
+  }
   #vacio, #error {
     text-align: center;
     color: var(--gris);
@@ -112,10 +143,24 @@
   <div id="actualizado">Cargando...</div>
 </header>
 
-<div class="filtros" id="filtros"></div>
+<div class="bloque-filtro">
+  <div class="etiqueta">Clubes</div>
+  <div class="filtros" id="filtros-club"></div>
+</div>
+
+<div class="bloque-filtro">
+  <div class="etiqueta">Fechas</div>
+  <div class="filtros" id="filtros-fecha"></div>
+</div>
+
+<div class="bloque-filtro">
+  <div class="filtros">
+    <button id="btn-favoritos" class="favoritos-btn">⭐ Solo favoritos</button>
+  </div>
+</div>
 
 <div id="lista"></div>
-<div id="vacio" style="display:none;">No hay torneos próximos con este filtro.</div>
+<div id="vacio" style="display:none;">No hay torneos que coincidan con estos filtros.</div>
 <div id="error" style="display:none;">
   No se ha podido cargar data.json todavía. Si acabas de configurar el
   proyecto, ejecuta el scraper al menos una vez (ver README).
@@ -124,8 +169,51 @@
 <script>
 const MESES = ["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
 let TODOS_LOS_TORNEOS = [];
-let filtroActivo = "Todos";
 
+// Filtros activos
+let clubesSeleccionados = new Set();   // vacío = todos los clubes
+let rangoFechaActivo = "todos";        // "todos" | "mes" | "3meses" | "6meses"
+let soloFavoritos = false;
+
+const RANGOS_FECHA = [
+  { id: "todos",   etiqueta: "Todos" },
+  { id: "mes",     etiqueta: "Este mes" },
+  { id: "3meses",  etiqueta: "Próximos 3 meses" },
+  { id: "6meses",  etiqueta: "Próximos 6 meses" },
+];
+
+// --- Favoritos (guardados en este navegador, solo tú los ves) ---
+const CLAVE_FAVORITOS = "golf_torneos_favoritos";
+
+function idTorneo(t) {
+  return `${t.club}__${t.nombre}__${t.fecha}`;
+}
+
+function cargarFavoritos() {
+  try {
+    return new Set(JSON.parse(localStorage.getItem(CLAVE_FAVORITOS)) || []);
+  } catch (e) {
+    return new Set();
+  }
+}
+
+function guardarFavoritos(set) {
+  localStorage.setItem(CLAVE_FAVORITOS, JSON.stringify([...set]));
+}
+
+let FAVORITOS = cargarFavoritos();
+
+function alternarFavorito(id) {
+  if (FAVORITOS.has(id)) {
+    FAVORITOS.delete(id);
+  } else {
+    FAVORITOS.add(id);
+  }
+  guardarFavoritos(FAVORITOS);
+  render();
+}
+
+// --- Carga de datos ---
 async function cargar() {
   try {
     const resp = await fetch('data.json?_=' + Date.now());
@@ -134,7 +222,8 @@ async function cargar() {
     TODOS_LOS_TORNEOS = data.torneos || [];
     document.getElementById('actualizado').textContent =
       "Actualizado: " + new Date(data.actualizado).toLocaleString('es-ES');
-    construirFiltros();
+    construirFiltroClubes();
+    construirFiltroFechas();
     render();
   } catch (e) {
     document.getElementById('error').style.display = 'block';
@@ -142,27 +231,90 @@ async function cargar() {
   }
 }
 
-function construirFiltros() {
-  const clubes = ["Todos", ...new Set(TODOS_LOS_TORNEOS.map(t => t.club))];
-  const cont = document.getElementById('filtros');
+// --- Construcción de filtros ---
+function construirFiltroClubes() {
+  const clubes = [...new Set(TODOS_LOS_TORNEOS.map(t => t.club))].sort();
+  const cont = document.getElementById('filtros-club');
   cont.innerHTML = '';
+
+  const btnTodos = document.createElement('button');
+  btnTodos.textContent = "Todos";
+  if (clubesSeleccionados.size === 0) btnTodos.classList.add('activo');
+  btnTodos.onclick = () => { clubesSeleccionados.clear(); construirFiltroClubes(); render(); };
+  cont.appendChild(btnTodos);
+
   clubes.forEach(club => {
     const btn = document.createElement('button');
     btn.textContent = club;
-    if (club === filtroActivo) btn.classList.add('activo');
-    btn.onclick = () => { filtroActivo = club; render(); construirFiltros(); };
+    if (clubesSeleccionados.has(club)) btn.classList.add('activo');
+    btn.onclick = () => {
+      // Selección múltiple: cada click añade o quita ese club del conjunto
+      if (clubesSeleccionados.has(club)) {
+        clubesSeleccionados.delete(club);
+      } else {
+        clubesSeleccionados.add(club);
+      }
+      construirFiltroClubes();
+      render();
+    };
     cont.appendChild(btn);
   });
 }
 
+function construirFiltroFechas() {
+  const cont = document.getElementById('filtros-fecha');
+  cont.innerHTML = '';
+  RANGOS_FECHA.forEach(r => {
+    const btn = document.createElement('button');
+    btn.textContent = r.etiqueta;
+    if (r.id === rangoFechaActivo) btn.classList.add('activo');
+    btn.onclick = () => { rangoFechaActivo = r.id; construirFiltroFechas(); render(); };
+    cont.appendChild(btn);
+  });
+}
+
+document.getElementById('btn-favoritos').onclick = (e) => {
+  soloFavoritos = !soloFavoritos;
+  e.target.classList.toggle('activo', soloFavoritos);
+  render();
+};
+
+// --- Lógica de filtrado por fecha ---
+function fechaDentroDelRango(fechaStr) {
+  if (rangoFechaActivo === "todos") return true;
+
+  const hoy = new Date();
+  const limite = new Date();
+
+  if (rangoFechaActivo === "mes") {
+    limite.setMonth(limite.getMonth() + 1);
+  } else if (rangoFechaActivo === "3meses") {
+    limite.setMonth(limite.getMonth() + 3);
+  } else if (rangoFechaActivo === "6meses") {
+    limite.setMonth(limite.getMonth() + 6);
+  }
+
+  const fecha = new Date(fechaStr + "T00:00:00");
+  return fecha <= limite;
+}
+
+// --- Render principal ---
 function render() {
   const lista = document.getElementById('lista');
   const vacio = document.getElementById('vacio');
   lista.innerHTML = '';
 
-  const filtrados = filtroActivo === "Todos"
-    ? TODOS_LOS_TORNEOS
-    : TODOS_LOS_TORNEOS.filter(t => t.club === filtroActivo);
+  let filtrados = TODOS_LOS_TORNEOS;
+
+  if (clubesSeleccionados.size > 0) {
+    filtrados = filtrados.filter(t => clubesSeleccionados.has(t.club));
+  }
+
+  filtrados = filtrados.filter(t => fechaDentroDelRango(t.fecha));
+
+  if (soloFavoritos) {
+    filtrados = filtrados.filter(t => FAVORITOS.has(idTorneo(t)));
+  }
 
   if (filtrados.length === 0) {
     vacio.style.display = 'block';
@@ -172,6 +324,9 @@ function render() {
 
   filtrados.forEach(t => {
     const fecha = new Date(t.fecha + "T00:00:00");
+    const id = idTorneo(t);
+    const esFavorito = FAVORITOS.has(id);
+
     const div = document.createElement('div');
     div.className = 'torneo';
     div.innerHTML = `
@@ -183,8 +338,14 @@ function render() {
         <h3>${t.nombre}</h3>
         <div class="club">${t.club}</div>
       </div>
-      <a class="enlace" href="${t.url}" target="_blank" rel="noopener">Ver &rarr;</a>
+      <div class="acciones">
+        <button class="btn-favorito ${esFavorito ? 'activo' : ''}" title="Marcar como favorito">
+          ${esFavorito ? '★' : '☆'}
+        </button>
+        <a class="enlace" href="${t.url}" target="_blank" rel="noopener">Ver &rarr;</a>
+      </div>
     `;
+    div.querySelector('.btn-favorito').onclick = () => alternarFavorito(id);
     lista.appendChild(div);
   });
 }
