@@ -10,6 +10,7 @@ Uso:
     python main.py
 """
 import json
+import re
 import datetime
 import traceback
 from pathlib import Path
@@ -26,6 +27,52 @@ SCRAPERS = [
 ]
 
 SALIDA = Path(__file__).parent / "docs" / "data.json"
+MANUAL = Path(__file__).parent / "data" / "manual.json"
+
+
+def cargar_torneos_manuales():
+    """
+    Lee data/manual.json (torneos de clubes que no se pueden automatizar) y
+    los devuelve en el mismo formato que usan los scrapers automáticos.
+    Si el archivo no existe, o tiene algún error de formato, no rompe el
+    resto del proceso: simplemente avisa y sigue sin ellos.
+    """
+    if not MANUAL.exists():
+        return [], "sin archivo data/manual.json (no pasa nada, es opcional)"
+
+    try:
+        with open(MANUAL, "r", encoding="utf-8") as f:
+            contenido = json.load(f)
+    except json.JSONDecodeError as e:
+        return [], f"data/manual.json tiene un error de formato JSON: {e}"
+
+    torneos = contenido.get("torneos", [])
+
+    # Descartamos las filas de ejemplo que vienen de fábrica, para que no
+    # aparezcan como si fueran un torneo real.
+    torneos_validos = []
+    for t in torneos:
+        nombre = str(t.get("nombre", "")).strip()
+        fecha = str(t.get("fecha", "")).strip()
+        club = str(t.get("club", "")).strip()
+
+        if nombre.upper().startswith("EJEMPLO"):
+            continue
+        if not (nombre and club and re.match(r"^\d{4}-\d{2}-\d{2}$", fecha)):
+            # Entrada incompleta o con la fecha mal escrita (debe ser
+            # AAAA-MM-DD, por ejemplo 2026-03-15). La ignoramos para no
+            # romper el resto, pero avisamos por si acaso.
+            print(f"[manual.json] AVISO: entrada ignorada por datos incompletos o fecha inválida: {t}")
+            continue
+
+        torneos_validos.append({
+            "club": club,
+            "nombre": nombre,
+            "fecha": fecha,
+            "url": t.get("url", ""),
+        })
+
+    return torneos_validos, f"{len(torneos_validos)} torneos manuales cargados"
 
 
 def main():
@@ -41,6 +88,10 @@ def main():
         except Exception as e:
             resumen.append(f"FALLO - {nombre_club}: {e}")
             traceback.print_exc()
+
+    torneos_manuales, mensaje_manual = cargar_torneos_manuales()
+    todos_los_torneos.extend(torneos_manuales)
+    resumen.append(f"INFO - Torneos manuales: {mensaje_manual}")
 
     hoy = datetime.date.today().isoformat()
 
