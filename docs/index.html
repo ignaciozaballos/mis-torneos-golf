@@ -121,6 +121,23 @@
     font-size: 13px;
     color: var(--gris);
   }
+  .toggle-filtros {
+    display: block;
+    max-width: 900px;
+    margin: 0 auto 10px;
+    background: none;
+    border: none;
+    color: var(--gris);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 4px 0;
+    text-align: center;
+    width: 100%;
+  }
+  .toggle-filtros:hover {
+    color: var(--verde);
+  }
 
   /* ---------- Vista lista ---------- */
   #lista {
@@ -212,14 +229,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0;
+    gap: 4px;
   }
-  .btn-favorito, .btn-descartar {
+  .btn-favorito {
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 20px;
-    line-height: 1.3;
+    font-size: 22px;
+    line-height: 1;
     padding: 2px 4px;
     color: #d8dcd9;
   }
@@ -227,11 +244,25 @@
     color: var(--amarillo);
   }
   .btn-descartar {
-    font-size: 15px;
-    font-weight: 700;
+    background: white;
+    border: 2px solid #d8dcd9;
+    color: #c2c9c5;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1;
+    padding: 0;
   }
   .btn-descartar.activo {
-    color: #c0392b;
+    background: #c0392b;
+    border-color: #c0392b;
+    color: white;
   }
 
   /* ---------- Vista calendario ---------- */
@@ -446,33 +477,37 @@
   <div id="actualizado">Cargando...</div>
 </header>
 
-<div class="bloque-filtro">
-  <div class="etiqueta">Vista</div>
-  <div class="filtros">
-    <button id="btn-vista-lista" class="vista-btn activo">📋 Lista</button>
-    <button id="btn-vista-calendario" class="vista-btn">🗓️ Calendario</button>
+<div id="filtros-contenedor">
+  <div class="bloque-filtro">
+    <div class="etiqueta">Vista</div>
+    <div class="filtros">
+      <button id="btn-vista-lista" class="vista-btn activo">📋 Lista</button>
+      <button id="btn-vista-calendario" class="vista-btn">🗓️ Calendario</button>
+    </div>
+  </div>
+
+  <div class="bloque-filtro">
+    <div class="etiqueta">Clubes de golf</div>
+    <div class="filtros" id="filtros-club"></div>
+  </div>
+
+  <div class="bloque-filtro" id="bloque-filtro-fecha">
+    <div class="etiqueta">Fechas</div>
+    <div class="filtros" id="filtros-fecha"></div>
+  </div>
+
+  <div class="bloque-filtro">
+    <div class="etiqueta">Otros filtros</div>
+    <div class="filtros">
+      <button id="btn-favoritos" class="favoritos-btn">⭐ Favoritos</button>
+      <button id="btn-finde" class="finde-btn">🏖️ Fin de semana</button>
+      <button id="btn-nuevos" class="nuevos-btn">🆕 Nuevos</button>
+      <button id="btn-descartados" class="descartados-btn">🗑️ Descartados</button>
+    </div>
   </div>
 </div>
 
-<div class="bloque-filtro">
-  <div class="etiqueta">Clubes de golf</div>
-  <div class="filtros" id="filtros-club"></div>
-</div>
-
-<div class="bloque-filtro" id="bloque-filtro-fecha">
-  <div class="etiqueta">Fechas</div>
-  <div class="filtros" id="filtros-fecha"></div>
-</div>
-
-<div class="bloque-filtro">
-  <div class="etiqueta">Otros filtros</div>
-  <div class="filtros">
-    <button id="btn-favoritos" class="favoritos-btn">⭐ Favoritos</button>
-    <button id="btn-finde" class="finde-btn">🏖️ Fin de semana</button>
-    <button id="btn-nuevos" class="nuevos-btn">🆕 Nuevos</button>
-    <button id="btn-descartados" class="descartados-btn">🗑️ Descartados</button>
-  </div>
-</div>
+<button id="btn-toggle-filtros" class="toggle-filtros">▲ Ocultar filtros</button>
 
 <div id="contador"></div>
 
@@ -1048,6 +1083,24 @@ document.addEventListener('keydown', (e) => {
     distancia = 0;
   }, { passive: true });
 })();
+
+// --- Ocultar/mostrar el bloque de filtros (se recuerda entre visitas) ---
+const CLAVE_FILTROS_VISIBLES = "golf_torneos_filtros_visibles";
+let filtrosVisibles = localStorage.getItem(CLAVE_FILTROS_VISIBLES) !== "0";
+
+function actualizarBotonFiltros() {
+  document.getElementById('filtros-contenedor').style.display = filtrosVisibles ? '' : 'none';
+  document.getElementById('btn-toggle-filtros').textContent =
+    filtrosVisibles ? '▲ Ocultar filtros' : '▼ Mostrar filtros';
+}
+
+document.getElementById('btn-toggle-filtros').onclick = () => {
+  filtrosVisibles = !filtrosVisibles;
+  localStorage.setItem(CLAVE_FILTROS_VISIBLES, filtrosVisibles ? "1" : "0");
+  actualizarBotonFiltros();
+};
+
+actualizarBotonFiltros();
 
 cargar();
 </script>
