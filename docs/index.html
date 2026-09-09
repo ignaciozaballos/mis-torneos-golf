@@ -111,6 +111,10 @@
     background: #c0392b;
     border-color: #c0392b;
   }
+  .filtros button.descartados-btn.activo {
+    background: #7f8c8d;
+    border-color: #7f8c8d;
+  }
   #contador {
     max-width: 900px;
     margin: 0 auto 12px;
@@ -204,17 +208,30 @@
     align-items: center;
     gap: 10px;
   }
-  .btn-favorito {
+  .botones-estado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .btn-favorito, .btn-descartar {
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 22px;
-    line-height: 1;
-    padding: 4px;
+    font-size: 20px;
+    line-height: 1.3;
+    padding: 2px 4px;
     color: #d8dcd9;
   }
   .btn-favorito.activo {
     color: var(--amarillo);
+  }
+  .btn-descartar {
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .btn-descartar.activo {
+    color: #c0392b;
   }
 
   /* ---------- Vista calendario ---------- */
@@ -438,7 +455,7 @@
 </div>
 
 <div class="bloque-filtro">
-  <div class="etiqueta">Clubes</div>
+  <div class="etiqueta">Clubes de golf</div>
   <div class="filtros" id="filtros-club"></div>
 </div>
 
@@ -450,9 +467,10 @@
 <div class="bloque-filtro">
   <div class="etiqueta">Otros filtros</div>
   <div class="filtros">
-    <button id="btn-favoritos" class="favoritos-btn">⭐ Solo favoritos</button>
+    <button id="btn-favoritos" class="favoritos-btn">⭐ Favoritos</button>
     <button id="btn-finde" class="finde-btn">🏖️ Fin de semana</button>
-    <button id="btn-nuevos" class="nuevos-btn">🆕 Solo nuevos</button>
+    <button id="btn-nuevos" class="nuevos-btn">🆕 Nuevos</button>
+    <button id="btn-descartados" class="descartados-btn">🗑️ Descartados</button>
   </div>
 </div>
 
@@ -509,39 +527,58 @@ let mesCalendario = new Date(new Date().getFullYear(), new Date().getMonth(), 1)
 const RANGOS_FECHA = [
   { id: "todos",   etiqueta: "Todos" },
   { id: "mes",     etiqueta: "Este mes" },
-  { id: "3meses",  etiqueta: "Próximos 3 meses" },
-  { id: "6meses",  etiqueta: "Próximos 6 meses" },
+  { id: "3meses",  etiqueta: "3 meses" },
+  { id: "6meses",  etiqueta: "6 meses" },
 ];
 
-// --- Favoritos (guardados en este navegador, solo tú los ves) ---
+// --- Favoritos y descartados (guardados en este navegador, solo tú los ves) ---
 const CLAVE_FAVORITOS = "golf_torneos_favoritos";
+const CLAVE_DESCARTADOS = "golf_torneos_descartados";
 
 function idTorneo(t) {
   return `${t.club}__${t.nombre}__${t.fecha}`;
 }
 
-function cargarFavoritos() {
+function cargarConjuntoGuardado(clave) {
   try {
-    return new Set(JSON.parse(localStorage.getItem(CLAVE_FAVORITOS)) || []);
+    return new Set(JSON.parse(localStorage.getItem(clave)) || []);
   } catch (e) {
     return new Set();
   }
 }
 
-function guardarFavoritos(set) {
-  localStorage.setItem(CLAVE_FAVORITOS, JSON.stringify([...set]));
+function guardarConjunto(clave, set) {
+  localStorage.setItem(clave, JSON.stringify([...set]));
 }
 
-let FAVORITOS = cargarFavoritos();
+let FAVORITOS = cargarConjuntoGuardado(CLAVE_FAVORITOS);
+let DESCARTADOS = cargarConjuntoGuardado(CLAVE_DESCARTADOS);
 
 function alternarFavorito(id) {
-  if (FAVORITOS.has(id)) {
-    FAVORITOS.delete(id);
-  } else {
-    FAVORITOS.add(id);
-  }
-  guardarFavoritos(FAVORITOS);
+  FAVORITOS.has(id) ? FAVORITOS.delete(id) : FAVORITOS.add(id);
+  guardarConjunto(CLAVE_FAVORITOS, FAVORITOS);
   render();
+  refrescarModalSiHaceFalta();
+}
+
+function alternarDescartado(id) {
+  DESCARTADOS.has(id) ? DESCARTADOS.delete(id) : DESCARTADOS.add(id);
+  guardarConjunto(CLAVE_DESCARTADOS, DESCARTADOS);
+  render();
+  refrescarModalSiHaceFalta();
+}
+
+// Si el modal del día está abierto y lo que acabamos de marcar/desmarcar
+// hace que un torneo deba entrar o salir de esa vista (por ejemplo, lo
+// descartamos y por eso debería desaparecer), recalculamos su contenido.
+function refrescarModalSiHaceFalta() {
+  if (!diaModalActual) return;
+  const actualizados = torneosDeUnDia(diaModalActual);
+  if (actualizados.length === 0) {
+    cerrarModalDia();
+  } else {
+    abrirModalDia(diaModalActual, actualizados);
+  }
 }
 
 // --- Carga de datos ---
@@ -586,6 +623,25 @@ async function cargar() {
 }
 
 // --- Construcción de filtros ---
+// Nombres completos (tal y como están guardados en los datos) -> nombre
+// corto para mostrar en el botón de filtro. Si un club no está en esta
+// lista, se muestra su nombre completo tal cual (por si se añade uno
+// nuevo en el futuro y se nos olvida añadirlo aquí).
+const NOMBRES_CORTOS_CLUB = {
+  "Club de Golf Escorpión": "Escorpión",
+  "Club de Golf El Bosque": "El Bosque",
+  "Foressos Club de Golf": "Foressos",
+  "Golf Parador El Saler": "El Saler",
+  "La Sella Golf Resort & Spa": "La Sella",
+  "Mediterráneo Golf": "Mediterráneo",
+  "Oliva Nova Beach & Golf Resort": "Oliva Nova",
+  "Panorámica Golf": "Panorámica",
+};
+
+function nombreCortoClub(club) {
+  return NOMBRES_CORTOS_CLUB[club] || club;
+}
+
 function construirFiltroClubes() {
   const clubes = [...new Set(TODOS_LOS_TORNEOS.map(t => t.club))].sort();
   const cont = document.getElementById('filtros-club');
@@ -600,7 +656,7 @@ function construirFiltroClubes() {
   clubes.forEach(club => {
     const color = colorDeClub(club);
     const btn = document.createElement('button');
-    btn.textContent = club;
+    btn.textContent = nombreCortoClub(club);
     const activo = clubesSeleccionados.has(club);
     btn.style.borderColor = color;
     btn.style.color = activo ? "white" : color;
@@ -650,6 +706,13 @@ document.getElementById('btn-nuevos').onclick = (e) => {
   render();
 };
 
+let soloDescartados = false;
+document.getElementById('btn-descartados').onclick = (e) => {
+  soloDescartados = !soloDescartados;
+  e.target.classList.toggle('activo', soloDescartados);
+  render();
+};
+
 document.getElementById('btn-vista-lista').onclick = () => cambiarVista('lista');
 document.getElementById('btn-vista-calendario').onclick = () => cambiarVista('calendario');
 
@@ -688,13 +751,23 @@ function fechaDentroDelRango(fechaStr) {
   return fecha <= limite;
 }
 
-// --- Filtros comunes (club, favoritos, fin de semana) ---
+// --- Filtros comunes (club, favoritos, fin de semana, descartados) ---
 function aplicarFiltrosComunes(torneos) {
   let filtrados = torneos;
 
   if (clubesSeleccionados.size > 0) {
     filtrados = filtrados.filter(t => clubesSeleccionados.has(t.club));
   }
+
+  // Los descartados se ocultan SIEMPRE por defecto. Si activas el botón
+  // "Descartados", se invierte: solo se muestran esos (para poder
+  // recuperarlos si te has equivocado).
+  if (soloDescartados) {
+    filtrados = filtrados.filter(t => DESCARTADOS.has(idTorneo(t)));
+  } else {
+    filtrados = filtrados.filter(t => !DESCARTADOS.has(idTorneo(t)));
+  }
+
   if (soloFavoritos) {
     filtrados = filtrados.filter(t => FAVORITOS.has(idTorneo(t)));
   }
@@ -705,6 +778,12 @@ function aplicarFiltrosComunes(torneos) {
     filtrados = filtrados.filter(t => t.nuevo);
   }
   return filtrados;
+}
+
+// Torneos de un día concreto, aplicando los filtros activos (se usa para
+// refrescar el modal del calendario cuando marcas/desmarcas algo).
+function torneosDeUnDia(fechaStr) {
+  return aplicarFiltrosComunes(TODOS_LOS_TORNEOS).filter(t => t.fecha === fechaStr);
 }
 
 function actualizarContador(mostrados) {
@@ -726,6 +805,7 @@ function crearTarjetaTorneo(t, indice = 0) {
   const fecha = new Date(t.fecha + "T00:00:00");
   const id = idTorneo(t);
   const esFavorito = FAVORITOS.has(id);
+  const esDescartado = DESCARTADOS.has(id);
   const color = colorDeClub(t.club);
 
   const div = document.createElement('div');
@@ -743,19 +823,19 @@ function crearTarjetaTorneo(t, indice = 0) {
       <span class="club">${t.club}</span>
     </div>
     <div class="acciones">
-      <button class="btn-favorito ${esFavorito ? 'activo' : ''}" title="Marcar como favorito">
-        ${esFavorito ? '★' : '☆'}
-      </button>
+      <div class="botones-estado">
+        <button class="btn-favorito ${esFavorito ? 'activo' : ''}" title="Marcar como favorito">
+          ${esFavorito ? '★' : '☆'}
+        </button>
+        <button class="btn-descartar ${esDescartado ? 'activo' : ''}" title="Descartar (no volver a mostrar)">
+          ✕
+        </button>
+      </div>
       <a class="enlace" href="${t.url}" target="_blank" rel="noopener">Ver &rarr;</a>
     </div>
   `;
-  div.querySelector('.btn-favorito').onclick = () => {
-    alternarFavorito(id);
-    // Si el botón estaba dentro del modal del día, lo refrescamos también
-    if (document.getElementById('modal-fondo').contains(div)) {
-      abrirModalDia(diaModalActual, porDiaModalActual);
-    }
-  };
+  div.querySelector('.btn-favorito').onclick = () => alternarFavorito(id);
+  div.querySelector('.btn-descartar').onclick = () => alternarDescartado(id);
   return div;
 }
 
