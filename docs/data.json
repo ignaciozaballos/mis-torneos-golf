@@ -1,13 +1,6 @@
 {
-  "actualizado": "2026-09-13T15:31:46",
+  "actualizado": "2026-09-14T06:17:24",
   "torneos": [
-    {
-      "club": "Club de Golf Escorpión",
-      "nombre": "AESGOLF DAMAS - CIRCUITO LANZAROTE",
-      "fecha": "2026-09-17",
-      "url": "https://clubescorpion.com/evento/aesgolf-damas-circuito-lanzarote/",
-      "nuevo": false
-    },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "Torneo LPG",
@@ -20,13 +13,6 @@
       "nombre": "WAGR PANORÁMICA",
       "fecha": "2026-09-18",
       "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
-      "nuevo": false
-    },
-    {
-      "club": "Club de Golf Escorpión",
-      "nombre": "SOCIAL BIENVENIDA",
-      "fecha": "2026-09-19",
-      "url": "https://clubescorpion.com/evento/social-bienvenida/",
       "nuevo": false
     },
     {
@@ -247,13 +233,6 @@
       "nuevo": false
     },
     {
-      "club": "Club de Golf Escorpión",
-      "nombre": "AESGOLF DAMAS P&P",
-      "fecha": "2026-10-29",
-      "url": "https://clubescorpion.com/evento/aesgolf-damas-pp-4/",
-      "nuevo": false
-    },
-    {
       "club": "Foressos Club de Golf",
       "nombre": "Liga de Foressos",
       "fecha": "2026-10-30",
@@ -261,24 +240,10 @@
       "nuevo": false
     },
     {
-      "club": "Club de Golf Escorpión",
-      "nombre": "MENSUAL JUVENIL ESCUELA OCTUBRE P&P",
-      "fecha": "2026-10-31",
-      "url": "https://clubescorpion.com/evento/mensual-juvenil-escuela-octubre-pp/",
-      "nuevo": false
-    },
-    {
       "club": "Foressos Club de Golf",
       "nombre": "Liga de Foressos",
       "fecha": "2026-10-31",
       "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Club de Golf Escorpión",
-      "nombre": "RYDER DAMAS",
-      "fecha": "2026-11-01",
-      "url": "https://clubescorpion.com/evento/ryder-damas/",
       "nuevo": false
     },
     {
@@ -303,20 +268,6 @@
       "nuevo": false
     },
     {
-      "club": "Club de Golf Escorpión",
-      "nombre": "OPEN DAMAS HIPERCOR",
-      "fecha": "2026-11-10",
-      "url": "https://clubescorpion.com/evento/open-damas-hipercor-2/",
-      "nuevo": false
-    },
-    {
-      "club": "Club de Golf Escorpión",
-      "nombre": "MENSUAL JUVENIL ESCUELA NOVIEMBRE",
-      "fecha": "2026-11-14",
-      "url": "https://clubescorpion.com/evento/mensual-juvenil-escuela-noviembre/",
-      "nuevo": false
-    },
-    {
       "club": "Foressos Club de Golf",
       "nombre": "Torneo de Noveles Infantil",
       "fecha": "2026-11-14",
@@ -338,13 +289,6 @@
       "nuevo": false
     },
     {
-      "club": "Club de Golf Escorpión",
-      "nombre": "RYDER DAMAS ESCORPIÓN",
-      "fecha": "2026-11-15",
-      "url": "https://clubescorpion.com/evento/ryder-damas-escorpion-5/",
-      "nuevo": false
-    },
-    {
       "club": "Foressos Club de Golf",
       "nombre": "Torneo de Noveles",
       "fecha": "2026-11-15",
@@ -352,24 +296,10 @@
       "nuevo": false
     },
     {
-      "club": "Club de Golf Escorpión",
-      "nombre": "CTO BENÉFICO",
-      "fecha": "2026-11-19",
-      "url": "https://clubescorpion.com/evento/cto-benefico-2/",
-      "nuevo": false
-    },
-    {
       "club": "Foressos Club de Golf",
       "nombre": "Liga de Foressos",
       "fecha": "2026-11-20",
       "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Club de Golf Escorpión",
-      "nombre": "SOCIAL NOVIEMBRE",
-      "fecha": "2026-11-21",
-      "url": "https://clubescorpion.com/evento/cto-benefico/",
       "nuevo": false
     },
     {
@@ -394,24 +324,10 @@
       "nuevo": false
     },
     {
-      "club": "Club de Golf Escorpión",
-      "nombre": "MANDARINA DE ORO",
-      "fecha": "2026-11-24",
-      "url": "https://clubescorpion.com/evento/mandarina-de-oro/",
-      "nuevo": false
-    },
-    {
       "club": "Foressos Club de Golf",
       "nombre": "Torneo MSC Cruceros",
       "fecha": "2026-11-27",
       "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Club de Golf Escorpión",
-      "nombre": "COPA ESCORPIÓN",
-      "fecha": "2026-11-28",
-      "url": "https://clubescorpion.com/evento/copa-escorpion-3/",
       "nuevo": false
     },
     {
@@ -450,13 +366,6 @@
       "nuevo": false
     },
     {
-      "club": "Club de Golf Escorpión",
-      "nombre": "NARANJA DE ORO",
-      "fecha": "2026-12-09",
-      "url": "https://clubescorpion.com/evento/naranja-de-oro/",
-      "nuevo": false
-    },
-    {
       "club": "Oliva Nova Beach & Golf Resort",
       "nombre": "Torneo de Navidad",
       "fecha": "2026-12-12",
@@ -478,24 +387,10 @@
       "nuevo": false
     },
     {
-      "club": "Club de Golf Escorpión",
-      "nombre": "SENIOR DAMAS ESCORPIÓN",
-      "fecha": "2026-12-16",
-      "url": "https://clubescorpion.com/evento/senior-damas-escorpion-2/",
-      "nuevo": false
-    },
-    {
       "club": "Club de Golf El Bosque",
       "nombre": "Torneo LPG",
       "fecha": "2026-12-17",
       "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Club de Golf Escorpión",
-      "nombre": "SOCIAL NAVIDAD",
-      "fecha": "2026-12-19",
-      "url": "https://clubescorpion.com/evento/social-navidad-3/",
       "nuevo": false
     },
     {
@@ -531,13 +426,6 @@
       "nombre": "9H Torneo Mensual Infantil",
       "fecha": "2026-12-20",
       "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Club de Golf Escorpión",
-      "nombre": "MENSUAL JUVENIL ESCUELA DICIEMBRE",
-      "fecha": "2026-12-30",
-      "url": "https://clubescorpion.com/evento/mensual-juvenil-escuela-diciembre/",
       "nuevo": false
     },
     {
