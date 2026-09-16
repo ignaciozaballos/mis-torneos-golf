@@ -1,12 +1,12 @@
 {
-  "actualizado": "2026-09-15T06:15:46",
+  "actualizado": "2026-09-16T06:15:29",
   "torneos": [
     {
       "club": "Club de Golf Escorpión",
       "nombre": "AESGOLF DAMAS - CIRCUITO LANZAROTE",
       "fecha": "2026-09-17",
       "url": "https://clubescorpion.com/evento/aesgolf-damas-circuito-lanzarote/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
@@ -27,7 +27,7 @@
       "nombre": "SOCIAL BIENVENIDA",
       "fecha": "2026-09-19",
       "url": "https://clubescorpion.com/evento/social-bienvenida/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
@@ -163,6 +163,13 @@
       "nuevo": false
     },
     {
+      "club": "Panorámica Golf",
+      "nombre": "TORNEO OM INDIVIDUAL",
+      "fecha": "2026-10-10",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
+    },
+    {
       "club": "Mediterráneo Golf",
       "nombre": "CIRCUITO MEDITERRANEO GOLF",
       "fecha": "2026-10-10",
@@ -182,6 +189,13 @@
       "fecha": "2026-10-17",
       "url": "https://www.elbosquegolf.com/torneos/",
       "nuevo": false
+    },
+    {
+      "club": "Panorámica Golf",
+      "nombre": "TORNEO OM PAREJAS",
+      "fecha": "2026-10-17",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
     },
     {
       "club": "Mediterráneo Golf",
@@ -244,14 +258,14 @@
       "nombre": "AESGOLF DAMAS P&P",
       "fecha": "2026-10-29",
       "url": "https://clubescorpion.com/evento/aesgolf-damas-pp-4/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "MENSUAL JUVENIL ESCUELA OCTUBRE P&P",
       "fecha": "2026-10-31",
       "url": "https://clubescorpion.com/evento/mensual-juvenil-escuela-octubre-pp/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
@@ -265,7 +279,7 @@
       "nombre": "RYDER DAMAS",
       "fecha": "2026-11-01",
       "url": "https://clubescorpion.com/evento/ryder-damas/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
@@ -273,6 +287,20 @@
       "fecha": "2026-11-05",
       "url": "https://www.elbosquegolf.com/torneos/",
       "nuevo": false
+    },
+    {
+      "club": "Panorámica Golf",
+      "nombre": "TORNEO GASTRONOMIC",
+      "fecha": "2026-11-06",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
+    },
+    {
+      "club": "Panorámica Golf",
+      "nombre": "TORNEO GASTRONOMIC",
+      "fecha": "2026-11-07",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
     },
     {
       "club": "Mediterráneo Golf",
@@ -293,14 +321,14 @@
       "nombre": "OPEN DAMAS HIPERCOR",
       "fecha": "2026-11-10",
       "url": "https://clubescorpion.com/evento/open-damas-hipercor-2/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "MENSUAL JUVENIL ESCUELA NOVIEMBRE",
       "fecha": "2026-11-14",
       "url": "https://clubescorpion.com/evento/mensual-juvenil-escuela-noviembre/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
@@ -317,6 +345,13 @@
       "nuevo": false
     },
     {
+      "club": "Panorámica Golf",
+      "nombre": "FINAL LEGACY",
+      "fecha": "2026-11-14",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
+    },
+    {
       "club": "Mediterráneo Golf",
       "nombre": "XIX Torneo de Golf Sindrome Down",
       "fecha": "2026-11-14",
@@ -328,7 +363,7 @@
       "nombre": "RYDER DAMAS ESCORPIÓN",
       "fecha": "2026-11-15",
       "url": "https://clubescorpion.com/evento/ryder-damas-escorpion-5/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
@@ -342,14 +377,14 @@
       "nombre": "CTO BENÉFICO",
       "fecha": "2026-11-19",
       "url": "https://clubescorpion.com/evento/cto-benefico-2/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "SOCIAL NOVIEMBRE",
       "fecha": "2026-11-21",
       "url": "https://clubescorpion.com/evento/cto-benefico/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
@@ -357,6 +392,13 @@
       "fecha": "2026-11-21",
       "url": "https://foressosclubgolf.com/torneos/",
       "nuevo": false
+    },
+    {
+      "club": "Panorámica Golf",
+      "nombre": "ORDEN MÉRITO PAREJAS",
+      "fecha": "2026-11-21",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
     },
     {
       "club": "Club de Golf El Bosque",
@@ -377,7 +419,7 @@
       "nombre": "MANDARINA DE ORO",
       "fecha": "2026-11-24",
       "url": "https://clubescorpion.com/evento/mandarina-de-oro/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
@@ -391,7 +433,7 @@
       "nombre": "COPA ESCORPIÓN",
       "fecha": "2026-11-28",
       "url": "https://clubescorpion.com/evento/copa-escorpion-3/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
@@ -429,11 +471,18 @@
       "nuevo": false
     },
     {
+      "club": "Panorámica Golf",
+      "nombre": "TORNEO OM INDIVIDUAL",
+      "fecha": "2026-12-05",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
+    },
+    {
       "club": "Club de Golf Escorpión",
       "nombre": "NARANJA DE ORO",
       "fecha": "2026-12-09",
       "url": "https://clubescorpion.com/evento/naranja-de-oro/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Oliva Nova Beach & Golf Resort",
@@ -461,7 +510,7 @@
       "nombre": "SENIOR DAMAS ESCORPIÓN",
       "fecha": "2026-12-16",
       "url": "https://clubescorpion.com/evento/senior-damas-escorpion-2/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
@@ -475,7 +524,7 @@
       "nombre": "SOCIAL NAVIDAD",
       "fecha": "2026-12-19",
       "url": "https://clubescorpion.com/evento/social-navidad-3/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
@@ -483,6 +532,13 @@
       "fecha": "2026-12-19",
       "url": "https://www.elbosquegolf.com/torneos/",
       "nuevo": false
+    },
+    {
+      "club": "Panorámica Golf",
+      "nombre": "TORNEO OM PAREJAS",
+      "fecha": "2026-12-19",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
     },
     {
       "club": "La Sella Golf Resort & Spa",
@@ -517,7 +573,7 @@
       "nombre": "MENSUAL JUVENIL ESCUELA DICIEMBRE",
       "fecha": "2026-12-30",
       "url": "https://clubescorpion.com/evento/mensual-juvenil-escuela-diciembre/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
