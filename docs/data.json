@@ -1,18 +1,11 @@
 {
-  "actualizado": "2026-09-16T06:15:29",
+  "actualizado": "2026-09-17T06:15:48",
   "torneos": [
     {
       "club": "Club de Golf Escorpión",
       "nombre": "AESGOLF DAMAS - CIRCUITO LANZAROTE",
       "fecha": "2026-09-17",
       "url": "https://clubescorpion.com/evento/aesgolf-damas-circuito-lanzarote/",
-      "nuevo": false
-    },
-    {
-      "club": "Club de Golf El Bosque",
-      "nombre": "Torneo LPG",
-      "fecha": "2026-09-17",
-      "url": "https://www.elbosquegolf.com/torneos/",
       "nuevo": false
     },
     {
@@ -167,7 +160,7 @@
       "nombre": "TORNEO OM INDIVIDUAL",
       "fecha": "2026-10-10",
       "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Mediterráneo Golf",
@@ -195,7 +188,7 @@
       "nombre": "TORNEO OM PAREJAS",
       "fecha": "2026-10-17",
       "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Mediterráneo Golf",
@@ -293,14 +286,14 @@
       "nombre": "TORNEO GASTRONOMIC",
       "fecha": "2026-11-06",
       "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Panorámica Golf",
       "nombre": "TORNEO GASTRONOMIC",
       "fecha": "2026-11-07",
       "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Mediterráneo Golf",
@@ -349,7 +342,7 @@
       "nombre": "FINAL LEGACY",
       "fecha": "2026-11-14",
       "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Mediterráneo Golf",
@@ -398,7 +391,7 @@
       "nombre": "ORDEN MÉRITO PAREJAS",
       "fecha": "2026-11-21",
       "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
@@ -475,7 +468,7 @@
       "nombre": "TORNEO OM INDIVIDUAL",
       "fecha": "2026-12-05",
       "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
@@ -538,7 +531,7 @@
       "nombre": "TORNEO OM PAREJAS",
       "fecha": "2026-12-19",
       "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "La Sella Golf Resort & Spa",
