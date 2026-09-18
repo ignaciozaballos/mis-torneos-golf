@@ -1,13 +1,6 @@
 {
-  "actualizado": "2026-09-17T06:15:48",
+  "actualizado": "2026-09-18T06:15:15",
   "torneos": [
-    {
-      "club": "Club de Golf Escorpión",
-      "nombre": "AESGOLF DAMAS - CIRCUITO LANZAROTE",
-      "fecha": "2026-09-17",
-      "url": "https://clubescorpion.com/evento/aesgolf-damas-circuito-lanzarote/",
-      "nuevo": false
-    },
     {
       "club": "Panorámica Golf",
       "nombre": "WAGR PANORÁMICA",
@@ -168,6 +161,13 @@
       "fecha": "2026-10-10",
       "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/",
       "nuevo": false
+    },
+    {
+      "club": "Club de Golf El Bosque",
+      "nombre": "Torneo LPG",
+      "fecha": "2026-10-15",
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": true
     },
     {
       "club": "Foressos Club de Golf",
