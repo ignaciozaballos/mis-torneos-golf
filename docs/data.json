@@ -1,13 +1,6 @@
 {
-  "actualizado": "2026-09-18T06:15:15",
+  "actualizado": "2026-09-19T06:14:12",
   "torneos": [
-    {
-      "club": "Panorámica Golf",
-      "nombre": "WAGR PANORÁMICA",
-      "fecha": "2026-09-18",
-      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
-      "nuevo": false
-    },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "SOCIAL BIENVENIDA",
@@ -35,6 +28,13 @@
       "fecha": "2026-09-19",
       "url": "https://www.elbosquegolf.com/torneos/",
       "nuevo": false
+    },
+    {
+      "club": "Panorámica Golf",
+      "nombre": "WAGR PANORÁMICA",
+      "fecha": "2026-09-19",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
     },
     {
       "club": "Mediterráneo Golf",
@@ -121,6 +121,13 @@
       "nuevo": false
     },
     {
+      "club": "Club de Golf El Bosque",
+      "nombre": "White Coast Individual Stableford",
+      "fecha": "2026-09-30",
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": true
+    },
+    {
       "club": "Foressos Club de Golf",
       "nombre": "Copa de Golf Adaptado CV",
       "fecha": "2026-10-03",
@@ -167,7 +174,7 @@
       "nombre": "Torneo LPG",
       "fecha": "2026-10-15",
       "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
