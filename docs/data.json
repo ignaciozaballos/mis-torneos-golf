@@ -1,54 +1,26 @@
 {
-  "actualizado": "2026-09-19T06:14:12",
+  "actualizado": "2026-09-20T06:14:45",
   "torneos": [
-    {
-      "club": "Club de Golf Escorpión",
-      "nombre": "SOCIAL BIENVENIDA",
-      "fecha": "2026-09-19",
-      "url": "https://clubescorpion.com/evento/social-bienvenida/",
-      "nuevo": false
-    },
-    {
-      "club": "Foressos Club de Golf",
-      "nombre": "Torneo Match Quality",
-      "fecha": "2026-09-19",
-      "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Foressos Club de Golf",
-      "nombre": "Torneo Noveles Infantil",
-      "fecha": "2026-09-19",
-      "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Club de Golf El Bosque",
-      "nombre": "Torneo Noveles",
-      "fecha": "2026-09-19",
-      "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Panorámica Golf",
-      "nombre": "WAGR PANORÁMICA",
-      "fecha": "2026-09-19",
-      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
-      "nuevo": true
-    },
-    {
-      "club": "Mediterráneo Golf",
-      "nombre": "CIRCUITO YOINGOLF",
-      "fecha": "2026-09-19",
-      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/",
-      "nuevo": false
-    },
     {
       "club": "Foressos Club de Golf",
       "nombre": "Torneo Noveles",
       "fecha": "2026-09-20",
       "url": "https://foressosclubgolf.com/torneos/",
       "nuevo": false
+    },
+    {
+      "club": "Panorámica Golf",
+      "nombre": "WAGR PANORÁMICA",
+      "fecha": "2026-09-20",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
+    },
+    {
+      "club": "Club de Golf Escorpión",
+      "nombre": "AESGOLF DAMAS - CIRCUITO LANZAROTE",
+      "fecha": "2026-09-22",
+      "url": "https://clubescorpion.com/evento/aesgolf-damas-circuito-lanzarote/",
+      "nuevo": true
     },
     {
       "club": "Oliva Nova Beach & Golf Resort",
@@ -125,7 +97,7 @@
       "nombre": "White Coast Individual Stableford",
       "fecha": "2026-09-30",
       "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
