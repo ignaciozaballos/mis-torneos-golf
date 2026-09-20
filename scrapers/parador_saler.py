@@ -4,6 +4,10 @@ Golf Parador El Saler (Valencia)
 Esta web tiene una página de torneos con paginación (?page=0, ?page=1, ...).
 Cada torneo es un enlace a una ficha tipo /es/node/12345, con el título del
 torneo como texto del enlace, seguido de una línea con la fecha.
+
+Nota: esta web tiene el certificado de seguridad (SSL) mal configurado por
+su parte (no envía la cadena completa del certificado), así que
+desactivamos esa comprobación solo para este club en concreto.
 """
 import re
 from .utils import get_soup, parse_fecha_es
@@ -19,7 +23,7 @@ def obtener_torneos():
 
     for pagina in range(MAX_PAGINAS):
         url = BASE_URL if pagina == 0 else f"{BASE_URL}?page={pagina}"
-        soup = get_soup(url)
+        soup = get_soup(url, verificar_ssl=False)
 
         # Los torneos enlazan a fichas individuales tipo /es/node/22236
         enlaces = soup.select('a[href*="/es/node/"]')
