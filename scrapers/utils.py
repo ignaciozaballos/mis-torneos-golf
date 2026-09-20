@@ -4,6 +4,11 @@ Funciones de ayuda compartidas por todos los scrapers.
 import re
 import datetime
 import requests
+import urllib3
+
+# Evita que se llene el log de avisos cuando desactivamos la verificación
+# SSL a propósito para alguna web concreta (ver verificar_ssl en get_soup).
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Cabeceras para que las webs no nos bloqueen pensando que somos un bot raro.
 # Cuantas más cabeceras "de navegador real" mandemos, menos posibilidades de
@@ -39,13 +44,21 @@ MESES_EN_ABR = {
 }
 
 
-def get_soup(url, timeout=20, referer=None):
-    """Descarga una URL y la devuelve como objeto BeautifulSoup."""
+def get_soup(url, timeout=20, referer=None, verificar_ssl=True):
+    """
+    Descarga una URL y la devuelve como objeto BeautifulSoup.
+
+    verificar_ssl=False desactiva la comprobación del certificado de
+    seguridad de esa web. Solo se usa como excepción puntual para alguna
+    web con el certificado mal configurado por su parte (ver
+    parador_saler.py) — para el resto de clubes se deja activada, que es
+    lo seguro por defecto.
+    """
     from bs4 import BeautifulSoup
     headers = dict(HEADERS)
     if referer:
         headers["Referer"] = referer
-    resp = requests.get(url, headers=headers, timeout=timeout)
+    resp = requests.get(url, headers=headers, timeout=timeout, verify=verificar_ssl)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
 
