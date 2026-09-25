@@ -1,20 +1,6 @@
 {
-  "actualizado": "2026-09-24T06:15:21",
+  "actualizado": "2026-09-25T06:15:25",
   "torneos": [
-    {
-      "club": "Oliva Nova Beach & Golf Resort",
-      "nombre": "Torneo 50 aniversario Federaciones Autonómicas",
-      "fecha": "2026-09-24",
-      "url": "https://www.olivanova.com/deporte-ocio-golf-torneos",
-      "nuevo": false
-    },
-    {
-      "club": "Mediterráneo Golf",
-      "nombre": "AESGOLF MASCULINO",
-      "fecha": "2026-09-24",
-      "url": "https://mediterraneo.golf/torneos/",
-      "nuevo": false
-    },
     {
       "club": "Foressos Club de Golf",
       "nombre": "Liga de Foressos",
@@ -398,7 +384,7 @@
       "nombre": "Torneo Audi Center Valencia",
       "fecha": "2026-11-28",
       "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "La Sella Golf Resort & Spa",
