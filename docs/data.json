@@ -1,18 +1,11 @@
 {
-  "actualizado": "2026-09-25T06:15:25",
+  "actualizado": "2026-09-26T06:14:31",
   "torneos": [
     {
       "club": "Foressos Club de Golf",
       "nombre": "Liga de Foressos",
       "fecha": "2026-09-26",
       "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Club de Golf El Bosque",
-      "nombre": "Torneo de Otoño",
-      "fecha": "2026-09-26",
-      "url": "https://www.elbosquegolf.com/torneos/",
       "nuevo": false
     },
     {
