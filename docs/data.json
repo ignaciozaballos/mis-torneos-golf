@@ -1,34 +1,6 @@
 {
-  "actualizado": "2026-09-27T06:15:10",
+  "actualizado": "2026-09-28T06:16:30",
   "torneos": [
-    {
-      "club": "Oliva Nova Beach & Golf Resort",
-      "nombre": "Campbell Lamont",
-      "fecha": "2026-09-27",
-      "url": "https://www.olivanova.com/deporte-ocio-golf-torneos",
-      "nuevo": false
-    },
-    {
-      "club": "Club de Golf El Bosque",
-      "nombre": "18H Torneo Mensual Infantil",
-      "fecha": "2026-09-27",
-      "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Club de Golf El Bosque",
-      "nombre": "9H Torneo Mensual Infantil",
-      "fecha": "2026-09-27",
-      "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Mediterráneo Golf",
-      "nombre": "CIRCUITO INTERCLUBS PAIRS TROPHY CBACFCV",
-      "fecha": "2026-09-27",
-      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/",
-      "nuevo": false
-    },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "White Coast Individual Stableford",
@@ -52,10 +24,10 @@
     },
     {
       "club": "Club de Golf El Bosque",
-      "nombre": "DAMAS RANDOM",
+      "nombre": "DAMAS",
       "fecha": "2026-10-04",
       "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": false
+      "nuevo": true
     },
     {
       "club": "Foressos Club de Golf",
