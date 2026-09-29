@@ -20,15 +20,23 @@
 <style>
   :root {
     --verde: #2e6b3e;
-    --verde-claro: #eef6ef;
+    --verde-oscuro: #1d4a2a;
+    --verde-claro: #f0f5f1;
     --texto: #1f2a24;
     --gris: #6b7a70;
+    --gris-claro: #9aa8a0;
     --amarillo: #e0a415;
+    --azul: #2f6f9e;
+    --rojo: #c0392b;
+    --radio-grande: 24px;
+    --radio-medio: 16px;
+    --sombra-suave: 0 2px 10px rgba(31,42,36,0.06);
+    --sombra-media: 0 6px 20px rgba(31,42,36,0.10);
   }
   * { box-sizing: border-box; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: var(--verde-claro);
+    background: #f4f7f5;
     color: var(--texto);
     margin: 0;
     padding: 0 16px 40px;
@@ -36,25 +44,38 @@
   header {
     max-width: 900px;
     margin: 0 auto;
-    padding: 32px 0 16px;
+    padding: 20px 0 16px;
+  }
+  .header-card {
+    background: linear-gradient(135deg, var(--verde) 0%, var(--verde-oscuro) 100%);
+    border-radius: var(--radio-grande);
+    padding: 26px 28px;
+    box-shadow: var(--sombra-media);
+    color: white;
   }
   h1 {
     font-family: "Baloo 2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    color: var(--verde);
-    margin: 0 0 10px;
-    font-size: 44px;
-    letter-spacing: 0.5px;
+    color: white;
+    margin: 0 0 6px;
+    font-size: 34px;
+    letter-spacing: 0.3px;
     white-space: nowrap;
+  }
+  .header-subtitulo {
+    margin: 0 0 16px;
+    font-size: 13.5px;
+    color: rgba(255,255,255,0.82);
+    font-weight: 500;
   }
   #actualizado {
     display: inline-block;
-    color: var(--gris);
+    color: white;
     font-size: 12px;
-    background: white;
-    border: 1px solid #dfe8e2;
-    border-radius: 8px;
-    padding: 6px 12px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    font-weight: 600;
+    background: rgba(255,255,255,0.16);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 20px;
+    padding: 7px 14px;
   }
   .bloque-filtro {
     max-width: 900px;
@@ -62,9 +83,9 @@
   }
   .bloque-filtro .etiqueta {
     font-family: "Baloo 2", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    font-size: 15px;
+    font-size: 13px;
     text-transform: uppercase;
-    color: var(--verde);
+    color: var(--gris);
     font-weight: 700;
     letter-spacing: 0.6px;
     margin-bottom: 8px;
@@ -75,17 +96,20 @@
     gap: 8px;
   }
   .filtros button {
-    border: 1px solid var(--verde);
+    border: none;
     background: white;
-    color: var(--verde);
-    padding: 6px 14px;
-    border-radius: 20px;
+    color: var(--texto);
+    padding: 8px 16px;
+    border-radius: 999px;
     font-size: 13px;
+    font-weight: 600;
     cursor: pointer;
-    transition: transform 0.1s ease;
+    box-shadow: var(--sombra-suave);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
   }
   .filtros button:hover {
     transform: translateY(-1px);
+    box-shadow: var(--sombra-media);
   }
   .filtros button.activo {
     background: var(--verde);
@@ -93,47 +117,54 @@
   }
   .filtros button.favoritos-btn.activo {
     background: var(--amarillo);
-    border-color: var(--amarillo);
   }
   .filtros button.finde-btn.activo {
-    background: #2f6f9e;
-    border-color: #2f6f9e;
-  }
-  .filtros button.vista-btn {
-    border-color: var(--texto);
-    color: var(--texto);
+    background: var(--azul);
   }
   .filtros button.vista-btn.activo {
     background: var(--texto);
     color: white;
   }
   .filtros button.nuevos-btn.activo {
-    background: #c0392b;
-    border-color: #c0392b;
+    background: var(--rojo);
   }
   .filtros button.descartados-btn.activo {
     background: #7f8c8d;
-    border-color: #7f8c8d;
   }
   #contador {
     max-width: 900px;
-    margin: 0 auto 12px;
+    margin: 14px auto 14px;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+    background: white;
+    border-radius: 999px;
+    padding: 8px 18px;
+    box-shadow: var(--sombra-suave);
     font-size: 13px;
     color: var(--gris);
+    font-weight: 600;
+  }
+  #contador strong {
+    color: var(--verde);
+    font-size: 15px;
   }
   .toggle-filtros {
     display: block;
     max-width: 900px;
-    margin: 0 auto 10px;
-    background: none;
+    margin: 14px auto 6px;
+    background: white;
     border: none;
     color: var(--gris);
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
-    padding: 4px 0;
+    padding: 8px 0;
+    border-radius: 999px;
     text-align: center;
     width: 100%;
+    box-shadow: var(--sombra-suave);
+    transition: color 0.1s ease;
   }
   .toggle-filtros:hover {
     color: var(--verde);
@@ -146,10 +177,10 @@
   }
   .torneo {
     background: white;
-    border-radius: 12px;
+    border-radius: var(--radio-medio);
     padding: 16px 20px;
     margin-bottom: 10px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    box-shadow: var(--sombra-suave);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -160,7 +191,7 @@
   }
   .torneo:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.10);
+    box-shadow: var(--sombra-media);
   }
   @keyframes aparece {
     from { opacity: 0; transform: translateY(8px); }
@@ -188,8 +219,8 @@
     font-weight: 600;
     color: white;
     background: var(--color-club, var(--gris));
-    padding: 2px 9px;
-    border-radius: 10px;
+    padding: 3px 10px;
+    border-radius: 999px;
   }
   .torneo .fecha {
     text-align: center;
@@ -283,13 +314,15 @@
     color: var(--verde);
   }
   .cal-cabecera button {
-    border: 1px solid var(--verde);
+    border: none;
     background: white;
     color: var(--verde);
-    padding: 6px 12px;
-    border-radius: 8px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    box-shadow: var(--sombra-suave);
     cursor: pointer;
     font-size: 14px;
+    font-weight: 700;
   }
   .cal-grid {
     display: grid;
@@ -306,17 +339,17 @@
   }
   .cal-dia {
     background: white;
-    border-radius: 8px;
+    border-radius: 12px;
     min-height: 70px;
     max-height: 140px;
     overflow-y: auto;
     min-width: 0;
     padding: 6px;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    box-shadow: var(--sombra-suave);
     transition: box-shadow 0.15s ease;
   }
   .cal-dia:not(.vacio):hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+    box-shadow: var(--sombra-media);
   }
   .cal-dia.vacio {
     background: transparent;
@@ -383,7 +416,7 @@
   }
   .modal-caja {
     background: var(--verde-claro);
-    border-radius: 16px;
+    border-radius: var(--radio-grande);
     padding: 20px;
     width: 100%;
     max-width: 520px;
@@ -440,10 +473,10 @@
   /* ---------- Esqueleto de carga ---------- */
   .skeleton-card {
     background: white;
-    border-radius: 12px;
+    border-radius: var(--radio-medio);
     padding: 16px 20px;
     margin-bottom: 10px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    box-shadow: var(--sombra-suave);
     display: flex;
     align-items: center;
     gap: 14px;
@@ -462,9 +495,11 @@
   @media (max-width: 600px) {
     .cal-dia { min-height: 60px; }
     .cal-chip { font-size: 9px; }
-    header { padding: 20px 0 12px; }
-    h1 { font-size: 30px; letter-spacing: 0.2px; }
-    #actualizado { font-size: 10.5px; padding: 4px 9px; }
+    header { padding: 14px 0 10px; }
+    .header-card { padding: 20px 18px; border-radius: 20px; }
+    h1 { font-size: 25px; letter-spacing: 0.1px; }
+    .header-subtitulo { font-size: 12px; margin-bottom: 12px; }
+    #actualizado { font-size: 10.5px; padding: 5px 11px; }
   }
 </style>
 </head>
@@ -473,8 +508,11 @@
 <div id="pull-indicador">↓ Desliza para actualizar</div>
 
 <header>
-  <h1>⛳ TORNEOS C.V.</h1>
-  <div id="actualizado">Cargando...</div>
+  <div class="header-card">
+    <h1>⛳ TORNEOS C.V.</h1>
+    <p class="header-subtitulo">Todos los torneos de golf de la Comunidad Valenciana, en un solo sitio</p>
+    <div id="actualizado">Cargando...</div>
+  </div>
 </header>
 
 <div id="filtros-contenedor">
@@ -823,8 +861,8 @@ function torneosDeUnDia(fechaStr) {
 
 function actualizarContador(mostrados) {
   const total = TODOS_LOS_TORNEOS.length;
-  document.getElementById('contador').textContent =
-    `Mostrando ${mostrados} de ${total} torneos`;
+  document.getElementById('contador').innerHTML =
+    `<strong>${mostrados}</strong> de ${total} torneos`;
 }
 
 // --- Render principal ---
