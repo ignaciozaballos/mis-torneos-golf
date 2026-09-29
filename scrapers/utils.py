@@ -44,7 +44,7 @@ MESES_EN_ABR = {
 }
 
 
-def get_soup(url, timeout=20, referer=None, verificar_ssl=True):
+def get_soup(url, timeout=20, referer=None, verificar_ssl=True, sesion=None):
     """
     Descarga una URL y la devuelve como objeto BeautifulSoup.
 
@@ -53,14 +53,47 @@ def get_soup(url, timeout=20, referer=None, verificar_ssl=True):
     web con el certificado mal configurado por su parte (ver
     parador_saler.py) — para el resto de clubes se deja activada, que es
     lo seguro por defecto.
+
+    sesion=<requests.Session> permite reutilizar cookies entre varias
+    peticiones seguidas (por ejemplo: entrar primero por la portada de una
+    web y luego navegar a la página de torneos con esas mismas cookies,
+    como haría una persona real en vez de un script suelto).
     """
     from bs4 import BeautifulSoup
     headers = dict(HEADERS)
     if referer:
         headers["Referer"] = referer
-    resp = requests.get(url, headers=headers, timeout=timeout, verify=verificar_ssl)
+    cliente = sesion if sesion is not None else requests
+    resp = cliente.get(url, headers=headers, timeout=timeout, verify=verificar_ssl)
     resp.raise_for_status()
     return BeautifulSoup(resp.text, "html.parser")
+
+
+def crear_sesion_navegador(url_portada, verificar_ssl=True, timeout=20):
+    """
+    Crea una sesión de "requests" que se comporta como un navegador real
+    entrando por la portada de la web: primero visita la página de inicio
+    (para recoger las cookies que el sitio reparte a cualquier visitante) y
+    solo después queda lista para pedir páginas internas con esas mismas
+    cookies y con la portada como "Referer" — igual que haría una persona
+    que llega a la web y hace clic en un enlace interno, en vez de entrar
+    directamente a una URL concreta sin haber pasado por ningún sitio.
+
+    Esto no garantiza saltarse cualquier bloqueo (algunos sitios exigen
+    ejecutar JavaScript, algo que "requests" no hace), pero muchos filtros
+    anti-bot sencillos se fijan sobre todo en si la petición "viene de
+    algún sitio" y trae cookies válidas.
+    """
+    sesion = requests.Session()
+    sesion.headers.update(HEADERS)
+    try:
+        sesion.get(url_portada, timeout=timeout, verify=verificar_ssl)
+    except requests.RequestException:
+        # Si ni siquiera la portada responde, seguimos igualmente: la
+        # función que llama a esto ya gestiona los fallos de la petición
+        # real que le importa.
+        pass
+    return sesion
 
 
 def parse_fecha_es(texto, anio_referencia=None):
