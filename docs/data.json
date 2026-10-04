@@ -1,25 +1,11 @@
 {
-  "actualizado": "2026-10-03T06:20:05",
+  "actualizado": "2026-10-04T11:21:17",
   "torneos": [
-    {
-      "club": "Foressos Club de Golf",
-      "nombre": "Copa de Golf Adaptado CV",
-      "fecha": "2026-10-03",
-      "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": false
-    },
     {
       "club": "Golf Parador El Saler",
       "nombre": "Trofeo Escuela Juvenil Octubre 2026",
       "fecha": "2026-10-04",
       "url": "https://paradores.es/es/node/22428",
-      "nuevo": false
-    },
-    {
-      "club": "Club de Golf El Bosque",
-      "nombre": "DAMAS RANDOM",
-      "fecha": "2026-10-04",
-      "url": "https://www.elbosquegolf.com/torneos/",
       "nuevo": false
     },
     {
@@ -102,13 +88,6 @@
     {
       "club": "Foressos Club de Golf",
       "nombre": "Torneo de la Federación",
-      "fecha": "2026-10-23",
-      "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Foressos Club de Golf",
-      "nombre": "Torneo de la Federación",
       "fecha": "2026-10-24",
       "url": "https://foressosclubgolf.com/torneos/",
       "nuevo": false
@@ -133,6 +112,13 @@
       "fecha": "2026-10-24",
       "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/",
       "nuevo": false
+    },
+    {
+      "club": "Foressos Club de Golf",
+      "nombre": "Torneo de la Federación",
+      "fecha": "2026-10-25",
+      "url": "https://foressosclubgolf.com/torneos/",
+      "nuevo": true
     },
     {
       "club": "Club de Golf El Bosque",
@@ -405,7 +391,7 @@
       "nombre": "Torneo de Noveles Infantil",
       "fecha": "2026-12-05",
       "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Panorámica Golf",
@@ -419,7 +405,7 @@
       "nombre": "Torneo de Noveles",
       "fecha": "2026-12-06",
       "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
@@ -433,7 +419,7 @@
       "nombre": "Liga de Foressos",
       "fecha": "2026-12-12",
       "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Golf Parador El Saler",
@@ -489,7 +475,7 @@
       "nombre": "Torneo Navidad Foressos",
       "fecha": "2026-12-19",
       "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
