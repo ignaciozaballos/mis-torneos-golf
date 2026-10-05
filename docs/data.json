@@ -1,13 +1,6 @@
 {
-  "actualizado": "2026-10-04T11:21:17",
+  "actualizado": "2026-10-05T06:19:53",
   "torneos": [
-    {
-      "club": "Golf Parador El Saler",
-      "nombre": "Trofeo Escuela Juvenil Octubre 2026",
-      "fecha": "2026-10-04",
-      "url": "https://paradores.es/es/node/22428",
-      "nuevo": false
-    },
     {
       "club": "Foressos Club de Golf",
       "nombre": "Torneo Locos por el Golf",
@@ -118,7 +111,7 @@
       "nombre": "Torneo de la Federación",
       "fecha": "2026-10-25",
       "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
@@ -441,6 +434,13 @@
       "fecha": "2026-12-12",
       "url": "https://www.elbosquegolf.com/torneos/",
       "nuevo": false
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Trofeo Escuela Juvenil Diciembre 2026",
+      "fecha": "2026-12-13",
+      "url": "https://paradores.es/es/node/22461",
+      "nuevo": true
     },
     {
       "club": "Club de Golf El Bosque",
