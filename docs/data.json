@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-05T06:19:53",
+  "actualizado": "2026-10-06T06:16:10",
   "torneos": [
     {
       "club": "Foressos Club de Golf",
@@ -195,13 +195,6 @@
       "nombre": "DAMAS MARIA PICATTO",
       "fecha": "2026-11-08",
       "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Club de Golf Escorpión",
-      "nombre": "OPEN DAMAS HIPERCOR",
-      "fecha": "2026-11-10",
-      "url": "https://clubescorpion.com/evento/open-damas-hipercor-2/",
       "nuevo": false
     },
     {
@@ -440,7 +433,7 @@
       "nombre": "Trofeo Escuela Juvenil Diciembre 2026",
       "fecha": "2026-12-13",
       "url": "https://paradores.es/es/node/22461",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
