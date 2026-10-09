@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-08T08:51:55",
+  "actualizado": "2026-10-09T12:42:08",
   "torneos": [
     {
       "club": "Foressos Club de Golf",
@@ -21,6 +21,13 @@
       "fecha": "2026-10-10",
       "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/",
       "nuevo": false
+    },
+    {
+      "club": "Club de Golf El Bosque",
+      "nombre": "Torneo Invitacional Junwei Zhou",
+      "fecha": "2026-10-11",
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": true
     },
     {
       "club": "Club de Golf El Bosque",
