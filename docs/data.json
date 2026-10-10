@@ -1,20 +1,6 @@
 {
-  "actualizado": "2026-10-09T12:42:08",
+  "actualizado": "2026-10-10T12:01:09",
   "torneos": [
-    {
-      "club": "Foressos Club de Golf",
-      "nombre": "Torneo Locos por el Golf",
-      "fecha": "2026-10-09",
-      "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Panorámica Golf",
-      "nombre": "TORNEO OM INDIVIDUAL",
-      "fecha": "2026-10-10",
-      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
-      "nuevo": false
-    },
     {
       "club": "Mediterráneo Golf",
       "nombre": "CIRCUITO MEDITERRANEO GOLF",
@@ -27,7 +13,7 @@
       "nombre": "Torneo Invitacional Junwei Zhou",
       "fecha": "2026-10-11",
       "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
