@@ -1,20 +1,6 @@
 {
-  "actualizado": "2026-10-10T12:01:09",
+  "actualizado": "2026-10-11T12:14:06",
   "torneos": [
-    {
-      "club": "Mediterráneo Golf",
-      "nombre": "CIRCUITO MEDITERRANEO GOLF",
-      "fecha": "2026-10-10",
-      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Club de Golf El Bosque",
-      "nombre": "Torneo Invitacional Junwei Zhou",
-      "fecha": "2026-10-11",
-      "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": false
-    },
     {
       "club": "Club de Golf El Bosque",
       "nombre": "Torneo LPG",
