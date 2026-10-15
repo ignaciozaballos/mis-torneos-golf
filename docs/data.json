@@ -1,20 +1,6 @@
 {
-  "actualizado": "2026-10-14T11:20:31",
+  "actualizado": "2026-10-15T10:57:47",
   "torneos": [
-    {
-      "club": "Club de Golf El Bosque",
-      "nombre": "Torneo LPG",
-      "fecha": "2026-10-15",
-      "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Foressos Club de Golf",
-      "nombre": "Torneo Noveles Infantil",
-      "fecha": "2026-10-17",
-      "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": false
-    },
     {
       "club": "Golf Parador El Saler",
       "nombre": "Circuito Nacional de Golf Onda Cero 2026",
@@ -42,6 +28,13 @@
       "fecha": "2026-10-17",
       "url": "https://mediterraneo.golf/torneos/",
       "nuevo": false
+    },
+    {
+      "club": "Foressos Club de Golf",
+      "nombre": "Torneo Noveles Infantil",
+      "fecha": "2026-10-18",
+      "url": "https://foressosclubgolf.com/torneos/",
+      "nuevo": true
     },
     {
       "club": "Foressos Club de Golf",
@@ -129,10 +122,10 @@
     },
     {
       "club": "Club de Golf Escorpión",
-      "nombre": "RYDER DAMAS",
+      "nombre": "RYDER DAMAS ESCORPIÓN P&P",
       "fecha": "2026-11-01",
       "url": "https://clubescorpion.com/evento/ryder-damas/",
-      "nuevo": false
+      "nuevo": true
     },
     {
       "club": "Club de Golf El Bosque",
