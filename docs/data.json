@@ -1,27 +1,6 @@
 {
-  "actualizado": "2026-10-18T10:30:43",
+  "actualizado": "2026-10-19T12:21:02",
   "torneos": [
-    {
-      "club": "Foressos Club de Golf",
-      "nombre": "Torneo Noveles Infantil",
-      "fecha": "2026-10-18",
-      "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Foressos Club de Golf",
-      "nombre": "Torneo Noveles",
-      "fecha": "2026-10-18",
-      "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Golf Parador El Saler",
-      "nombre": "Circuito Masculino y Femenino CV",
-      "fecha": "2026-10-18",
-      "url": "https://paradores.es/es/node/22434",
-      "nuevo": false
-    },
     {
       "club": "Foressos Club de Golf",
       "nombre": "Torneo de la Federación",
@@ -104,14 +83,14 @@
       "nombre": "Torneo de Noveles Infantil",
       "fecha": "2026-11-01",
       "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
       "nombre": "Torneo de Noveles",
       "fecha": "2026-11-01",
       "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
