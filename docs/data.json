@@ -1,13 +1,6 @@
 {
-  "actualizado": "2026-10-19T12:21:02",
+  "actualizado": "2026-10-20T11:01:03",
   "torneos": [
-    {
-      "club": "Foressos Club de Golf",
-      "nombre": "Torneo de la Federación",
-      "fecha": "2026-10-24",
-      "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": false
-    },
     {
       "club": "Golf Parador El Saler",
       "nombre": "Saler Trophy 2026",
@@ -27,13 +20,6 @@
       "nombre": "CIRCUITO ONDA CERO",
       "fecha": "2026-10-24",
       "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Foressos Club de Golf",
-      "nombre": "Torneo de la Federación",
-      "fecha": "2026-10-25",
-      "url": "https://foressosclubgolf.com/torneos/",
       "nuevo": false
     },
     {
@@ -65,31 +51,10 @@
       "nuevo": false
     },
     {
-      "club": "Foressos Club de Golf",
-      "nombre": "Liga de Foressos",
-      "fecha": "2026-10-31",
-      "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": false
-    },
-    {
       "club": "Club de Golf Escorpión",
       "nombre": "RYDER DAMAS ESCORPIÓN P&P",
       "fecha": "2026-11-01",
       "url": "https://clubescorpion.com/evento/ryder-damas/",
-      "nuevo": false
-    },
-    {
-      "club": "Foressos Club de Golf",
-      "nombre": "Torneo de Noveles Infantil",
-      "fecha": "2026-11-01",
-      "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Foressos Club de Golf",
-      "nombre": "Torneo de Noveles",
-      "fecha": "2026-11-01",
-      "url": "https://foressosclubgolf.com/torneos/",
       "nuevo": false
     },
     {
@@ -149,20 +114,6 @@
       "nuevo": false
     },
     {
-      "club": "Foressos Club de Golf",
-      "nombre": "Torneo Golf Adaptado Federación C.V",
-      "fecha": "2026-11-14",
-      "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Foressos Club de Golf",
-      "nombre": "Torneo de Noveles Infantil",
-      "fecha": "2026-11-14",
-      "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": false
-    },
-    {
       "club": "Club de Golf El Bosque",
       "nombre": "Torneo Noveles",
       "fecha": "2026-11-14",
@@ -191,13 +142,6 @@
       "nuevo": false
     },
     {
-      "club": "Foressos Club de Golf",
-      "nombre": "Torneo de Noveles",
-      "fecha": "2026-11-15",
-      "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": false
-    },
-    {
       "club": "Club de Golf Escorpión",
       "nombre": "CTO BENÉFICO",
       "fecha": "2026-11-19",
@@ -209,13 +153,6 @@
       "nombre": "SOCIAL NOVIEMBRE",
       "fecha": "2026-11-21",
       "url": "https://clubescorpion.com/evento/cto-benefico/",
-      "nuevo": false
-    },
-    {
-      "club": "Foressos Club de Golf",
-      "nombre": "Liga de Foressos",
-      "fecha": "2026-11-21",
-      "url": "https://foressosclubgolf.com/torneos/",
       "nuevo": false
     },
     {
@@ -254,24 +191,10 @@
       "nuevo": false
     },
     {
-      "club": "Foressos Club de Golf",
-      "nombre": "Torneo MSC Cruceros",
-      "fecha": "2026-11-27",
-      "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": false
-    },
-    {
       "club": "Club de Golf Escorpión",
       "nombre": "COPA ESCORPIÓN",
       "fecha": "2026-11-28",
       "url": "https://clubescorpion.com/evento/copa-escorpion-3/",
-      "nuevo": false
-    },
-    {
-      "club": "Foressos Club de Golf",
-      "nombre": "Torneo MSC Cruceros",
-      "fecha": "2026-11-28",
-      "url": "https://foressosclubgolf.com/torneos/",
       "nuevo": false
     },
     {
@@ -317,13 +240,6 @@
       "nuevo": false
     },
     {
-      "club": "Foressos Club de Golf",
-      "nombre": "Torneo de Noveles Infantil",
-      "fecha": "2026-12-05",
-      "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": false
-    },
-    {
       "club": "Panorámica Golf",
       "nombre": "TORNEO OM INDIVIDUAL",
       "fecha": "2026-12-05",
@@ -331,31 +247,10 @@
       "nuevo": false
     },
     {
-      "club": "Foressos Club de Golf",
-      "nombre": "Torneo de Noveles",
-      "fecha": "2026-12-06",
-      "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Foressos Club de Golf",
-      "nombre": "Torneo Locos por el Golf",
-      "fecha": "2026-12-08",
-      "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": false
-    },
-    {
       "club": "Club de Golf Escorpión",
       "nombre": "NARANJA DE ORO",
       "fecha": "2026-12-09",
       "url": "https://clubescorpion.com/evento/naranja-de-oro/",
-      "nuevo": false
-    },
-    {
-      "club": "Foressos Club de Golf",
-      "nombre": "Liga de Foressos",
-      "fecha": "2026-12-12",
-      "url": "https://foressosclubgolf.com/torneos/",
       "nuevo": false
     },
     {
@@ -412,13 +307,6 @@
       "nombre": "SOCIAL NAVIDAD",
       "fecha": "2026-12-19",
       "url": "https://clubescorpion.com/evento/social-navidad-3/",
-      "nuevo": false
-    },
-    {
-      "club": "Foressos Club de Golf",
-      "nombre": "Torneo Navidad Foressos",
-      "fecha": "2026-12-19",
-      "url": "https://foressosclubgolf.com/torneos/",
       "nuevo": false
     },
     {
