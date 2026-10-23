@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-22T11:17:11",
+  "actualizado": "2026-10-23T11:08:12",
   "torneos": [
     {
       "club": "Foressos Club de Golf",
@@ -146,7 +146,7 @@
       "nombre": "SAS El Bosque",
       "fecha": "2026-11-12",
       "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
@@ -455,6 +455,13 @@
       "fecha": "2026-12-19",
       "url": "https://mediterraneo.golf/torneos/",
       "nuevo": false
+    },
+    {
+      "club": "Golf Parador El Saler",
+      "nombre": "Circuito Masculino y Femenino CV",
+      "fecha": "2026-12-20",
+      "url": "https://paradores.es/es/node/22434",
+      "nuevo": true
     },
     {
       "club": "Club de Golf El Bosque",
