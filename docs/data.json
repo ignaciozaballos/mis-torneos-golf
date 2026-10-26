@@ -1,27 +1,6 @@
 {
-  "actualizado": "2026-10-25T10:52:14",
+  "actualizado": "2026-10-26T12:22:59",
   "torneos": [
-    {
-      "club": "Foressos Club de Golf",
-      "nombre": "Torneo de la Federación",
-      "fecha": "2026-10-25",
-      "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Club de Golf El Bosque",
-      "nombre": "18H Torneo Mensual Infantil",
-      "fecha": "2026-10-25",
-      "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Club de Golf El Bosque",
-      "nombre": "9H Torneo Mensual Infantil",
-      "fecha": "2026-10-25",
-      "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": false
-    },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "AESGOLF DAMAS P&P",
