@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-28T12:15:01",
+  "actualizado": "2026-10-29T12:24:49",
   "torneos": [
     {
       "club": "Club de Golf Escorpión",
@@ -210,6 +210,13 @@
       "fecha": "2026-11-24",
       "url": "https://clubescorpion.com/evento/mandarina-de-oro/",
       "nuevo": false
+    },
+    {
+      "club": "Club de Golf Escorpión",
+      "nombre": "MEMORIAL 4 AMIGOS",
+      "fecha": "2026-11-26",
+      "url": "https://clubescorpion.com/evento/memorial-4-amigos/",
+      "nuevo": true
     },
     {
       "club": "Foressos Club de Golf",
