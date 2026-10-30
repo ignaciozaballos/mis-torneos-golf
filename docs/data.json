@@ -1,13 +1,6 @@
 {
-  "actualizado": "2026-10-29T12:24:49",
+  "actualizado": "2026-10-30T12:16:16",
   "torneos": [
-    {
-      "club": "Club de Golf Escorpión",
-      "nombre": "AESGOLF DAMAS P&P",
-      "fecha": "2026-10-29",
-      "url": "https://clubescorpion.com/evento/aesgolf-damas-pp-4/",
-      "nuevo": false
-    },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "MENSUAL JUVENIL ESCUELA OCTUBRE P&P",
@@ -216,7 +209,7 @@
       "nombre": "MEMORIAL 4 AMIGOS",
       "fecha": "2026-11-26",
       "url": "https://clubescorpion.com/evento/memorial-4-amigos/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
