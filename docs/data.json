@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-30T12:16:16",
+  "actualizado": "2026-10-31T11:47:32",
   "torneos": [
     {
       "club": "Club de Golf Escorpión",
@@ -199,10 +199,10 @@
     },
     {
       "club": "Club de Golf Escorpión",
-      "nombre": "MANDARINA DE ORO",
+      "nombre": "MANDARINA DE ORO - AESGOLF DAMAS",
       "fecha": "2026-11-24",
       "url": "https://clubescorpion.com/evento/mandarina-de-oro/",
-      "nuevo": false
+      "nuevo": true
     },
     {
       "club": "Club de Golf Escorpión",
