@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-02T14:55:37",
+  "actualizado": "2026-11-03T13:44:37",
   "torneos": [
     {
       "club": "Club de Golf El Bosque",
@@ -115,10 +115,10 @@
     },
     {
       "club": "Club de Golf Escorpión",
-      "nombre": "CTO BENÉFICO",
+      "nombre": "CTO BENÉFICO MARY MEALS",
       "fecha": "2026-11-19",
       "url": "https://clubescorpion.com/evento/cto-benefico-2/",
-      "nuevo": false
+      "nuevo": true
     },
     {
       "club": "Club de Golf Escorpión",
