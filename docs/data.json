@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-03T13:44:37",
+  "actualizado": "2026-11-04T13:52:47",
   "torneos": [
     {
       "club": "Club de Golf El Bosque",
@@ -118,7 +118,7 @@
       "nombre": "CTO BENÉFICO MARY MEALS",
       "fecha": "2026-11-19",
       "url": "https://clubescorpion.com/evento/cto-benefico-2/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
@@ -171,10 +171,10 @@
     },
     {
       "club": "Club de Golf Escorpión",
-      "nombre": "MEMORIAL 4 AMIGOS",
+      "nombre": "MEMORIAL 4 AMIGOS 2026",
       "fecha": "2026-11-26",
       "url": "https://clubescorpion.com/evento/memorial-4-amigos/",
-      "nuevo": false
+      "nuevo": true
     },
     {
       "club": "Foressos Club de Golf",
