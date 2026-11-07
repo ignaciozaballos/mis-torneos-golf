@@ -1,18 +1,11 @@
 {
-  "actualizado": "2026-11-06T13:50:22",
+  "actualizado": "2026-11-07T12:34:43",
   "torneos": [
     {
       "club": "Golf Parador El Saler",
       "nombre": "Campeonato de 2ª,3ª,4ª y 5ª categoría de la C.V.",
       "fecha": "2026-11-07",
       "url": "https://paradores.es/es/node/22449",
-      "nuevo": false
-    },
-    {
-      "club": "Panorámica Golf",
-      "nombre": "TORNEO GASTRONOMIC",
-      "fecha": "2026-11-07",
-      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
       "nuevo": false
     },
     {
