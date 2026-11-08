@@ -1,27 +1,6 @@
 {
-  "actualizado": "2026-11-07T12:34:43",
+  "actualizado": "2026-11-08T12:52:30",
   "torneos": [
-    {
-      "club": "Golf Parador El Saler",
-      "nombre": "Campeonato de 2ª,3ª,4ª y 5ª categoría de la C.V.",
-      "fecha": "2026-11-07",
-      "url": "https://paradores.es/es/node/22449",
-      "nuevo": false
-    },
-    {
-      "club": "Mediterráneo Golf",
-      "nombre": "CIRCUITO MEDITERRANEO GOLF",
-      "fecha": "2026-11-07",
-      "url": "https://open.teeone.golf/es/ccmediterraneo/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Club de Golf El Bosque",
-      "nombre": "DAMAS MARIA PICATTO",
-      "fecha": "2026-11-08",
-      "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": false
-    },
     {
       "club": "Golf Parador El Saler",
       "nombre": "Lanzarote Golf Tour Aesgolf 2026- Trofeo L'Albufera",
