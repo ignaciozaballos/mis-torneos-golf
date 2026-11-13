@@ -1,20 +1,6 @@
 {
-  "actualizado": "2026-11-12T14:44:42",
+  "actualizado": "2026-11-13T14:01:46",
   "torneos": [
-    {
-      "club": "Golf Parador El Saler",
-      "nombre": "Lanzarote Golf Tour Aesgolf 2026- Trofeo L'Albufera",
-      "fecha": "2026-11-12",
-      "url": "https://paradores.es/es/node/22452",
-      "nuevo": false
-    },
-    {
-      "club": "Club de Golf El Bosque",
-      "nombre": "SAS El Bosque",
-      "fecha": "2026-11-12",
-      "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": false
-    },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "MENSUAL JUVENIL ESCUELA NOVIEMBRE",
@@ -94,10 +80,10 @@
     },
     {
       "club": "Club de Golf El Bosque",
-      "nombre": "Torneo Audi Center Valencia",
+      "nombre": "Torneo Audi",
       "fecha": "2026-11-21",
       "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": false
+      "nuevo": true
     },
     {
       "club": "Panorámica Golf",
@@ -234,10 +220,10 @@
     },
     {
       "club": "Club de Golf Escorpión",
-      "nombre": "SOCIAL NAVIDAD",
+      "nombre": "COPA PRESIDENTE 2026",
       "fecha": "2026-12-12",
-      "url": "https://clubescorpion.com/evento/social-navidad-3/",
-      "nuevo": false
+      "url": "https://clubescorpion.com/evento/copa-presidente-2026/",
+      "nuevo": true
     },
     {
       "club": "Golf Parador El Saler",
@@ -290,10 +276,10 @@
     },
     {
       "club": "Club de Golf Escorpión",
-      "nombre": "COPA PRESIDENTE 2026",
+      "nombre": "SOCIAL NAVIDAD",
       "fecha": "2026-12-19",
-      "url": "https://clubescorpion.com/evento/copa-presidente-2026/",
-      "nuevo": false
+      "url": "https://clubescorpion.com/evento/social-navidad-3/",
+      "nuevo": true
     },
     {
       "club": "Foressos Club de Golf",
