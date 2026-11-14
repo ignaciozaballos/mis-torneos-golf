@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-13T14:01:46",
+  "actualizado": "2026-11-14T13:03:56",
   "torneos": [
     {
       "club": "Club de Golf Escorpión",
@@ -20,20 +20,6 @@
       "nombre": "Torneo de Noveles Infantil",
       "fecha": "2026-11-14",
       "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Club de Golf El Bosque",
-      "nombre": "Torneo Noveles",
-      "fecha": "2026-11-14",
-      "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Panorámica Golf",
-      "nombre": "FINAL LEGACY",
-      "fecha": "2026-11-14",
-      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
       "nuevo": false
     },
     {
@@ -83,7 +69,7 @@
       "nombre": "Torneo Audi",
       "fecha": "2026-11-21",
       "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Panorámica Golf",
@@ -223,7 +209,7 @@
       "nombre": "COPA PRESIDENTE 2026",
       "fecha": "2026-12-12",
       "url": "https://clubescorpion.com/evento/copa-presidente-2026/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Golf Parador El Saler",
@@ -279,7 +265,7 @@
       "nombre": "SOCIAL NAVIDAD",
       "fecha": "2026-12-19",
       "url": "https://clubescorpion.com/evento/social-navidad-3/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Foressos Club de Golf",
