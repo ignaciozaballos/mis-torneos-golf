@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-16T14:59:33",
+  "actualizado": "2026-11-17T15:36:02",
   "torneos": [
     {
       "club": "Club de Golf Escorpión",
@@ -112,6 +112,13 @@
       "fecha": "2026-11-29",
       "url": "https://paradores.es/es/node/22458",
       "nuevo": false
+    },
+    {
+      "club": "Panorámica Golf",
+      "nombre": "TORNEO INICIACIÓN - 5ªCATEGORÍA",
+      "fecha": "2026-11-29",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
     },
     {
       "club": "Oliva Nova Beach & Golf Resort",
