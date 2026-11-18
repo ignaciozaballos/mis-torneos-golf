@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-17T15:36:02",
+  "actualizado": "2026-11-18T15:14:01",
   "torneos": [
     {
       "club": "Club de Golf Escorpión",
@@ -118,7 +118,7 @@
       "nombre": "TORNEO INICIACIÓN - 5ªCATEGORÍA",
       "fecha": "2026-11-29",
       "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Oliva Nova Beach & Golf Resort",
@@ -304,6 +304,13 @@
     },
     {
       "club": "Club de Golf El Bosque",
+      "nombre": "Torneo LPG",
+      "fecha": "2027-02-11",
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": true
+    },
+    {
+      "club": "Club de Golf El Bosque",
       "nombre": "DAMAS MEDICAL WELLNESS",
       "fecha": "2027-02-21",
       "url": "https://www.elbosquegolf.com/torneos/",
@@ -360,6 +367,13 @@
     },
     {
       "club": "Club de Golf El Bosque",
+      "nombre": "Torneo LPG",
+      "fecha": "2027-09-16",
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": true
+    },
+    {
+      "club": "Club de Golf El Bosque",
       "nombre": "DAMAS",
       "fecha": "2027-09-19",
       "url": "https://www.elbosquegolf.com/torneos/",
@@ -385,6 +399,13 @@
       "fecha": "2027-11-21",
       "url": "https://www.elbosquegolf.com/torneos/",
       "nuevo": false
+    },
+    {
+      "club": "Club de Golf El Bosque",
+      "nombre": "Torneo LPG",
+      "fecha": "2027-12-16",
+      "url": "https://www.elbosquegolf.com/torneos/",
+      "nuevo": true
     },
     {
       "club": "Club de Golf El Bosque",
