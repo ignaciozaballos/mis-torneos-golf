@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-18T15:14:01",
+  "actualizado": "2026-11-19T15:21:03",
   "torneos": [
     {
       "club": "Club de Golf Escorpión",
@@ -7,6 +7,13 @@
       "fecha": "2026-11-19",
       "url": "https://clubescorpion.com/evento/cto-benefico-2/",
       "nuevo": false
+    },
+    {
+      "club": "Foressos Club de Golf",
+      "nombre": "AESGOLF DAMAS",
+      "fecha": "2026-11-19",
+      "url": "https://foressosclubgolf.com/torneos/",
+      "nuevo": true
     },
     {
       "club": "Club de Golf Escorpión",
@@ -164,10 +171,10 @@
     },
     {
       "club": "Club de Golf Escorpión",
-      "nombre": "NARANJA DE ORO",
+      "nombre": "NARANJA DE ORO 2026",
       "fecha": "2026-12-09",
       "url": "https://clubescorpion.com/evento/naranja-de-oro/",
-      "nuevo": false
+      "nuevo": true
     },
     {
       "club": "Club de Golf Escorpión",
@@ -307,7 +314,7 @@
       "nombre": "Torneo LPG",
       "fecha": "2027-02-11",
       "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
@@ -370,7 +377,7 @@
       "nombre": "Torneo LPG",
       "fecha": "2027-09-16",
       "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
@@ -405,7 +412,7 @@
       "nombre": "Torneo LPG",
       "fecha": "2027-12-16",
       "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
