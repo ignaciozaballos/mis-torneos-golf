@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-20T14:58:55",
+  "actualizado": "2026-11-21T14:19:29",
   "torneos": [
     {
       "club": "Club de Golf Escorpión",
@@ -13,13 +13,6 @@
       "nombre": "Liga de Foressos",
       "fecha": "2026-11-21",
       "url": "https://foressosclubgolf.com/torneos/",
-      "nuevo": false
-    },
-    {
-      "club": "Panorámica Golf",
-      "nombre": "ORDEN MÉRITO PAREJAS",
-      "fecha": "2026-11-21",
-      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
       "nuevo": false
     },
     {
@@ -173,7 +166,7 @@
       "club": "Oliva Nova Beach & Golf Resort",
       "nombre": "Torneo de Navidad",
       "fecha": "2026-12-12",
-      "url": "https://www.olivanova.com/deporte-ocio-golf-torneos",
+      "url": "https://www.olivanova.com/files/uploads/Torneo_Golf_Navidad_2026.jpg",
       "nuevo": false
     },
     {
@@ -286,7 +279,7 @@
       "nombre": "ROSCON DE REYES P&P",
       "fecha": "2027-01-04",
       "url": "https://clubescorpion.com/evento/roscon-de-reyes-pp/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
@@ -300,35 +293,35 @@
       "nombre": "SOCIAL ENERO",
       "fecha": "2027-01-23",
       "url": "https://clubescorpion.com/evento/social-enero-3/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "DAMAS COMITÉ J1",
       "fecha": "2027-01-27",
       "url": "https://clubescorpion.com/evento/damas-comite-j1-3/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "INTERNACIONAL MIXTO AESGOLF",
       "fecha": "2027-02-03",
       "url": "https://clubescorpion.com/evento/internacional-mixto-aesgolf/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "SOCIAL FEBRERO",
       "fecha": "2027-02-06",
       "url": "https://clubescorpion.com/evento/social-febrero-5/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "SOCIAL TRECECASAS",
       "fecha": "2027-02-10",
       "url": "https://clubescorpion.com/evento/social-trececasas/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
@@ -342,35 +335,35 @@
       "nombre": "MENSUAL JUVENIL ESCUELA",
       "fecha": "2027-02-13",
       "url": "https://clubescorpion.com/evento/mensual-juvenil-escuela/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "RYDER DAMAS ESCORPIÓN",
       "fecha": "2027-02-14",
       "url": "https://clubescorpion.com/evento/ryder-damas-escorpion-6/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "DAMAS COMITÉ J2",
       "fecha": "2027-02-16",
       "url": "https://clubescorpion.com/evento/damas-comite-j2-3/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "SAMANIEGO",
       "fecha": "2027-02-18",
       "url": "https://clubescorpion.com/evento/samaniego/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "CTO. INDIVIDUAL DEL CLUB SENIOR",
       "fecha": "2027-02-20",
       "url": "https://clubescorpion.com/evento/cto-individual-del-club-senior/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
@@ -384,14 +377,14 @@
       "nombre": "AESGOLF MASCULINO P&P",
       "fecha": "2027-02-25",
       "url": "https://clubescorpion.com/evento/aesgolf-masculino-pp-3/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "SOCIAL P&P",
       "fecha": "2027-02-27",
       "url": "https://clubescorpion.com/evento/social-pp-3/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
