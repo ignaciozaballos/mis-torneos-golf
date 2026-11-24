@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-23T17:32:11",
+  "actualizado": "2026-11-24T17:03:47",
   "torneos": [
     {
       "club": "Club de Golf Escorpión",
@@ -339,10 +339,10 @@
     },
     {
       "club": "Club de Golf El Bosque",
-      "nombre": "DAMAS MEDICAL WELLNESS",
+      "nombre": "DAMAS CLINICA M. FORT",
       "fecha": "2027-02-21",
       "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": false
+      "nuevo": true
     },
     {
       "club": "Club de Golf Escorpión",
@@ -437,10 +437,10 @@
     },
     {
       "club": "Club de Golf El Bosque",
-      "nombre": "DAMAS",
+      "nombre": "DAMAS OPTICA JESUS",
       "fecha": "2027-11-21",
       "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": false
+      "nuevo": true
     },
     {
       "club": "Club de Golf El Bosque",
