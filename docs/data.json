@@ -1,13 +1,6 @@
 {
-  "actualizado": "2026-11-24T17:03:47",
+  "actualizado": "2026-11-25T16:53:24",
   "torneos": [
-    {
-      "club": "Club de Golf Escorpión",
-      "nombre": "MANDARINA DE ORO - AESGOLF DAMAS",
-      "fecha": "2026-11-24",
-      "url": "https://clubescorpion.com/evento/mandarina-de-oro/",
-      "nuevo": false
-    },
     {
       "club": "Club de Golf Escorpión",
       "nombre": "MEMORIAL 4 AMIGOS 2026",
@@ -342,7 +335,7 @@
       "nombre": "DAMAS CLINICA M. FORT",
       "fecha": "2027-02-21",
       "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf Escorpión",
@@ -440,7 +433,7 @@
       "nombre": "DAMAS OPTICA JESUS",
       "fecha": "2027-11-21",
       "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
