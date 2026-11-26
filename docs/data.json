@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-25T16:53:24",
+  "actualizado": "2026-11-26T16:30:20",
   "torneos": [
     {
       "club": "Club de Golf Escorpión",
@@ -396,9 +396,9 @@
     {
       "club": "Club de Golf El Bosque",
       "nombre": "AESGOLF PAREJAS CABALLEROS CV",
-      "fecha": "2027-09-02",
+      "fecha": "2027-09-09",
       "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": false
+      "nuevo": true
     },
     {
       "club": "Club de Golf El Bosque",
