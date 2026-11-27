@@ -1,13 +1,6 @@
 {
-  "actualizado": "2026-11-26T16:30:20",
+  "actualizado": "2026-11-27T16:15:51",
   "torneos": [
-    {
-      "club": "Club de Golf Escorpión",
-      "nombre": "MEMORIAL 4 AMIGOS 2026",
-      "fecha": "2026-11-26",
-      "url": "https://clubescorpion.com/evento/memorial-4-amigos/",
-      "nuevo": false
-    },
     {
       "club": "Foressos Club de Golf",
       "nombre": "Torneo MSC Cruceros",
@@ -359,11 +352,25 @@
       "nuevo": false
     },
     {
+      "club": "Panorámica Golf",
+      "nombre": "WAGR PANORAMICA",
+      "fecha": "2027-03-19",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
+    },
+    {
       "club": "Club de Golf El Bosque",
       "nombre": "DAMAS CLINICA MARIA HUESO",
       "fecha": "2027-03-21",
       "url": "https://www.elbosquegolf.com/torneos/",
       "nuevo": false
+    },
+    {
+      "club": "Panorámica Golf",
+      "nombre": "OM - KEYHOLE",
+      "fecha": "2027-03-27",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
     },
     {
       "club": "Club de Golf El Bosque",
@@ -373,11 +380,46 @@
       "nuevo": false
     },
     {
+      "club": "Panorámica Golf",
+      "nombre": "CAMPEONATO LUNS",
+      "fecha": "2027-04-24",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
+    },
+    {
+      "club": "Panorámica Golf",
+      "nombre": "CAMPEONATO GASTRONOMIC",
+      "fecha": "2027-04-30",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
+    },
+    {
+      "club": "Panorámica Golf",
+      "nombre": "CAMPEONATO GASTRONOMIC",
+      "fecha": "2027-05-01",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
+    },
+    {
+      "club": "Panorámica Golf",
+      "nombre": "OM CLUB",
+      "fecha": "2027-05-15",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
+    },
+    {
       "club": "Club de Golf El Bosque",
       "nombre": "DAMAS BISUTERIA VERCA",
       "fecha": "2027-05-16",
       "url": "https://www.elbosquegolf.com/torneos/",
       "nuevo": false
+    },
+    {
+      "club": "Panorámica Golf",
+      "nombre": "TORNEO IPT COSTA BLANCA",
+      "fecha": "2027-05-30",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
     },
     {
       "club": "Club de Golf El Bosque",
@@ -387,6 +429,20 @@
       "nuevo": false
     },
     {
+      "club": "Panorámica Golf",
+      "nombre": "CAMPEONATO SENIOR Y MID AMATEUR",
+      "fecha": "2027-06-12",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
+    },
+    {
+      "club": "Panorámica Golf",
+      "nombre": "OM CLUB",
+      "fecha": "2027-06-26",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
+    },
+    {
       "club": "Club de Golf El Bosque",
       "nombre": "DAMAS",
       "fecha": "2027-07-18",
@@ -394,11 +450,25 @@
       "nuevo": false
     },
     {
+      "club": "Panorámica Golf",
+      "nombre": "XXXIII ANIVERSARIO PANORÁMICA",
+      "fecha": "2027-08-15",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
+    },
+    {
+      "club": "Panorámica Golf",
+      "nombre": "CAMPEONATO LOCOS X EL GOLF",
+      "fecha": "2027-08-21",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
+    },
+    {
       "club": "Club de Golf El Bosque",
       "nombre": "AESGOLF PAREJAS CABALLEROS CV",
       "fecha": "2027-09-09",
       "url": "https://www.elbosquegolf.com/torneos/",
-      "nuevo": true
+      "nuevo": false
     },
     {
       "club": "Club de Golf El Bosque",
@@ -415,6 +485,34 @@
       "nuevo": false
     },
     {
+      "club": "Panorámica Golf",
+      "nombre": "OM CLUB",
+      "fecha": "2027-09-25",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
+    },
+    {
+      "club": "Panorámica Golf",
+      "nombre": "CAMPEONATO GASTRONOMIC",
+      "fecha": "2027-10-01",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
+    },
+    {
+      "club": "Panorámica Golf",
+      "nombre": "CAMPEONATO GASTRONOMIC",
+      "fecha": "2027-10-02",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
+    },
+    {
+      "club": "Panorámica Golf",
+      "nombre": "WAGR PANORAMICA",
+      "fecha": "2027-10-08",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
+    },
+    {
       "club": "Club de Golf El Bosque",
       "nombre": "DAMAS SIMBIOSIS",
       "fecha": "2027-10-17",
@@ -422,11 +520,25 @@
       "nuevo": false
     },
     {
+      "club": "Panorámica Golf",
+      "nombre": "OM CLUB",
+      "fecha": "2027-10-31",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
+    },
+    {
       "club": "Club de Golf El Bosque",
       "nombre": "AESGOLF MIXTO BIENVENIDA",
       "fecha": "2027-11-04",
       "url": "https://www.elbosquegolf.com/torneos/",
       "nuevo": false
+    },
+    {
+      "club": "Panorámica Golf",
+      "nombre": "FINAL CIRCUITO LEGACY",
+      "fecha": "2027-11-20",
+      "url": "https://www.panoramicaclubdegolf.com/competiciones.html",
+      "nuevo": true
     },
     {
       "club": "Club de Golf El Bosque",
